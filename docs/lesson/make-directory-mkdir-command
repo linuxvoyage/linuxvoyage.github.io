@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>make-directory-mkdir-command</title>
+    <script
+        src="../static/assets/category/application-8013fdc35e4c79f95bcb3d655ff61f137ac05bcee52e6d96588427a84eddef12.js.download"
+        data-turbolinks-track="true"></script>
+    <link rel="stylesheet" media="all"
+        href="../static/assets/category/application-b0b91461d093aa2ed95d8a7467856e4dc16f55744d3c17a927c3598e5b26cd3f.css"
+        data-turbolinks-track="true">
+</head>
+
+<body>
+    <div id="wrapper" class="active">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul id="sidebar_menu" class="sidebar-nav">
+                <li class="sidebar-brand"><a>Command Line</a>
+                </li>
+            </ul>
+            <ul class="sidebar-nav" id="sidebar">
+                
+                <li>
+                    <a class="" href="the-shell">
+                        1. The shell</a>
+                </li>
+                
+                <li>
+                    <a class="" href="print-working-directory-pwd-command">
+                        2. Print working directory pwd command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="change-directory-cd-command">
+                        3. Change directory cd command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="list-directories-ls-command">
+                        4. List directories ls command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="touch-command">
+                        5. Touch command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="file-command">
+                        6. File command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="cat-command">
+                        7. Cat command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="less-command">
+                        8. Less command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="history-command">
+                        9. History command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="copy-cp-command">
+                        10. Copy cp command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="move-mv-command">
+                        11. Move mv command</a>
+                </li>
+                
+                <li>
+                    <a class="current" href="make-directory-mkdir-command">
+                        12. Make directory mkdir command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="remove-rm-command">
+                        13. Remove rm command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="find-command">
+                        14. Find command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="help-command">
+                        15. Help command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="man-command">
+                        16. Man command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="whatis-command">
+                        17. Whatis command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="alias-command">
+                        18. Alias command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="exit-command">
+                        19. Exit command</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- End of Sidebar -->
+
+
+        <div id="page-content-wrapper">
+            <!-- Keep all page content within the page-content inset div! -->
+            <div class="page-content inset">
+                <div class="row">
+                    <div class="col-md-6 lesson">
+
+                        <div class="user-app">
+                            <a class="btn btn-default btn-sm" href="../index.html">
+                                Home
+                            </a>
+                        </div>
+
+                        <div class="lesson-content">
+                            
+<h3>mkdir (Make Directory)</h3>
+<p>We’re gonna need some directories to store all these files we’ve been working on. The mkdir command (Make Directory) is useful for that, it will create a directory if it doesn’t already exist. You can even make multiple directories at the same time.</p>
+<pre>$ mkdir books paintings</pre>
+<p>You can also create subdirectories at the same time with the -p (parent flag).</p>
+<pre>$ mkdir -p books/hemmingway/favorites</pre>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 practice">
+                        <div class="exercise-content">
+                            <h3>Exercise</h3>
+<p>Make a couple of directories and move some files into that directory.</p>
+
+                        </div>
+
+                        <div class="quiz-content">
+                            <h3>Quiz Question</h3>
+<p>What command is use to make a directory?</p>
+<h3>Quiz Answer</h3>
+<p>mkdir</p>
+</div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

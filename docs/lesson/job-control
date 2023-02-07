@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>job-control</title>
+    <script
+        src="../static/assets/category/application-8013fdc35e4c79f95bcb3d655ff61f137ac05bcee52e6d96588427a84eddef12.js.download"
+        data-turbolinks-track="true"></script>
+    <link rel="stylesheet" media="all"
+        href="../static/assets/category/application-b0b91461d093aa2ed95d8a7467856e4dc16f55744d3c17a927c3598e5b26cd3f.css"
+        data-turbolinks-track="true">
+</head>
+
+<body>
+    <div id="wrapper" class="active">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul id="sidebar_menu" class="sidebar-nav">
+                <li class="sidebar-brand"><a>Processes</a>
+                </li>
+            </ul>
+            <ul class="sidebar-nav" id="sidebar">
+                
+                <li>
+                    <a class="" href="monitor-processes-ps-command">
+                        1. Monitor processes ps command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="controlling-terminal">
+                        2. Controlling terminal</a>
+                </li>
+                
+                <li>
+                    <a class="" href="process-details">
+                        3. Process details</a>
+                </li>
+                
+                <li>
+                    <a class="" href="process-creation">
+                        4. Process creation</a>
+                </li>
+                
+                <li>
+                    <a class="" href="process-termination">
+                        5. Process termination</a>
+                </li>
+                
+                <li>
+                    <a class="" href="process-signals">
+                        6. Process signals</a>
+                </li>
+                
+                <li>
+                    <a class="" href="killing-processes">
+                        7. Killing processes</a>
+                </li>
+                
+                <li>
+                    <a class="" href="process-niceness">
+                        8. Process niceness</a>
+                </li>
+                
+                <li>
+                    <a class="" href="process-states">
+                        9. Process states</a>
+                </li>
+                
+                <li>
+                    <a class="" href="proc-filesystem">
+                        10. Proc filesystem</a>
+                </li>
+                
+                <li>
+                    <a class="current" href="job-control">
+                        11. Job control</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- End of Sidebar -->
+
+
+        <div id="page-content-wrapper">
+            <!-- Keep all page content within the page-content inset div! -->
+            <div class="page-content inset">
+                <div class="row">
+                    <div class="col-md-6 lesson">
+
+                        <div class="user-app">
+                            <a class="btn btn-default btn-sm" href="../index.html">
+                                Home
+                            </a>
+                        </div>
+
+                        <div class="lesson-content">
+                            
+<h3>Job Control</h3>
+<p>Let's say you're working on a single terminal window and you're running a command that is taking forever. You can't interact with the shell until it is complete, however we want to keep working on our machines, so we need that shell open. Fortunately we can control how our processes run with jobs: </p>
+<p><b>Sending a job to the background</b></p>
+<p>Appending an ampersand (&amp;) to the command will run it in the background so you can still use your shell. Let's see an example:</p>
+<pre>$ sleep 1000 &amp;
+$ sleep 1001 &amp;
+$ sleep 1002 &amp;
+</pre>
+<p><b>View all background jobs</b></p>
+<p>Now you can view the jobs you just sent to the background.</p>
+<pre>$ jobs
+
+[1]    Running     sleep 1000 &amp;
+[2]-   Running     sleep 1001 &amp;
+[3]+   Running     sleep 1002 &amp;
+
+</pre>
+<p>This will show you the job id in the first column, then the status and the command that was run. The <b>+</b> next to the job ID means that it is the most recent background job that started. The job with the <b>-</b> is the second most recent command.</p>
+<p><b>Sending a job to the background on existing job</b></p>
+<p>If you already ran a job and want to send it to the background, you don't have to terminate it and start over again. First suspend the job with Ctrl-Z, then run the <b>bg</b> command to send it to the background.</p>
+<pre>
+pete@icebox ~ $ sleep 1003
+^Z
+[4]+    Stopped     sleep 1003
+
+pete@icebox ~ $ bg
+[4]+    sleep 1003 &amp;
+
+pete@icebox ~ $ jobs
+
+[1]    Running     sleep 1000 &amp;
+[2]    Running     sleep 1001 &amp;
+[3]-   Running     sleep 1002 &amp;
+[4]+   Running     sleep 1003 &amp;
+</pre>
+<p><b>Moving a job from the background to the foreground</b></p>
+<p>To move a job out of the background just specify the job ID you want. If you run fg without any options, it will bring back the most recent background job (the job with the + sign next to it)</p>
+<pre>$ fg %1</pre>
+<p><b>Kill background jobs</b></p>
+<p>Similar to moving jobs out of the background, you can use the same form to kill the processes by using their Job ID.</p>
+<pre>kill %1</pre>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 practice">
+                        <div class="exercise-content">
+                            <h3>Exercise</h3>
+<p>Move some jobs between the background and the foreground</p>
+
+                        </div>
+
+                        <div class="quiz-content">
+                            <h3>Quiz Question</h3>
+<p>What command is used to list background jobs?</p>
+<h3>Quiz Answer</h3>
+<p>jobs</p>
+</div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

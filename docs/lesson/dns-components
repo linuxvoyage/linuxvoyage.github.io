@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>dns-components</title>
+    <script
+        src="../static/assets/category/application-8013fdc35e4c79f95bcb3d655ff61f137ac05bcee52e6d96588427a84eddef12.js.download"
+        data-turbolinks-track="true"></script>
+    <link rel="stylesheet" media="all"
+        href="../static/assets/category/application-b0b91461d093aa2ed95d8a7467856e4dc16f55744d3c17a927c3598e5b26cd3f.css"
+        data-turbolinks-track="true">
+</head>
+
+<body>
+    <div id="wrapper" class="active">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul id="sidebar_menu" class="sidebar-nav">
+                <li class="sidebar-brand"><a>Dns</a>
+                </li>
+            </ul>
+            <ul class="sidebar-nav" id="sidebar">
+                
+                <li>
+                    <a class="" href="what-is-dns">
+                        1. What is dns</a>
+                </li>
+                
+                <li>
+                    <a class="current" href="dns-components">
+                        2. Dns components</a>
+                </li>
+                
+                <li>
+                    <a class="" href="dns-process">
+                        3. Dns process</a>
+                </li>
+                
+                <li>
+                    <a class="" href="etc-hosts">
+                        4. Etc hosts</a>
+                </li>
+                
+                <li>
+                    <a class="" href="dns-setup">
+                        5. Dns setup</a>
+                </li>
+                
+                <li>
+                    <a class="" href="dns-tools">
+                        6. Dns tools</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- End of Sidebar -->
+
+
+        <div id="page-content-wrapper">
+            <!-- Keep all page content within the page-content inset div! -->
+            <div class="page-content inset">
+                <div class="row">
+                    <div class="col-md-6 lesson">
+
+                        <div class="user-app">
+                            <a class="btn btn-default btn-sm" href="../index.html">
+                                Home
+                            </a>
+                        </div>
+
+                        <div class="lesson-content">
+                            
+<h3>DNS Components</h3>
+<p>The DNS database of the Internet relies on sites and organizations providing part of that database. To do that, they need:</p>
+<p><b>Name Server</b></p>
+<p>We setup DNS via "name servers", the name servers load up our DNS settings and configs and answers any questions from clients or other servers that want to know things like "Who is google.com?". If the name server doesn't know the answer to that query, it will redirect the request to other name servers. Name servers can be "authoritative", meaning they hold the actual DNS records that you're looking for, or "recursive" meaning they would ask other servers and those servers would ask other servers until they found an authoritative server that contained the DNS records. Recursive servers can also have the information we want cached instead of reaching an authoritative server.</p>
+<p><b>Zone File</b></p>
+<p>Inside a name server lives something called zone files. Zone files are how the name server stores information about the domain or how to get to the domain if it doesn't know. </p>
+<p><b>Resource Records</b></p>
+<p>A zone file is comprised of entries of resource records. Each line is a record and contains information about hosts, nameservers, other resources, etc. The fields consist of the following: </p>
+<ul>
+<li>Record name</li>
+<li>TTL - The time after which we discard the record and obtain a new one, in DNS TTL is denoted by time, so records could have a TTL of one hour. The reason we do this is because the Internet is constantly changing, one minute a host can be mapped to X IP address then next it can be at Y IP address</li>
+<li>Class - Namespace of the record information, most commonly IN is used for Internet</li>
+<li>Type - Type of information stored in the record data. We won't get into record types, but you've probably seen common ones like A for address, MX or mail exchanger, etc.</li>
+<li>Data - This field can contain an IP address if it's an A record or something else depending on the record type.</li>
+</ul>
+<pre>
+patty    IN  A      192.168.0.4 
+</pre>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 practice">
+                        <div class="exercise-content">
+                            <h3>Exercise</h3>
+<p>No exercises for this lesson.</p>
+
+                        </div>
+
+                        <div class="quiz-content">
+                            <h3>Quiz Question</h3>
+<p>What resource record type is used for mail exchangers?</p>
+<h3>Quiz Answer</h3>
+<p>MX</p>
+</div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>process-niceness</title>
+    <script
+        src="../static/assets/category/application-8013fdc35e4c79f95bcb3d655ff61f137ac05bcee52e6d96588427a84eddef12.js.download"
+        data-turbolinks-track="true"></script>
+    <link rel="stylesheet" media="all"
+        href="../static/assets/category/application-b0b91461d093aa2ed95d8a7467856e4dc16f55744d3c17a927c3598e5b26cd3f.css"
+        data-turbolinks-track="true">
+</head>
+
+<body>
+    <div id="wrapper" class="active">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul id="sidebar_menu" class="sidebar-nav">
+                <li class="sidebar-brand"><a>Processes</a>
+                </li>
+            </ul>
+            <ul class="sidebar-nav" id="sidebar">
+                
+                <li>
+                    <a class="" href="monitor-processes-ps-command">
+                        1. Monitor processes ps command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="controlling-terminal">
+                        2. Controlling terminal</a>
+                </li>
+                
+                <li>
+                    <a class="" href="process-details">
+                        3. Process details</a>
+                </li>
+                
+                <li>
+                    <a class="" href="process-creation">
+                        4. Process creation</a>
+                </li>
+                
+                <li>
+                    <a class="" href="process-termination">
+                        5. Process termination</a>
+                </li>
+                
+                <li>
+                    <a class="" href="process-signals">
+                        6. Process signals</a>
+                </li>
+                
+                <li>
+                    <a class="" href="killing-processes">
+                        7. Killing processes</a>
+                </li>
+                
+                <li>
+                    <a class="current" href="process-niceness">
+                        8. Process niceness</a>
+                </li>
+                
+                <li>
+                    <a class="" href="process-states">
+                        9. Process states</a>
+                </li>
+                
+                <li>
+                    <a class="" href="proc-filesystem">
+                        10. Proc filesystem</a>
+                </li>
+                
+                <li>
+                    <a class="" href="job-control">
+                        11. Job control</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- End of Sidebar -->
+
+
+        <div id="page-content-wrapper">
+            <!-- Keep all page content within the page-content inset div! -->
+            <div class="page-content inset">
+                <div class="row">
+                    <div class="col-md-6 lesson">
+
+                        <div class="user-app">
+                            <a class="btn btn-default btn-sm" href="../index.html">
+                                Home
+                            </a>
+                        </div>
+
+                        <div class="lesson-content">
+                            
+<h3>niceness</h3>
+<p>When you run multiple things on your computer, like perhaps Chrome, Microsoft Word or Photoshop at the same time, it may seem like these processes are running at the same time, but that isn't quite true. </p>
+<p>Processes use the CPU for a small amount of time called a time slice. Then they pause for milliseconds and another process gets a little time slice. By default, process scheduling happens in this round-robin fashion. Every process gets enough time slices until it's finished processing. The kernel handles all of these switching of processes and it does a pretty good job at it most of the time.</p>
+<p>Processes aren't able to decide when and how long they get CPU time, if all processes behaved normally they would each (roughly) get an equal amount of CPU time. However, there is a way to influence the kernel's process scheduling algorithm with a nice value. Niceness is a pretty weird name, but what it means is that processes have a number to determine their priority for the CPU. A high number means the process is nice and has a lower priority for the CPU and a low or negative number means the process is not very nice and it wants to get as much of the CPU as possible. </p>
+<pre>$ top</pre>
+<p>You can see a column for NI right now, that is the niceness level of a process.</p>
+<p>To change the niceness level you can use the nice and renice commands:</p>
+<pre>$ nice -n 5 apt upgrade</pre>
+<p>The nice command is used to set priority for a new process. The renice command is used to set priority on an existing process. </p>
+<pre>$ renice 10 -p 3245</pre>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 practice">
+                        <div class="exercise-content">
+                            <h3>Exercise</h3>
+<p>What processes aren't very nice and why?</p>
+
+                        </div>
+
+                        <div class="quiz-content">
+                            <h3>Quiz Question</h3>
+<p>If I want a process to get more CPU priority, do I use a lower or higher nice number?</p>
+<h3>Quiz Answer</h3>
+<p>lower</p>
+</div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

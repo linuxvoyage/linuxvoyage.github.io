@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>ipv6</title>
+    <script
+        src="../static/assets/category/application-8013fdc35e4c79f95bcb3d655ff61f137ac05bcee52e6d96588427a84eddef12.js.download"
+        data-turbolinks-track="true"></script>
+    <link rel="stylesheet" media="all"
+        href="../static/assets/category/application-b0b91461d093aa2ed95d8a7467856e4dc16f55744d3c17a927c3598e5b26cd3f.css"
+        data-turbolinks-track="true">
+</head>
+
+<body>
+    <div id="wrapper" class="active">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul id="sidebar_menu" class="sidebar-nav">
+                <li class="sidebar-brand"><a>Subnetting</a>
+                </li>
+            </ul>
+            <ul class="sidebar-nav" id="sidebar">
+                
+                <li>
+                    <a class="" href="ipv4">
+                        1. Ipv4</a>
+                </li>
+                
+                <li>
+                    <a class="" href="subnets">
+                        2. Subnets</a>
+                </li>
+                
+                <li>
+                    <a class="" href="subnet-math">
+                        3. Subnet math</a>
+                </li>
+                
+                <li>
+                    <a class="" href="subnetting-cheats">
+                        4. Subnetting cheats</a>
+                </li>
+                
+                <li>
+                    <a class="" href="classless-interdomain-routing-cidr">
+                        5. Classless interdomain routing cidr</a>
+                </li>
+                
+                <li>
+                    <a class="" href="nat-network-address-translation">
+                        6. Nat network address translation</a>
+                </li>
+                
+                <li>
+                    <a class="current" href="ipv6">
+                        7. Ipv6</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- End of Sidebar -->
+
+
+        <div id="page-content-wrapper">
+            <!-- Keep all page content within the page-content inset div! -->
+            <div class="page-content inset">
+                <div class="row">
+                    <div class="col-md-6 lesson">
+
+                        <div class="user-app">
+                            <a class="btn btn-default btn-sm" href="../index.html">
+                                Home
+                            </a>
+                        </div>
+
+                        <div class="lesson-content">
+                            
+<h3>IPv6</h3>
+<p>We've heard the term IPv6 here and there, but what is it? Every device that connects to the Internet gets it's own IP address, well that happens to be a finite number that we are soon approaching in this digital age. IPv6 was created to allow us to connect more hosts to the Internet, it comes with more IP improvements however, it's adoption is quite slow. It isn't meant to replace IPv4, they are meant to complement each other. The two IP protocols are very similar and if you know IPv4 you'll understand IPv6, the major difference is the way the address is written. Here is what a typical IPv6 address looks like:</p>
+<pre>
+2dde:1235:1256:3:200:f8ed:fe23:59cf
+</pre>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 practice">
+                        <div class="exercise-content">
+                            <h3>Exercise</h3>
+<p>Check ifconfig to see if you have an IPv6 address listed.</p>
+
+                        </div>
+
+                        <div class="quiz-content">
+                            <h3>Quiz Question</h3>
+<p>What IP address is used to help increase the number of hosts that can connect to the Internet?</p>
+<h3>Quiz Answer</h3>
+<p>IPv6</p>
+</div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>device-names</title>
+    <script
+        src="../static/assets/category/application-8013fdc35e4c79f95bcb3d655ff61f137ac05bcee52e6d96588427a84eddef12.js.download"
+        data-turbolinks-track="true"></script>
+    <link rel="stylesheet" media="all"
+        href="../static/assets/category/application-b0b91461d093aa2ed95d8a7467856e4dc16f55744d3c17a927c3598e5b26cd3f.css"
+        data-turbolinks-track="true">
+</head>
+
+<body>
+    <div id="wrapper" class="active">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul id="sidebar_menu" class="sidebar-nav">
+                <li class="sidebar-brand"><a>Devices</a>
+                </li>
+            </ul>
+            <ul class="sidebar-nav" id="sidebar">
+                
+                <li>
+                    <a class="" href="dev-directory">
+                        1. Dev directory</a>
+                </li>
+                
+                <li>
+                    <a class="" href="device-types">
+                        2. Device types</a>
+                </li>
+                
+                <li>
+                    <a class="current" href="device-names">
+                        3. Device names</a>
+                </li>
+                
+                <li>
+                    <a class="" href="sysfs">
+                        4. Sysfs</a>
+                </li>
+                
+                <li>
+                    <a class="" href="udev">
+                        5. Udev</a>
+                </li>
+                
+                <li>
+                    <a class="" href="listing-devices">
+                        6. Listing devices</a>
+                </li>
+                
+                <li>
+                    <a class="" href="dd-command">
+                        7. Dd command</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- End of Sidebar -->
+
+
+        <div id="page-content-wrapper">
+            <!-- Keep all page content within the page-content inset div! -->
+            <div class="page-content inset">
+                <div class="row">
+                    <div class="col-md-6 lesson">
+
+                        <div class="user-app">
+                            <a class="btn btn-default btn-sm" href="../index.html">
+                                Home
+                            </a>
+                        </div>
+
+                        <div class="lesson-content">
+                            
+<h3>Device Names</h3>
+<p>Here are the most common device names that you will encounter: </p>
+<p><b>SCSI Devices</b></p>
+<p>If you have any sort of mass storage on your machine, chances are it is using the SCSI (pronounced "scuzzy") protocol. SCSI stands for Small Computer System Interface, it is a protocol used for allow communication between disks, printers, scanners and other peripherals to your system. You may have heard of SCSI devices which aren't actually in use in modern systems, however our Linux systems correspond SCSI disks with hard disk drives in /dev. They are represented by a prefix of sd (SCSI disk):</p>
+<p>Common SCSI device files:</p>
+<ul>
+<li>/dev/sda - First hard disk</li>
+<li>/dev/sdb - Second hard disk</li>
+<li>/dev/sda3 - Third partition on the first hard disk</li>
+</ul>
+<p><b>Pseudo Devices</b></p>
+<p>As we discussed earlier, pseudo devices aren't really physically connected to your system, most common pseudo devices are character devices: </p>
+<ul>
+<li>/dev/zero - accepts and discards all input, produces a continuous stream of NULL (zero value) bytes</li>
+<li>/dev/null - accepts and discards all input, produces no output</li>
+<li>/dev/random - produces random numbers</li>
+</ul>
+<p><b>PATA Devices</b></p>
+<p>Sometimes in older systems you may see hard drives being referred to with an hd prefix: </p>
+<ul>
+<li>/dev/hda - First hard disk</li>
+<li>/dev/hdd2 - Second partition on 4th hard disk</li>
+</ul>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 practice">
+                        <div class="exercise-content">
+                            <h3>Exercise</h3>
+<p>Write to the pseudo devices and see what happens, be careful not to write your disks to those devices!</p>
+
+                        </div>
+
+                        <div class="quiz-content">
+                            <h3>Quiz Question</h3>
+<p>What would commonly be the device name for the first partition on the second SCSI disk?</p>
+<h3>Quiz Answer</h3>
+<p>sdb1</p>
+</div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

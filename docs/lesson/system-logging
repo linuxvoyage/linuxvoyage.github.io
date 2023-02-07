@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>system-logging</title>
+    <script
+        src="../static/assets/category/application-8013fdc35e4c79f95bcb3d655ff61f137ac05bcee52e6d96588427a84eddef12.js.download"
+        data-turbolinks-track="true"></script>
+    <link rel="stylesheet" media="all"
+        href="../static/assets/category/application-b0b91461d093aa2ed95d8a7467856e4dc16f55744d3c17a927c3598e5b26cd3f.css"
+        data-turbolinks-track="true">
+</head>
+
+<body>
+    <div id="wrapper" class="active">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul id="sidebar_menu" class="sidebar-nav">
+                <li class="sidebar-brand"><a>Logging</a>
+                </li>
+            </ul>
+            <ul class="sidebar-nav" id="sidebar">
+                
+                <li>
+                    <a class="current" href="system-logging">
+                        1. System logging</a>
+                </li>
+                
+                <li>
+                    <a class="" href="syslog">
+                        2. Syslog</a>
+                </li>
+                
+                <li>
+                    <a class="" href="general-logging">
+                        3. General logging</a>
+                </li>
+                
+                <li>
+                    <a class="" href="kernel-logging">
+                        4. Kernel logging</a>
+                </li>
+                
+                <li>
+                    <a class="" href="authentication-logging">
+                        5. Authentication logging</a>
+                </li>
+                
+                <li>
+                    <a class="" href="managing-log-files">
+                        6. Managing log files</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- End of Sidebar -->
+
+
+        <div id="page-content-wrapper">
+            <!-- Keep all page content within the page-content inset div! -->
+            <div class="page-content inset">
+                <div class="row">
+                    <div class="col-md-6 lesson">
+
+                        <div class="user-app">
+                            <a class="btn btn-default btn-sm" href="../index.html">
+                                Home
+                            </a>
+                        </div>
+
+                        <div class="lesson-content">
+                            
+<h3>System Logging</h3>
+<p>The services, kernel, daemons, etc on your system are constantly doing something, this data is actually sent to be saved on your system in the form of logs. This allows us to have a human readable journal of the events that are happening on our system. This data is usually kept in the /var directory, the /var directory is where we keep our variable data, such as logs!</p>
+<p>How are these messages even getting received on your system? There is a service called syslog that sends this information to the system logger. </p>
+<p>Syslog actually contains many components, one of the important ones is a daemon running called syslogd (newer Linux distributions use rsyslogd), that waits for event messages to occur and filter the ones it wants to know about, and depending on what it's supposed to do with that message, it will send it to a file, your console or do nothing with it.</p>
+<p>You would think that this system logger is the centralized place to manage logs, but unfortunately it's not. You'll see many applications that write their own logging rules and generate different log files, however in general the format of logs should include a timestamp and the event details. </p>
+<p>Here is an example of a line from syslog:</p>
+<pre>
+pete@icebox:~$ less /var/log/syslog
+Jan 27 07:41:32 icebox anacron[4650]: Job `cron.weekly' started
+</pre>
+<p>Here we can see that at Jan 27 07:41:32 our cron service ran the cron.weekly job. You can view all the event messages that syslog collects with in the /var/log/syslog file.</p>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 practice">
+                        <div class="exercise-content">
+                            <h3>Exercise</h3>
+<p>Look at your /var/log/syslog file and see what else is happening on your machine.</p>
+
+                        </div>
+
+                        <div class="quiz-content">
+                            <h3>Quiz Question</h3>
+<p>What is the daemon that manages log on newer Linux systems?</p>
+<h3>Quiz Answer</h3>
+<p>rsyslogd</p>
+</div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

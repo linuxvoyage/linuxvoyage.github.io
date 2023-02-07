@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>samba</title>
+    <script
+        src="../static/assets/category/application-8013fdc35e4c79f95bcb3d655ff61f137ac05bcee52e6d96588427a84eddef12.js.download"
+        data-turbolinks-track="true"></script>
+    <link rel="stylesheet" media="all"
+        href="../static/assets/category/application-b0b91461d093aa2ed95d8a7467856e4dc16f55744d3c17a927c3598e5b26cd3f.css"
+        data-turbolinks-track="true">
+</head>
+
+<body>
+    <div id="wrapper" class="active">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul id="sidebar_menu" class="sidebar-nav">
+                <li class="sidebar-brand"><a>Network Sharing</a>
+                </li>
+            </ul>
+            <ul class="sidebar-nav" id="sidebar">
+                
+                <li>
+                    <a class="" href="network-file-sharing">
+                        1. Network file sharing</a>
+                </li>
+                
+                <li>
+                    <a class="" href="rsync">
+                        2. Rsync</a>
+                </li>
+                
+                <li>
+                    <a class="" href="simple-http-server">
+                        3. Simple http server</a>
+                </li>
+                
+                <li>
+                    <a class="" href="nfs-network-file-share">
+                        4. Nfs network file share</a>
+                </li>
+                
+                <li>
+                    <a class="current" href="samba">
+                        5. Samba</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- End of Sidebar -->
+
+
+        <div id="page-content-wrapper">
+            <!-- Keep all page content within the page-content inset div! -->
+            <div class="page-content inset">
+                <div class="row">
+                    <div class="col-md-6 lesson">
+
+                        <div class="user-app">
+                            <a class="btn btn-default btn-sm" href="../index.html">
+                                Home
+                            </a>
+                        </div>
+
+                        <div class="lesson-content">
+                            
+<h3>Samba</h3>
+<p>In the early days of computing, it became necessary for Windows machines to share files with Linux machines, thus the Server Message Block (SMB) protocol was born. SMB was used for sharing files between Windows operating systems (Mac also has file sharing with SMB) and then it was later cleaned up and optimized in the form of the Common Internet File System (CIFS) protocol. </p>
+<p>Samba is what we call the Linux utilities to work with CIFS on Linux. In addition to file sharing, you can also share resources like printers. </p>
+<p><b>Create a network share with Samba</b></p>
+<p>Let's go through the basic steps to create a network share that a Windows machine can access:</p>
+<p><b>Install Samba</b></p>
+<pre>$ sudo apt update
+$ sudo apt install samba</pre>
+<p><b>Setup smb.conf</b></p>
+<p>The configuration file for Samba is found at /etc/samba/smb.conf, this file should tell the system what directories should be shared, their access permissions, and more options. The default smb.conf comes with lots of commented code already and you can use those as an example to write your own configurations.</p>
+<pre>$ sudo vi /etc/samba/smb.conf</pre>
+<p><b>Setup up a password for Samba</b></p>
+<pre>$ sudo smbpasswd -a [username]</pre>
+<p><b>Create a shared directory</b></p>
+<pre>$ mkdir /my/directory/to/share</pre>
+<p><b>Restart the Samba service</b></p>
+<pre>$ sudo service smbd restart</pre>
+<p><b>Accessing a Samba share via Windows</b></p>
+<p>In Windows, just type in the network connection in the run prompt: \HOST\sharename.</p>
+<p><b>Accessing a Samba/Windows share via Linux</b></p>
+<pre>$ smbclient //HOST/directory -U user</pre>
+<p>The Samba package includes a command line tool called <b>smbclient</b> that you can use to access any Windows or Samba server. Once you're connected to the share you can navigate and transfer files.</p>
+<p><b>Attach a Samba share to your system</b></p>
+<p>Instead of transferring files one by one, you can just mount the network share on your system.</p>
+<pre>$ sudo mount -t cifs servername:directory mountpount -o user=username,pass=password</pre>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 practice">
+                        <div class="exercise-content">
+                            <h3>Exercise</h3>
+<p>Setup a Samba share, if you don't have one, open up smb.conf and familiarize yourself with the options in the config file.</p>
+
+                        </div>
+
+                        <div class="quiz-content">
+                            <h3>Quiz Question</h3>
+<p>What is the latest protocol used for file transfer between Windows and Linux?</p>
+<h3>Quiz Answer</h3>
+<p>CIFS</p>
+</div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>linux-mint</title>
+    <script
+        src="../static/assets/category/application-8013fdc35e4c79f95bcb3d655ff61f137ac05bcee52e6d96588427a84eddef12.js.download"
+        data-turbolinks-track="true"></script>
+    <link rel="stylesheet" media="all"
+        href="../static/assets/category/application-b0b91461d093aa2ed95d8a7467856e4dc16f55744d3c17a927c3598e5b26cd3f.css"
+        data-turbolinks-track="true">
+</head>
+
+<body>
+    <div id="wrapper" class="active">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul id="sidebar_menu" class="sidebar-nav">
+                <li class="sidebar-brand"><a>Getting Started</a>
+                </li>
+            </ul>
+            <ul class="sidebar-nav" id="sidebar">
+                
+                <li>
+                    <a class="" href="linux-history">
+                        1. Linux history</a>
+                </li>
+                
+                <li>
+                    <a class="" href="choosing-a-linux-distribution">
+                        2. Choosing a linux distribution</a>
+                </li>
+                
+                <li>
+                    <a class="" href="debian">
+                        3. Debian</a>
+                </li>
+                
+                <li>
+                    <a class="" href="red-hat-enterprise-linux">
+                        4. Red hat enterprise linux</a>
+                </li>
+                
+                <li>
+                    <a class="" href="ubuntu">
+                        5. Ubuntu</a>
+                </li>
+                
+                <li>
+                    <a class="" href="fedora">
+                        6. Fedora</a>
+                </li>
+                
+                <li>
+                    <a class="current" href="linux-mint">
+                        7. Linux mint</a>
+                </li>
+                
+                <li>
+                    <a class="" href="gentoo">
+                        8. Gentoo</a>
+                </li>
+                
+                <li>
+                    <a class="" href="arch-linux">
+                        9. Arch linux</a>
+                </li>
+                
+                <li>
+                    <a class="" href="opensuse">
+                        10. Opensuse</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- End of Sidebar -->
+
+
+        <div id="page-content-wrapper">
+            <!-- Keep all page content within the page-content inset div! -->
+            <div class="page-content inset">
+                <div class="row">
+                    <div class="col-md-6 lesson">
+
+                        <div class="user-app">
+                            <a class="btn btn-default btn-sm" href="../index.html">
+                                Home
+                            </a>
+                        </div>
+
+                        <div class="lesson-content">
+                            
+<h3>Linux Mint</h3>
+<p><b>Overview</b><br/>
+Linux Mint is based off of Ubuntu. It uses Ubuntu’s software repositories so the same packages are available on both distributions. Linux Mint is preferred by others over Ubuntu because it doesn’t come with some of the proprietary software that Ubuntu includes such as Unity.</p>
+<p><b>Package Management</b><br/>
+Since Linux Mint is Ubuntu based, it uses the Debian package manager.</p>
+<p><b>Configurability</b><br/>
+Great user interface, great for beginners and less bloated than Ubuntu. In this course, I’ll be using Linux Mint, but any other distribution can be used. </p>
+<p><b>Uses</b><br/>
+Great for desktop and laptop.</p>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 practice">
+                        <div class="exercise-content">
+                            <h3>Exercise</h3>
+<p>If you're interested in having Linux Mint as your operating system, head over to the installation section and give it a try: <a href="http://linuxmint.com/"><a href="http://linuxmint.com/&lt;/a&gt;">http://linuxmint.com/</a></a></p>
+
+                        </div>
+
+                        <div class="quiz-content">
+                            <h3>Quiz Questions</h3>
+<p>What is Linux Mint based off of?</p>
+<h3>Quiz Answer</h3>
+<p>Ubuntu</p>
+</div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

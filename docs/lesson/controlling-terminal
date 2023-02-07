@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>controlling-terminal</title>
+    <script
+        src="../static/assets/category/application-8013fdc35e4c79f95bcb3d655ff61f137ac05bcee52e6d96588427a84eddef12.js.download"
+        data-turbolinks-track="true"></script>
+    <link rel="stylesheet" media="all"
+        href="../static/assets/category/application-b0b91461d093aa2ed95d8a7467856e4dc16f55744d3c17a927c3598e5b26cd3f.css"
+        data-turbolinks-track="true">
+</head>
+
+<body>
+    <div id="wrapper" class="active">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul id="sidebar_menu" class="sidebar-nav">
+                <li class="sidebar-brand"><a>Processes</a>
+                </li>
+            </ul>
+            <ul class="sidebar-nav" id="sidebar">
+                
+                <li>
+                    <a class="" href="monitor-processes-ps-command">
+                        1. Monitor processes ps command</a>
+                </li>
+                
+                <li>
+                    <a class="current" href="controlling-terminal">
+                        2. Controlling terminal</a>
+                </li>
+                
+                <li>
+                    <a class="" href="process-details">
+                        3. Process details</a>
+                </li>
+                
+                <li>
+                    <a class="" href="process-creation">
+                        4. Process creation</a>
+                </li>
+                
+                <li>
+                    <a class="" href="process-termination">
+                        5. Process termination</a>
+                </li>
+                
+                <li>
+                    <a class="" href="process-signals">
+                        6. Process signals</a>
+                </li>
+                
+                <li>
+                    <a class="" href="killing-processes">
+                        7. Killing processes</a>
+                </li>
+                
+                <li>
+                    <a class="" href="process-niceness">
+                        8. Process niceness</a>
+                </li>
+                
+                <li>
+                    <a class="" href="process-states">
+                        9. Process states</a>
+                </li>
+                
+                <li>
+                    <a class="" href="proc-filesystem">
+                        10. Proc filesystem</a>
+                </li>
+                
+                <li>
+                    <a class="" href="job-control">
+                        11. Job control</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- End of Sidebar -->
+
+
+        <div id="page-content-wrapper">
+            <!-- Keep all page content within the page-content inset div! -->
+            <div class="page-content inset">
+                <div class="row">
+                    <div class="col-md-6 lesson">
+
+                        <div class="user-app">
+                            <a class="btn btn-default btn-sm" href="../index.html">
+                                Home
+                            </a>
+                        </div>
+
+                        <div class="lesson-content">
+                            
+<h3>Controlling Terminal</h3>
+<p>We discussed how there is a TTY field in the ps output. The TTY is the terminal that executed the command.</p>
+<p>There are two types of terminals, regular <b>terminal devices</b> and <b>pseudoterminal devices</b>. A regular terminal device is a native terminal device that you can type into and send output to your system, this sounds like the terminal application you've been launching to get to your shell, but it's not. </p>
+<p>We're gonna segue so you can see this action, go ahead and type Ctrl-Alt-F1 to get into TTY1 (the first virtual console), you'll notice how you don't have anything except the terminal, no graphics, etc. This is considered a regular terminal device, you can exit this with Ctrl-Alt-F7. </p>
+<p>A pseudoterminal is what you've been used to working in, they emulate terminals with the shell terminal window and are denoted by PTS . If you look at ps again, you'll see your shell process under pts/*.</p>
+<p>Ok, now circling back to the controlling terminal, processes are usually bound to a controlling terminal. For example, if you were running a program on your shell window such as find and you closed the window, your process would also go with it. </p>
+<p>There are processes such as daemon processes, which are special processes that are essentially keeping the system running. They often start at system boot and usually get terminated when the system is shutdown. They run in the background and since we don't want these special processes to get terminated they are not bound to a controlling terminal. In the ps output, the TTY is listed as a <b>?</b> meaning it does not have a controlling terminal.</p>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 practice">
+                        <div class="exercise-content">
+                            <h3>Exercise</h3>
+<p>Look at your ps output and list all the unique TTY values.</p>
+
+                        </div>
+
+                        <div class="quiz-content">
+                            <h3>Quiz Question</h3>
+<p>What value is given for a process that does not have a controlling terminal?</p>
+<h3>Quiz Answer</h3>
+<p>?</p>
+</div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>icmp</title>
+    <script
+        src="../static/assets/category/application-8013fdc35e4c79f95bcb3d655ff61f137ac05bcee52e6d96588427a84eddef12.js.download"
+        data-turbolinks-track="true"></script>
+    <link rel="stylesheet" media="all"
+        href="../static/assets/category/application-b0b91461d093aa2ed95d8a7467856e4dc16f55744d3c17a927c3598e5b26cd3f.css"
+        data-turbolinks-track="true">
+</head>
+
+<body>
+    <div id="wrapper" class="active">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul id="sidebar_menu" class="sidebar-nav">
+                <li class="sidebar-brand"><a>Network Troubleshooting</a>
+                </li>
+            </ul>
+            <ul class="sidebar-nav" id="sidebar">
+                
+                <li>
+                    <a class="current" href="icmp">
+                        1. Icmp</a>
+                </li>
+                
+                <li>
+                    <a class="" href="ping">
+                        2. Ping</a>
+                </li>
+                
+                <li>
+                    <a class="" href="traceroute">
+                        3. Traceroute</a>
+                </li>
+                
+                <li>
+                    <a class="" href="netstat">
+                        4. Netstat</a>
+                </li>
+                
+                <li>
+                    <a class="" href="packet-analysis">
+                        5. Packet analysis</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- End of Sidebar -->
+
+
+        <div id="page-content-wrapper">
+            <!-- Keep all page content within the page-content inset div! -->
+            <div class="page-content inset">
+                <div class="row">
+                    <div class="col-md-6 lesson">
+
+                        <div class="user-app">
+                            <a class="btn btn-default btn-sm" href="../index.html">
+                                Home
+                            </a>
+                        </div>
+
+                        <div class="lesson-content">
+                            
+<h3>ICMP</h3>
+<p>The Internet Control Message Protocol (ICMP) is part of the TCP/IP protocol suite, it used to send updates and error messages and is an extremely useful protocol used for debugging network issues such as a failed packet delivery.</p>
+<p>Each ICMP message contains a type, code and checksum field. The type field is the type of ICMP message, the code is a sub-type and describes more information about the message and the checksum is used to detect any issues with the integrity of the message.</p>
+<p>Let's look at some common ICMP Types:</p>
+<ul>
+<li>Type 0 - Echo Reply</li>
+<li>Type 3 - Destination Unreachable</li>
+<li>Type 8 - Echo Request</li>
+<li>Type 11 - Time Exceeded</li>
+</ul>
+<p>When a packet can't get to a destination, Type 3 ICMP message is generated, within Type 3 there are 16 code values that will further describe why it can't get to the destination: </p>
+<ul>
+<li>Code 0 - Network Unreachable</li>
+<li>Code 1 - Host Unreachable</li>
+etc..etc..
+</ul>
+<p>These messages will make more sense as we use some network troubleshooting tools.</p>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 practice">
+                        <div class="exercise-content">
+                            <h3>Exercise</h3>
+<p>No exercises for this lesson.</p>
+
+                        </div>
+
+                        <div class="quiz-content">
+                            <h3>Quiz Question</h3>
+<p>What is the ICMP type for echo request?</p>
+<h3>Quiz Answer</h3>
+<p>8</p>
+</div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

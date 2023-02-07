@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>continuous-monitoring</title>
+    <script
+        src="../static/assets/category/application-8013fdc35e4c79f95bcb3d655ff61f137ac05bcee52e6d96588427a84eddef12.js.download"
+        data-turbolinks-track="true"></script>
+    <link rel="stylesheet" media="all"
+        href="../static/assets/category/application-b0b91461d093aa2ed95d8a7467856e4dc16f55744d3c17a927c3598e5b26cd3f.css"
+        data-turbolinks-track="true">
+</head>
+
+<body>
+    <div id="wrapper" class="active">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul id="sidebar_menu" class="sidebar-nav">
+                <li class="sidebar-brand"><a>Process Utilization</a>
+                </li>
+            </ul>
+            <ul class="sidebar-nav" id="sidebar">
+                
+                <li>
+                    <a class="" href="tracking-processes-top">
+                        1. Tracking processes top</a>
+                </li>
+                
+                <li>
+                    <a class="" href="tracking-processes-lsof-fuser">
+                        2. Tracking processes lsof fuser</a>
+                </li>
+                
+                <li>
+                    <a class="" href="process-threads">
+                        3. Process threads</a>
+                </li>
+                
+                <li>
+                    <a class="" href="cpu-monitoring">
+                        4. Cpu monitoring</a>
+                </li>
+                
+                <li>
+                    <a class="" href="io-monitoring">
+                        5. Io monitoring</a>
+                </li>
+                
+                <li>
+                    <a class="" href="memory-monitoring">
+                        6. Memory monitoring</a>
+                </li>
+                
+                <li>
+                    <a class="current" href="continuous-monitoring">
+                        7. Continuous monitoring</a>
+                </li>
+                
+                <li>
+                    <a class="" href="cron-jobs">
+                        8. Cron jobs</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- End of Sidebar -->
+
+
+        <div id="page-content-wrapper">
+            <!-- Keep all page content within the page-content inset div! -->
+            <div class="page-content inset">
+                <div class="row">
+                    <div class="col-md-6 lesson">
+
+                        <div class="user-app">
+                            <a class="btn btn-default btn-sm" href="../index.html">
+                                Home
+                            </a>
+                        </div>
+
+                        <div class="lesson-content">
+                            
+<h3>Continuous Monitoring</h3>
+<p>These monitoring tools are good to look at when your machine is having issues, but what about machines that are having issues when you aren't looking. For those, you'll need to use a continuous monitoring tool, something that will collect, report and save your system activity information. In this lesson we will go over a great tool to use <b>sar</b>.</p>
+<p><b>Installing sar</b><br/>
+Sar is a tool that is used to do historical analysis on your system, first make sure you have it installed by installing the sysstat package <b>sudo apt install sysstat</b>.</p>
+<p><b>Setting up data collection</b><br/>
+Usually once you install sysstat, your system will automatically start collecting data, if it doesn't you can enable it by modifying the ENABLED field in /etc/default/sysstat.</p>
+<p><b>Using sar</b></p>
+<pre>$ sudo sar -q</pre>
+<p>This command will list the details from the start of the day.</p>
+<pre>$ sudo sar -r</pre>
+<p>This will list the details of memory usage from the start of the day.</p>
+<pre>$ sudo sar -P</pre>
+<p>This will list the details of CPU usage. </p>
+<p>To see a view of a different day, you can go into /var/log/sysstat/saXX where XX is the day you want to view. </p>
+<pre>$sar -q /var/log/sysstat/sa02</pre>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 practice">
+                        <div class="exercise-content">
+                            <h3>Exercise</h3>
+<p>Install sar on your system and start collecting and analyzing your system resource utilization.</p>
+
+                        </div>
+
+                        <div class="quiz-content">
+                            <h3>Quiz Question</h3>
+<p>What is a good tool to use for monitoring system resources?</p>
+<h3>Quiz Answer</h3>
+<p>sar</p>
+</div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>dns-tools</title>
+    <script
+        src="../static/assets/category/application-8013fdc35e4c79f95bcb3d655ff61f137ac05bcee52e6d96588427a84eddef12.js.download"
+        data-turbolinks-track="true"></script>
+    <link rel="stylesheet" media="all"
+        href="../static/assets/category/application-b0b91461d093aa2ed95d8a7467856e4dc16f55744d3c17a927c3598e5b26cd3f.css"
+        data-turbolinks-track="true">
+</head>
+
+<body>
+    <div id="wrapper" class="active">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul id="sidebar_menu" class="sidebar-nav">
+                <li class="sidebar-brand"><a>Dns</a>
+                </li>
+            </ul>
+            <ul class="sidebar-nav" id="sidebar">
+                
+                <li>
+                    <a class="" href="what-is-dns">
+                        1. What is dns</a>
+                </li>
+                
+                <li>
+                    <a class="" href="dns-components">
+                        2. Dns components</a>
+                </li>
+                
+                <li>
+                    <a class="" href="dns-process">
+                        3. Dns process</a>
+                </li>
+                
+                <li>
+                    <a class="" href="etc-hosts">
+                        4. Etc hosts</a>
+                </li>
+                
+                <li>
+                    <a class="" href="dns-setup">
+                        5. Dns setup</a>
+                </li>
+                
+                <li>
+                    <a class="current" href="dns-tools">
+                        6. Dns tools</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- End of Sidebar -->
+
+
+        <div id="page-content-wrapper">
+            <!-- Keep all page content within the page-content inset div! -->
+            <div class="page-content inset">
+                <div class="row">
+                    <div class="col-md-6 lesson">
+
+                        <div class="user-app">
+                            <a class="btn btn-default btn-sm" href="../index.html">
+                                Home
+                            </a>
+                        </div>
+
+                        <div class="lesson-content">
+                            
+<h3>DNS Tools</h3>
+<p><b>nslookup</b></p>
+<p>The "name server lookup" tool is used to query name servers to find information about resource records. Let's find where the name server for google.com is:</p>
+<pre>
+pete@icebox:~$ nslookup www.google.com
+Server:         127.0.1.1
+Address:        127.0.1.1#53
+
+Non-authoritative answer:
+Name:   www.google.com
+Address: 216.58.192.4
+</pre>
+<p><b>dig</b></p>
+<p>Dig (domain information groper) is a powerful tool for getting information about DNS name servers, it is more flexible than nslookup and great for troubleshooting DNS issues.</p>
+<pre>
+pete@icebox:~$ dig www.google.com
+
+; &lt;&lt;&gt;&gt; DiG 9.9.5-3-Ubuntu &lt;&lt;&gt;&gt; www.google.com
+;; global options: +cmd
+;; Got answer:
+;; -&gt;&gt;HEADER&lt;&lt;- opcode: QUERY, status: NOERROR, id: 42376
+;; flags: qr rd ra; QUERY: 1, ANSWER: 5, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; MBZ: 0005 , udp: 512
+;; QUESTION SECTION:
+;www.google.com.                        IN      A
+
+;; ANSWER SECTION:
+www.google.com.         5       IN      A       74.125.239.147
+www.google.com.         5       IN      A       74.125.239.144
+www.google.com.         5       IN      A       74.125.239.146
+www.google.com.         5       IN      A       74.125.239.145
+www.google.com.         5       IN      A       74.125.239.148
+
+;; Query time: 27 msec
+;; SERVER: 127.0.1.1#53(127.0.1.1)
+;; WHEN: Sun Feb 07 10:14:00 PST 2016
+;; MSG SIZE  rcvd: 123
+</pre>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 practice">
+                        <div class="exercise-content">
+                            <h3>Exercise</h3>
+<p>Read up on the manpage for dig.</p>
+
+                        </div>
+
+                        <div class="quiz-content">
+                            <h3>Quiz Question</h3>
+<p>What tool is used to get detailed information about DNS name servers? </p>
+<h3>Quiz Answer</h3>
+<p>dig</p>
+</div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

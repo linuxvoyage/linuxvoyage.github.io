@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>ping</title>
+    <script
+        src="../static/assets/category/application-8013fdc35e4c79f95bcb3d655ff61f137ac05bcee52e6d96588427a84eddef12.js.download"
+        data-turbolinks-track="true"></script>
+    <link rel="stylesheet" media="all"
+        href="../static/assets/category/application-b0b91461d093aa2ed95d8a7467856e4dc16f55744d3c17a927c3598e5b26cd3f.css"
+        data-turbolinks-track="true">
+</head>
+
+<body>
+    <div id="wrapper" class="active">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul id="sidebar_menu" class="sidebar-nav">
+                <li class="sidebar-brand"><a>Network Troubleshooting</a>
+                </li>
+            </ul>
+            <ul class="sidebar-nav" id="sidebar">
+                
+                <li>
+                    <a class="" href="icmp">
+                        1. Icmp</a>
+                </li>
+                
+                <li>
+                    <a class="current" href="ping">
+                        2. Ping</a>
+                </li>
+                
+                <li>
+                    <a class="" href="traceroute">
+                        3. Traceroute</a>
+                </li>
+                
+                <li>
+                    <a class="" href="netstat">
+                        4. Netstat</a>
+                </li>
+                
+                <li>
+                    <a class="" href="packet-analysis">
+                        5. Packet analysis</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- End of Sidebar -->
+
+
+        <div id="page-content-wrapper">
+            <!-- Keep all page content within the page-content inset div! -->
+            <div class="page-content inset">
+                <div class="row">
+                    <div class="col-md-6 lesson">
+
+                        <div class="user-app">
+                            <a class="btn btn-default btn-sm" href="../index.html">
+                                Home
+                            </a>
+                        </div>
+
+                        <div class="lesson-content">
+                            
+<h3>ping</h3>
+<p>One of the most simplest networking tools <b>ping</b>, it's used to test whether or not a packet can reach a host. It works by sending ICMP echo request (Type 8) packets to the destination host and waits for an ICMP echo reply (Type 0). Ping is successful when a host sends out the request packet and receives a response from the target. Let's look at an example: </p>
+<pre>
+pete@icebox:~$ ping -c 3 www.google.com
+PING www.google.com (74.125.239.112) 56(84) bytes of data.
+64 bytes from nuq05s01-in-f16.1e100.net (74.125.239.112): icmp_seq=1 ttl=128 time=29.0 ms
+64 bytes from nuq05s01-in-f16.1e100.net (74.125.239.112): icmp_seq=2 ttl=128 time=23.7 ms
+64 bytes from nuq05s01-in-f16.1e100.net (74.125.239.112): icmp_seq=3 ttl=128 time=15.1 ms
+</pre>
+<p>In this example, we are using ping to check if we can get to <a href="http://www.google.com">www.google.com</a>. The -c flag (count) is used to stop sending echo request packets after the count has been reached. </p>
+<p>The first part says that we are sending 64-byte packets to 74.125.239.112 (google.com) and the rest show us the details of the trip. By default it sends a packet per second.</p>
+<p><b>icmp_seq</b></p>
+<p>The icmp_seq field is used to show the sequence number of packets sent, so in this case, I sent out 3 packets and we can see that 3 packets made it back. If you do a ping and you get some sequence numbers missing, that means that some connectivity issue is happening and not all your packets are getting through. If the sequence number is out of order, your connection is probably very slow as your packets are exceeding the one second default. </p>
+<p><b>ttl</b></p>
+<p>The Time To Live (ttl) field is used as a hop counter, as you make hops, it decrements the counter by one and once the hop counter reaches 0, our packet dies. This is meant to give the packet a lifespan, we don't want our packets travelling around forever.</p>
+<p><b>time</b></p>
+<p>The roundtrip time it took from you sending the echo request packet to getting an echo reply. </p>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 practice">
+                        <div class="exercise-content">
+                            <h3>Exercise</h3>
+<p>Do a ping on a website and look at the output you receive.</p>
+
+                        </div>
+
+                        <div class="quiz-content">
+                            <h3>Quiz Question</h3>
+<p>What is the roundtrip time unit of measurement?</p>
+<h3>Quiz Answer</h3>
+<p>ms</p>
+</div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

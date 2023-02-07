@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>rsync</title>
+    <script
+        src="../static/assets/category/application-8013fdc35e4c79f95bcb3d655ff61f137ac05bcee52e6d96588427a84eddef12.js.download"
+        data-turbolinks-track="true"></script>
+    <link rel="stylesheet" media="all"
+        href="../static/assets/category/application-b0b91461d093aa2ed95d8a7467856e4dc16f55744d3c17a927c3598e5b26cd3f.css"
+        data-turbolinks-track="true">
+</head>
+
+<body>
+    <div id="wrapper" class="active">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul id="sidebar_menu" class="sidebar-nav">
+                <li class="sidebar-brand"><a>Network Sharing</a>
+                </li>
+            </ul>
+            <ul class="sidebar-nav" id="sidebar">
+                
+                <li>
+                    <a class="" href="network-file-sharing">
+                        1. Network file sharing</a>
+                </li>
+                
+                <li>
+                    <a class="current" href="rsync">
+                        2. Rsync</a>
+                </li>
+                
+                <li>
+                    <a class="" href="simple-http-server">
+                        3. Simple http server</a>
+                </li>
+                
+                <li>
+                    <a class="" href="nfs-network-file-share">
+                        4. Nfs network file share</a>
+                </li>
+                
+                <li>
+                    <a class="" href="samba">
+                        5. Samba</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- End of Sidebar -->
+
+
+        <div id="page-content-wrapper">
+            <!-- Keep all page content within the page-content inset div! -->
+            <div class="page-content inset">
+                <div class="row">
+                    <div class="col-md-6 lesson">
+
+                        <div class="user-app">
+                            <a class="btn btn-default btn-sm" href="../index.html">
+                                Home
+                            </a>
+                        </div>
+
+                        <div class="lesson-content">
+                            
+<h3>rsync</h3>
+<p>Another tool used to copy data from different hosts is rsync (short for remote synchronization). Rsync is very similar to scp, but it does have a major difference. Rsync uses a special algorithm that checks in advanced if there is already data that you are copying to and will only copy over the differences. For example, let's say that you were copying over a file and your network got interrupted, therefore your copy stopped midway. Instead of re-copying everything from the beginning, rsync will only copy over the parts that didn't get copied. </p>
+<p>It also verifies the integrity of a file you are copying over with checksums. These small optimizations allow greater file transfer flexibility and makes rsync ideal for directory synchronization remotely and locally, data backups, large data transfers and more.</p>
+<p>Some commonly-used rsync options:</p>
+<ul>
+<li>v - verbose output</li>
+<li>r - recursive into directories</li>
+<li>h - human readable output</li>
+<li>z - compressed for easier transfer, great for slow connections</li>
+</ul>
+<p><b>Copy/sync files on the same host</b></p>
+<pre>$ rsync -zvr /my/local/directory/one /my/local/directory/two</pre>
+<p><b>Copy/sync files to local host from a remote host</b></p>
+<pre>$ rsync /local/directory username@remotehost.com:/remote/directory</pre>
+<p><b>Copy/sync files to a remote host from a local host</b></p>
+<pre>$ rsync username@remotehost.com:/remote/directory /local/directory</pre>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 practice">
+                        <div class="exercise-content">
+                            <h3>Exercise</h3>
+<p>Use rsync to sync a directory to another directory, be sure not to overwrite an important directory!</p>
+
+                        </div>
+
+                        <div class="quiz-content">
+                            <h3>Quiz Question</h3>
+<p>What command would be useful for data backups?</p>
+<h3>Quiz Answer</h3>
+<p>rsync</p>
+</div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

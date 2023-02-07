@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>linux-history</title>
+    <script
+        src="../static/assets/category/application-8013fdc35e4c79f95bcb3d655ff61f137ac05bcee52e6d96588427a84eddef12.js.download"
+        data-turbolinks-track="true"></script>
+    <link rel="stylesheet" media="all"
+        href="../static/assets/category/application-b0b91461d093aa2ed95d8a7467856e4dc16f55744d3c17a927c3598e5b26cd3f.css"
+        data-turbolinks-track="true">
+</head>
+
+<body>
+    <div id="wrapper" class="active">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul id="sidebar_menu" class="sidebar-nav">
+                <li class="sidebar-brand"><a>Getting Started</a>
+                </li>
+            </ul>
+            <ul class="sidebar-nav" id="sidebar">
+                
+                <li>
+                    <a class="current" href="linux-history">
+                        1. Linux history</a>
+                </li>
+                
+                <li>
+                    <a class="" href="choosing-a-linux-distribution">
+                        2. Choosing a linux distribution</a>
+                </li>
+                
+                <li>
+                    <a class="" href="debian">
+                        3. Debian</a>
+                </li>
+                
+                <li>
+                    <a class="" href="red-hat-enterprise-linux">
+                        4. Red hat enterprise linux</a>
+                </li>
+                
+                <li>
+                    <a class="" href="ubuntu">
+                        5. Ubuntu</a>
+                </li>
+                
+                <li>
+                    <a class="" href="fedora">
+                        6. Fedora</a>
+                </li>
+                
+                <li>
+                    <a class="" href="linux-mint">
+                        7. Linux mint</a>
+                </li>
+                
+                <li>
+                    <a class="" href="gentoo">
+                        8. Gentoo</a>
+                </li>
+                
+                <li>
+                    <a class="" href="arch-linux">
+                        9. Arch linux</a>
+                </li>
+                
+                <li>
+                    <a class="" href="opensuse">
+                        10. Opensuse</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- End of Sidebar -->
+
+
+        <div id="page-content-wrapper">
+            <!-- Keep all page content within the page-content inset div! -->
+            <div class="page-content inset">
+                <div class="row">
+                    <div class="col-md-6 lesson">
+
+                        <div class="user-app">
+                            <a class="btn btn-default btn-sm" href="../index.html">
+                                Home
+                            </a>
+                        </div>
+
+                        <div class="lesson-content">
+                            
+<h3>History</h3>
+<p>Hey rookie! So you decided to dive into this wonderful world known as Linux? Well you better strap in, because it’s gonna be a long and hard road. My name is Penguin Pete and I’m here to guide you through this journey. Let’s get started with a little bit of backstory about Linux. </p>
+<p>To learn about how Linux came to be, let’s go back to the beginning to 1969 where Ken Thompson and Dennis Ritchie of Bell Laboratories developed the UNIX operating system. It was later rewritten in C to make it more portable and eventually became a widely used operating system. </p>
+<p>A decade or so later, Richard Stallman started working on the GNU (GNU is Not UNIX) project, the GNU kernel called Hurd, which unfortunately never came to completion. The GNU General Public License (GPL), a free software license, was also created as a result of this.</p>
+<p>The kernel is the most important piece in the operating system. It allows the hardware to talk to the software. It also does a whole lot of other things, but we’ll dig into that in a different course. For now, just know that the kernel controls pretty much everything that happens on your system. </p>
+<p>During this time other efforts such as BSD, MINIX, etc were developed to be UNIX like-systems. However, one thing that all these UNIX like-systems had in common was the lack of a unified kernel. </p>
+<p>Then in 1991, a young fellow named Linus Torvalds started developing what we now know today as the Linux kernel.</p>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 practice">
+                        <div class="exercise-content">
+                            <h3>Exercise</h3>
+<p>Additional reading:<br/>
+<li><a href="https://www.gnu.org/home.en.html">GNU</a></li><br/>
+<li><a href="https://en.wikipedia.org/wiki/Ken_Thompson">Ken Thompson</a></li><br/>
+<li><a href="https://stallman.org/">Richard Stallman</a></li><br/>
+<li><a href="https://en.wikipedia.org/wiki/Linus_Torvalds">Linus Torvalds</a></li></p>
+
+                        </div>
+
+                        <div class="quiz-content">
+                            <h3>Quiz Question</h3>
+<p>Who developed the Linux kernel? </p>
+<h3>Quiz Answer</h3>
+<p>Linus Torvalds</p>
+</div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

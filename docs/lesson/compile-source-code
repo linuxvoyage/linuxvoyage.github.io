@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>compile-source-code</title>
+    <script
+        src="../static/assets/category/application-8013fdc35e4c79f95bcb3d655ff61f137ac05bcee52e6d96588427a84eddef12.js.download"
+        data-turbolinks-track="true"></script>
+    <link rel="stylesheet" media="all"
+        href="../static/assets/category/application-b0b91461d093aa2ed95d8a7467856e4dc16f55744d3c17a927c3598e5b26cd3f.css"
+        data-turbolinks-track="true">
+</head>
+
+<body>
+    <div id="wrapper" class="active">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul id="sidebar_menu" class="sidebar-nav">
+                <li class="sidebar-brand"><a>Packages</a>
+                </li>
+            </ul>
+            <ul class="sidebar-nav" id="sidebar">
+                
+                <li>
+                    <a class="" href="software-distribution">
+                        1. Software distribution</a>
+                </li>
+                
+                <li>
+                    <a class="" href="package-repositories">
+                        2. Package repositories</a>
+                </li>
+                
+                <li>
+                    <a class="" href="compressed-archives-tar">
+                        3. Compressed archives tar</a>
+                </li>
+                
+                <li>
+                    <a class="" href="package-dependencies">
+                        4. Package dependencies</a>
+                </li>
+                
+                <li>
+                    <a class="" href="package-install-tools">
+                        5. Package install tools</a>
+                </li>
+                
+                <li>
+                    <a class="" href="package-management-systems">
+                        6. Package management systems</a>
+                </li>
+                
+                <li>
+                    <a class="current" href="compile-source-code">
+                        7. Compile source code</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- End of Sidebar -->
+
+
+        <div id="page-content-wrapper">
+            <!-- Keep all page content within the page-content inset div! -->
+            <div class="page-content inset">
+                <div class="row">
+                    <div class="col-md-6 lesson">
+
+                        <div class="user-app">
+                            <a class="btn btn-default btn-sm" href="../index.html">
+                                Home
+                            </a>
+                        </div>
+
+                        <div class="lesson-content">
+                            
+<h3>Compile Source Code</h3>
+<p>Often times you will encounter an obscure package that only comes in the form of pure source code. You'll need to use a few commands to get that source code package compiled and installed on your system. </p>
+<p>First thing is first, you'll need to have software to install the tools that will allow you to compile source code. </p>
+<pre>$ sudo apt install build-essential</pre>
+<p>Once you do that, extract the contents of the package file, most likely a .tar.gz file. </p>
+<pre>$ tar -xzvf package.tar.gz</pre>
+<p>Before you do anything, take a look at the README or INSTALL file inside the package. Sometimes there will be specific installation instructions. </p>
+<p>Depending on what compile method that the developer used, you'll have to use different commands, such as cmake or something else.</p>
+<p>However, most commonly you'll see basic make compilation, so we'll discuss that:</p>
+<p>Inside the package contents will be a configure script, this script checks for dependencies on your system and if you are missing anything, you'll see an error and you'll need to fix those dependencies. </p>
+<pre>$ ./configure</pre>
+<p>The <b>./</b> allows you to execute a script in the current directory. </p>
+<pre>$ make</pre>
+<p>Inside of the package contents, there is a file called Makefile that contains rules to building the software. When you run the make command, it looks at this file to build the software.</p>
+<pre>$ sudo make install</pre>
+<p>This command actually installs the package, it will copy the correct files to the correct locations on your computer.</p>
+<p>If you want to uninstall the package, use:</p>
+<pre>$ sudo make uninstall</pre>
+<p>Be wary when using make install, you may not realize how much is actually going on in the background. If you decide to remove this package, you may not actually remove everything because you didn't realize what was added to your system. Instead forget everything about make install that I just explained to you and use the <b>checkinstall</b> command. This command will make a .deb file for you that you can easily install and uninstall. </p>
+<pre>$ sudo checkinstall</pre>
+<p>This command will essentially "make install" and build a .deb package and install it. This makes it easier to remove the package later on.</p>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 practice">
+                        <div class="exercise-content">
+                            <h3>Exercise</h3>
+<p>Find a source code program (from a trusted site) and install from source.</p>
+
+                        </div>
+
+                        <div class="quiz-content">
+                            <h3>Quiz Question</h3>
+<p>What should you use instead of make install ALWAYS? </p>
+<h3>Quiz Answer</h3>
+<p>checkinstall</p>
+</div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

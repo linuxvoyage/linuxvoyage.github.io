@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>kernel-installation</title>
+    <script
+        src="../static/assets/category/application-8013fdc35e4c79f95bcb3d655ff61f137ac05bcee52e6d96588427a84eddef12.js.download"
+        data-turbolinks-track="true"></script>
+    <link rel="stylesheet" media="all"
+        href="../static/assets/category/application-b0b91461d093aa2ed95d8a7467856e4dc16f55744d3c17a927c3598e5b26cd3f.css"
+        data-turbolinks-track="true">
+</head>
+
+<body>
+    <div id="wrapper" class="active">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul id="sidebar_menu" class="sidebar-nav">
+                <li class="sidebar-brand"><a>Kernel</a>
+                </li>
+            </ul>
+            <ul class="sidebar-nav" id="sidebar">
+                
+                <li>
+                    <a class="" href="kernel-overview">
+                        1. Kernel overview</a>
+                </li>
+                
+                <li>
+                    <a class="" href="kernel-privilege-levels">
+                        2. Kernel privilege levels</a>
+                </li>
+                
+                <li>
+                    <a class="" href="system-calls">
+                        3. System calls</a>
+                </li>
+                
+                <li>
+                    <a class="current" href="kernel-installation">
+                        4. Kernel installation</a>
+                </li>
+                
+                <li>
+                    <a class="" href="kernel-location">
+                        5. Kernel location</a>
+                </li>
+                
+                <li>
+                    <a class="" href="kernel-modules">
+                        6. Kernel modules</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- End of Sidebar -->
+
+
+        <div id="page-content-wrapper">
+            <!-- Keep all page content within the page-content inset div! -->
+            <div class="page-content inset">
+                <div class="row">
+                    <div class="col-md-6 lesson">
+
+                        <div class="user-app">
+                            <a class="btn btn-default btn-sm" href="../index.html">
+                                Home
+                            </a>
+                        </div>
+
+                        <div class="lesson-content">
+                            
+<h3>Kernel Installation</h3>
+<p>Ok, now that we've got all that boring stuff out of the way, let's talk about actually installing and modifying kernels. You can install multiple kernels on your system, remember in our lesson on the boot process? In our GRUB menu we can choose which kernel to boot to. </p>
+<p>To see what kernel version you have on your system, use the following command:</p>
+<pre>$ uname -r
+3.19.0-43-generic</pre>
+<p>The uname command prints system information, the -r command will print out all of the kernel release version.</p>
+<p>You can install the Linux kernel in different ways, you can download the source package and compile from source or you can install it using package management tools.</p>
+<pre>$ sudo apt install linux-generic-lts-vivid</pre>
+<p>and then just reboot into the kernel you installed. Simple right? Kind of, you'll need to also install other linux packages such as the linux-headers, linux-image-generic, etc). You can also specify the version number, so the above command can look like, <b>sudo apt install 3.19.0-43-generic</b></p>
+<p>Alternatively, if you just want the updated kernel version, just use dist-upgrade, it performs upgrades to all package on your system:</p>
+<pre>$ sudo apt dist-upgrade</pre>
+<p>There are many different kernel versions, some are used as LTS (long term support), some are the latest and greatest, the compatibility may be very different between kernel versions so you may want to try out different kernels.</p>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 practice">
+                        <div class="exercise-content">
+                            <h3>Exercise</h3>
+<ol>
+<li>Find out what kernel version you have.</li>
+<li>Research the different versions of kernels available</li>
+</ol>
+
+                        </div>
+
+                        <div class="quiz-content">
+                            <h3>Quiz Question</h3>
+<p>How do you see the kernel version of your system?</p>
+<h3>Quiz Answer</h3>
+<p>uname -r</p>
+</div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

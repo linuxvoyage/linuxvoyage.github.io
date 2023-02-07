@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>change-directory-cd-command</title>
+    <script
+        src="../static/assets/category/application-8013fdc35e4c79f95bcb3d655ff61f137ac05bcee52e6d96588427a84eddef12.js.download"
+        data-turbolinks-track="true"></script>
+    <link rel="stylesheet" media="all"
+        href="../static/assets/category/application-b0b91461d093aa2ed95d8a7467856e4dc16f55744d3c17a927c3598e5b26cd3f.css"
+        data-turbolinks-track="true">
+</head>
+
+<body>
+    <div id="wrapper" class="active">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul id="sidebar_menu" class="sidebar-nav">
+                <li class="sidebar-brand"><a>Command Line</a>
+                </li>
+            </ul>
+            <ul class="sidebar-nav" id="sidebar">
+                
+                <li>
+                    <a class="" href="the-shell">
+                        1. The shell</a>
+                </li>
+                
+                <li>
+                    <a class="" href="print-working-directory-pwd-command">
+                        2. Print working directory pwd command</a>
+                </li>
+                
+                <li>
+                    <a class="current" href="change-directory-cd-command">
+                        3. Change directory cd command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="list-directories-ls-command">
+                        4. List directories ls command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="touch-command">
+                        5. Touch command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="file-command">
+                        6. File command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="cat-command">
+                        7. Cat command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="less-command">
+                        8. Less command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="history-command">
+                        9. History command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="copy-cp-command">
+                        10. Copy cp command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="move-mv-command">
+                        11. Move mv command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="make-directory-mkdir-command">
+                        12. Make directory mkdir command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="remove-rm-command">
+                        13. Remove rm command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="find-command">
+                        14. Find command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="help-command">
+                        15. Help command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="man-command">
+                        16. Man command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="whatis-command">
+                        17. Whatis command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="alias-command">
+                        18. Alias command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="exit-command">
+                        19. Exit command</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- End of Sidebar -->
+
+
+        <div id="page-content-wrapper">
+            <!-- Keep all page content within the page-content inset div! -->
+            <div class="page-content inset">
+                <div class="row">
+                    <div class="col-md-6 lesson">
+
+                        <div class="user-app">
+                            <a class="btn btn-default btn-sm" href="../index.html">
+                                Home
+                            </a>
+                        </div>
+
+                        <div class="lesson-content">
+                            
+<h3>cd (Change Directory)</h3>
+<p>Now that you know where you are, let’s see if we can move around the filesystem a bit. Remember we’ll need to navigate our way using paths. There are two different ways to specify a path, with absolute and relative paths. </p>
+<ul>
+<li>Absolute path: This is the path from the root directory. The root is the head honcho. The root directory is commonly shown as a slash. Every time your path starts with / it means you are starting from the root directory. For example, /home/pete/Desktop.</li>
+<li>Relative path: This is the path from where you are currently in filesystem. If I was in location /home/pete/Documents and wanted to get to a directory inside Documents called taxes, I don’t have to specify the whole path from root like /home/pete/Documents/taxes, I can just go to taxes/ instead.</li>
+</ul>
+<p>Now that you know how paths work, we just need something to help us change to the directory we want to. Luckily, we have cd or “change directory” to do that. </p>
+<pre>$ cd /home/pete/Pictures</pre>
+<p>So now I've changed my directory location to /home/pete/Pictures.</p>
+<p>Now from this directory I have a folder inside called Hawaii, I can navigate to that folder with:</p>
+<pre>$ cd Hawaii</pre>
+<p>Notice how I just used the name of the folder? It’s because I was already in /home/pete/Pictures.</p>
+<p>It can get pretty tiring navigating with absolute and relative paths all the time, luckily there are some shortcuts to help you out. </p>
+<ul>
+<li>. (current directory). This is the directory you are currently in. </li>
+<li>.. (previous directory). Takes you to the directory above your current.</li>
+<li>~ (home directory). This directory defaults to your “home directory”. Such as /home/pete.</li>
+<li>- (previous directory). This will take you to the previous directory you were just at.</li>
+</ul>
+<pre>$ cd .
+$ cd ..
+$ cd ~
+$ cd -
+</pre>
+<p>Give them a try!</p>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 practice">
+                        <div class="exercise-content">
+                            <h3>Exercise</h3>
+<ol>
+<li>Run the cd command without any flags, where does it take you?</li>
+</ol>
+
+                        </div>
+
+                        <div class="quiz-content">
+                            <h3>Quiz Question</h3>
+<p>If you are in /home/pete/Pictures and wanted to go to /home/pete, what’s a good shortcut to use?</p>
+<h3>Quiz Answer</h3>
+<p>cd ..</p>
+</div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

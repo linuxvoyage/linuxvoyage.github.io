@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>move-mv-command</title>
+    <script
+        src="../static/assets/category/application-8013fdc35e4c79f95bcb3d655ff61f137ac05bcee52e6d96588427a84eddef12.js.download"
+        data-turbolinks-track="true"></script>
+    <link rel="stylesheet" media="all"
+        href="../static/assets/category/application-b0b91461d093aa2ed95d8a7467856e4dc16f55744d3c17a927c3598e5b26cd3f.css"
+        data-turbolinks-track="true">
+</head>
+
+<body>
+    <div id="wrapper" class="active">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul id="sidebar_menu" class="sidebar-nav">
+                <li class="sidebar-brand"><a>Command Line</a>
+                </li>
+            </ul>
+            <ul class="sidebar-nav" id="sidebar">
+                
+                <li>
+                    <a class="" href="the-shell">
+                        1. The shell</a>
+                </li>
+                
+                <li>
+                    <a class="" href="print-working-directory-pwd-command">
+                        2. Print working directory pwd command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="change-directory-cd-command">
+                        3. Change directory cd command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="list-directories-ls-command">
+                        4. List directories ls command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="touch-command">
+                        5. Touch command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="file-command">
+                        6. File command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="cat-command">
+                        7. Cat command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="less-command">
+                        8. Less command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="history-command">
+                        9. History command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="copy-cp-command">
+                        10. Copy cp command</a>
+                </li>
+                
+                <li>
+                    <a class="current" href="move-mv-command">
+                        11. Move mv command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="make-directory-mkdir-command">
+                        12. Make directory mkdir command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="remove-rm-command">
+                        13. Remove rm command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="find-command">
+                        14. Find command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="help-command">
+                        15. Help command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="man-command">
+                        16. Man command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="whatis-command">
+                        17. Whatis command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="alias-command">
+                        18. Alias command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="exit-command">
+                        19. Exit command</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- End of Sidebar -->
+
+
+        <div id="page-content-wrapper">
+            <!-- Keep all page content within the page-content inset div! -->
+            <div class="page-content inset">
+                <div class="row">
+                    <div class="col-md-6 lesson">
+
+                        <div class="user-app">
+                            <a class="btn btn-default btn-sm" href="../index.html">
+                                Home
+                            </a>
+                        </div>
+
+                        <div class="lesson-content">
+                            
+<h3>mv (Move)</h3>
+<p>Used for moving files and also renaming them. Quite similar to the cp command in terms of flags and functionality. </p>
+<p>You can rename files like this:</p>
+<pre>$ mv oldfile newfile</pre>
+<p>Or you can actually move a file to a different directory: </p>
+<pre>$ mv file2 /home/pete/Documents</pre>
+<p>And move more than one file:</p>
+<pre>$ mv file_1 file_2 /somedirectory</pre>
+<p>You can rename directories as well:</p>
+<pre>$ mv directory1 directory2</pre>
+<p>Like cp, if you mv a file or directory it will overwrite anything in the same directory. So you can use the -i flag to prompt you before overwriting anything.</p>
+<pre>mv -i directory1 directory2</pre>
+<p>Let’s say you did want to mv a file to overwrite the previous one. You can also make a backup of that file and it will just rename the old version with a ~. </p>
+<pre>$ mv -b directory1 directory2</pre>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 practice">
+                        <div class="exercise-content">
+                            <h3>Exercise</h3>
+<p>Rename a file, then move that file to a different directory.</p>
+
+                        </div>
+
+                        <div class="quiz-content">
+                            <h3>Quiz Question</h3>
+<p>How do you rename a file called cat to dog?</p>
+<h3>Quiz Answer</h3>
+<p>mv cat dog</p>
+</div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

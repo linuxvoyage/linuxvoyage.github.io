@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>red-hat-enterprise-linux</title>
+    <script
+        src="../static/assets/category/application-8013fdc35e4c79f95bcb3d655ff61f137ac05bcee52e6d96588427a84eddef12.js.download"
+        data-turbolinks-track="true"></script>
+    <link rel="stylesheet" media="all"
+        href="../static/assets/category/application-b0b91461d093aa2ed95d8a7467856e4dc16f55744d3c17a927c3598e5b26cd3f.css"
+        data-turbolinks-track="true">
+</head>
+
+<body>
+    <div id="wrapper" class="active">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul id="sidebar_menu" class="sidebar-nav">
+                <li class="sidebar-brand"><a>Getting Started</a>
+                </li>
+            </ul>
+            <ul class="sidebar-nav" id="sidebar">
+                
+                <li>
+                    <a class="" href="linux-history">
+                        1. Linux history</a>
+                </li>
+                
+                <li>
+                    <a class="" href="choosing-a-linux-distribution">
+                        2. Choosing a linux distribution</a>
+                </li>
+                
+                <li>
+                    <a class="" href="debian">
+                        3. Debian</a>
+                </li>
+                
+                <li>
+                    <a class="current" href="red-hat-enterprise-linux">
+                        4. Red hat enterprise linux</a>
+                </li>
+                
+                <li>
+                    <a class="" href="ubuntu">
+                        5. Ubuntu</a>
+                </li>
+                
+                <li>
+                    <a class="" href="fedora">
+                        6. Fedora</a>
+                </li>
+                
+                <li>
+                    <a class="" href="linux-mint">
+                        7. Linux mint</a>
+                </li>
+                
+                <li>
+                    <a class="" href="gentoo">
+                        8. Gentoo</a>
+                </li>
+                
+                <li>
+                    <a class="" href="arch-linux">
+                        9. Arch linux</a>
+                </li>
+                
+                <li>
+                    <a class="" href="opensuse">
+                        10. Opensuse</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- End of Sidebar -->
+
+
+        <div id="page-content-wrapper">
+            <!-- Keep all page content within the page-content inset div! -->
+            <div class="page-content inset">
+                <div class="row">
+                    <div class="col-md-6 lesson">
+
+                        <div class="user-app">
+                            <a class="btn btn-default btn-sm" href="../index.html">
+                                Home
+                            </a>
+                        </div>
+
+                        <div class="lesson-content">
+                            
+<h3>Red Hat Enterprise Linux</h3>
+<p><b>Overview</b><br/>
+Red Hat Enterprise Linux commonly referred to as RHEL is developed by Red Hat. RHEL has strict rules to restrict free re-distribution although it still provides source code for free.</p>
+<p><b>Package Management</b><br/>
+RHEL uses a different package manager than Debian, RPM package manager, which we will eventually learn about as well.</p>
+<p><b>Configurability</b><br/>
+RHEL-based operating systems will differ slightly from the Debian-based operating systems, most noticeably in package management. If you decide to go with RHEL it’s probably best if you know you’ll be working with it.</p>
+<p><b>Uses</b><br/>
+As described by the name it's mostly used in enterprise, so if you need a solid server OS this would be a good one.</p>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 practice">
+                        <div class="exercise-content">
+                            <h3>Exercise</h3>
+<p>If you're interested in having RHEL as your operating system, head over to the installation section and give it a try: <a href="http://www.redhat.com/en/technologies/linux-platforms/enterprise-linux/"><a href="https://www.redhat.com/rhel/&lt;/a&gt;">https://www.redhat.com/rhel/</a></a></p>
+
+                        </div>
+
+                        <div class="quiz-content">
+                            <h3>Quiz Questions</h3>
+<p>What package manager does RHEL use?</p>
+<h3>Quiz Answer</h3>
+<p>RPM</p>
+</div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

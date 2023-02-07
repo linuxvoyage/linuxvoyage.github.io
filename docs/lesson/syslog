@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>syslog</title>
+    <script
+        src="../static/assets/category/application-8013fdc35e4c79f95bcb3d655ff61f137ac05bcee52e6d96588427a84eddef12.js.download"
+        data-turbolinks-track="true"></script>
+    <link rel="stylesheet" media="all"
+        href="../static/assets/category/application-b0b91461d093aa2ed95d8a7467856e4dc16f55744d3c17a927c3598e5b26cd3f.css"
+        data-turbolinks-track="true">
+</head>
+
+<body>
+    <div id="wrapper" class="active">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul id="sidebar_menu" class="sidebar-nav">
+                <li class="sidebar-brand"><a>Logging</a>
+                </li>
+            </ul>
+            <ul class="sidebar-nav" id="sidebar">
+                
+                <li>
+                    <a class="" href="system-logging">
+                        1. System logging</a>
+                </li>
+                
+                <li>
+                    <a class="current" href="syslog">
+                        2. Syslog</a>
+                </li>
+                
+                <li>
+                    <a class="" href="general-logging">
+                        3. General logging</a>
+                </li>
+                
+                <li>
+                    <a class="" href="kernel-logging">
+                        4. Kernel logging</a>
+                </li>
+                
+                <li>
+                    <a class="" href="authentication-logging">
+                        5. Authentication logging</a>
+                </li>
+                
+                <li>
+                    <a class="" href="managing-log-files">
+                        6. Managing log files</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- End of Sidebar -->
+
+
+        <div id="page-content-wrapper">
+            <!-- Keep all page content within the page-content inset div! -->
+            <div class="page-content inset">
+                <div class="row">
+                    <div class="col-md-6 lesson">
+
+                        <div class="user-app">
+                            <a class="btn btn-default btn-sm" href="../index.html">
+                                Home
+                            </a>
+                        </div>
+
+                        <div class="lesson-content">
+                            
+<h3>syslog</h3>
+<p>The syslog service manages and sends logs to the system logger. Rsyslog is an advanced version of syslog, most Linux distributions should be using this new version. The output of all the logs the syslog service collects can be found at /var/log/syslog (every message except auth messages).</p>
+<p>To find out what files are maintained by our system logger, look at the configuration files in /etc/rsyslog.d:</p>
+<pre>
+pete@icebox:~$ less /etc/rsyslog.d/50-default.conf 
+# First some standard log files.  Log by facility.
+#
+auth,authpriv.*                 /var/log/auth.log
+*.*;auth,authpriv.none          -/var/log/syslog
+#cron.*                         /var/log/cron.log
+#daemon.*                       -/var/log/daemon.log
+kern.*                          -/var/log/kern.log
+#lpr.*                          -/var/log/lpr.log
+mail.*                          -/var/log/mail.log
+#user.*                         -/var/log/user.log
+</pre>
+<p>These rules to log files are denoted by the selector on the left column and the action on the right column. The action tells us where to send the log information, in a file, console, etc. Remember not every application and service uses rsyslog to manage their logs, so if you want to know specifically what is logged you'll have to look inside this directory.</p>
+<p>Let's actually see logging in action, you can manually send a log with the logger command:</p>
+<pre>
+logger -s Hello
+</pre>
+<p>Now look inside your /var/log/syslog and you should see this entry in your logs!</p>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 practice">
+                        <div class="exercise-content">
+                            <h3>Exercise</h3>
+<p>Look at your /etc/rsyslog.d configuration file and see what else is being logged via the system logger.</p>
+
+                        </div>
+
+                        <div class="quiz-content">
+                            <h3>Quiz Question</h3>
+<p>What command can you use to manually log a message?</p>
+<h3>Quiz Answer</h3>
+<p>logger</p>
+</div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

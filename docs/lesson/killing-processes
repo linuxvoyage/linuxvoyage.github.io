@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>killing-processes</title>
+    <script
+        src="../static/assets/category/application-8013fdc35e4c79f95bcb3d655ff61f137ac05bcee52e6d96588427a84eddef12.js.download"
+        data-turbolinks-track="true"></script>
+    <link rel="stylesheet" media="all"
+        href="../static/assets/category/application-b0b91461d093aa2ed95d8a7467856e4dc16f55744d3c17a927c3598e5b26cd3f.css"
+        data-turbolinks-track="true">
+</head>
+
+<body>
+    <div id="wrapper" class="active">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul id="sidebar_menu" class="sidebar-nav">
+                <li class="sidebar-brand"><a>Processes</a>
+                </li>
+            </ul>
+            <ul class="sidebar-nav" id="sidebar">
+                
+                <li>
+                    <a class="" href="monitor-processes-ps-command">
+                        1. Monitor processes ps command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="controlling-terminal">
+                        2. Controlling terminal</a>
+                </li>
+                
+                <li>
+                    <a class="" href="process-details">
+                        3. Process details</a>
+                </li>
+                
+                <li>
+                    <a class="" href="process-creation">
+                        4. Process creation</a>
+                </li>
+                
+                <li>
+                    <a class="" href="process-termination">
+                        5. Process termination</a>
+                </li>
+                
+                <li>
+                    <a class="" href="process-signals">
+                        6. Process signals</a>
+                </li>
+                
+                <li>
+                    <a class="current" href="killing-processes">
+                        7. Killing processes</a>
+                </li>
+                
+                <li>
+                    <a class="" href="process-niceness">
+                        8. Process niceness</a>
+                </li>
+                
+                <li>
+                    <a class="" href="process-states">
+                        9. Process states</a>
+                </li>
+                
+                <li>
+                    <a class="" href="proc-filesystem">
+                        10. Proc filesystem</a>
+                </li>
+                
+                <li>
+                    <a class="" href="job-control">
+                        11. Job control</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- End of Sidebar -->
+
+
+        <div id="page-content-wrapper">
+            <!-- Keep all page content within the page-content inset div! -->
+            <div class="page-content inset">
+                <div class="row">
+                    <div class="col-md-6 lesson">
+
+                        <div class="user-app">
+                            <a class="btn btn-default btn-sm" href="../index.html">
+                                Home
+                            </a>
+                        </div>
+
+                        <div class="lesson-content">
+                            
+<h3>kill (Terminate)</h3>
+<p>You can send signals that terminate processes, such a command is aptly named the kill command. </p>
+<pre>$ kill 12445</pre>
+<p>The 12445 is the PID of the process you want to kill. By default it sends a TERM signal. The SIGTERM signal is sent to a process to request its termination by allowing it to cleanly release its resources and saving its state. </p>
+<p>You can also specify a signal with the kill command: </p>
+<pre>$ kill -9 12445</pre>
+<p>This will run the SIGKILL signal and kill the process. </p>
+<p><b>Differences between SIGHUP, SIGINT, SIGTERM, SIGKILL, SIGSTOP?</b></p>
+<p>These signals all sound reasonably similar, but they do have their differences. </p>
+<ul>
+<li>SIGHUP - Hangup, sent to a process when the controlling terminal is closed. For example, if you closed a terminal window that had a process running in it, you would get a SIGHUP signal. So basically you've been hung up on</li>
+<li>SIGINT - Is an interrupt signal, so you can use Ctrl-C and the system will try to gracefully kill the process</li>
+<li>SIGTERM - Kill the process, but allow it to do some cleanup first</li>
+<li>SIGKILL - Kill the process, kill it with fire, doesn't do any cleanup</li>
+<li>SIGSTOP - Stop/suspend a process</li>
+</ul>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 practice">
+                        <div class="exercise-content">
+                            <h3>Exercise</h3>
+<p>Kill some processes using different signals.</p>
+
+                        </div>
+
+                        <div class="quiz-content">
+                            <h3>Quiz Question</h3>
+<p>What is the signal name for the default kill command?</p>
+<h3>Quiz Answer</h3>
+<p>SIGTERM</p>
+</div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>subnetting-cheats</title>
+    <script
+        src="../static/assets/category/application-8013fdc35e4c79f95bcb3d655ff61f137ac05bcee52e6d96588427a84eddef12.js.download"
+        data-turbolinks-track="true"></script>
+    <link rel="stylesheet" media="all"
+        href="../static/assets/category/application-b0b91461d093aa2ed95d8a7467856e4dc16f55744d3c17a927c3598e5b26cd3f.css"
+        data-turbolinks-track="true">
+</head>
+
+<body>
+    <div id="wrapper" class="active">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul id="sidebar_menu" class="sidebar-nav">
+                <li class="sidebar-brand"><a>Subnetting</a>
+                </li>
+            </ul>
+            <ul class="sidebar-nav" id="sidebar">
+                
+                <li>
+                    <a class="" href="ipv4">
+                        1. Ipv4</a>
+                </li>
+                
+                <li>
+                    <a class="" href="subnets">
+                        2. Subnets</a>
+                </li>
+                
+                <li>
+                    <a class="" href="subnet-math">
+                        3. Subnet math</a>
+                </li>
+                
+                <li>
+                    <a class="current" href="subnetting-cheats">
+                        4. Subnetting cheats</a>
+                </li>
+                
+                <li>
+                    <a class="" href="classless-interdomain-routing-cidr">
+                        5. Classless interdomain routing cidr</a>
+                </li>
+                
+                <li>
+                    <a class="" href="nat-network-address-translation">
+                        6. Nat network address translation</a>
+                </li>
+                
+                <li>
+                    <a class="" href="ipv6">
+                        7. Ipv6</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- End of Sidebar -->
+
+
+        <div id="page-content-wrapper">
+            <!-- Keep all page content within the page-content inset div! -->
+            <div class="page-content inset">
+                <div class="row">
+                    <div class="col-md-6 lesson">
+
+                        <div class="user-app">
+                            <a class="btn btn-default btn-sm" href="../index.html">
+                                Home
+                            </a>
+                        </div>
+
+                        <div class="lesson-content">
+                            
+<h3>Subnetting Cheats</h3>
+<p>I hate to have to add this section, in the real world you would most likely never have to do subnet math by hand, however if you were getting interviewed on this, you'll have to know how to convert to and from binary form for subnetting. Luckily there are some arithmetic cheats you can memorize. </p>
+<p>First memorize your base-2 calculations, just do it:</p>
+<ul>
+<li>2^1 = 2</li>
+<li>2^2 = 4</li>
+<li>2^3 = 8</li>
+<li>2^4 = 16</li>
+<li>2^5 = 32</li>
+<li>2^6 = 64</li>
+<li>2^7 = 128</li>
+<li>2^8 = 256</li>
+<li>2^9 = 512</li>
+<li>2^10 = 1024</li>
+<li>2^11 = 2048</li>
+<li>2^12 = 4096</li>
+</ul>
+<p><b>Decimal to Binary Chart</b></p>
+<pre>
+1   1  1  1  1 1 1 1
+128 64 32 16 8 4 2 1
+</pre>
+<p>There are lots of reasons why the following chart looks the way it does, if you're curious how it works there are lots of resources online.</p>
+<p>Ok, got these memorized? Let's do a quick decimal to binary conversion:</p>
+<p><b>Convert 192.168.23.43 to Binary</b></p>
+<p>Remember: 128 / 64 / 32 / 16 / 8 / 4 / 2 / 1</p>
+<p>Let's walk through converting the first octet to binary and you'll understand how the rest works.</p>
+<ol>
+<li>Can you subtract 192 - 128? Yes, so the first bit is 1</li>
+<li>192 - 128 = 64, the next number in the chart is 64, can you subtract 64 - 64? Yes, so the second bit is 1</li>
+<li>We've run out of numbers to subtract from, so our binary form of 192 is 11000000</li>
+</ol>
+<p><b>Convert Binary 11000000 to Decimal</b></p>
+<p>For binary to decimal conversion you add up the numbers that have a 1, so:</p>
+<p>128 + 64 + 0 + 0 + 0 + 0 + 0 + 0 = 192!</p>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 practice">
+                        <div class="exercise-content">
+                            <h3>Exercise</h3>
+<p>Look at your IP address and subnet mask and see how many hosts you can have on your subnet.</p>
+
+                        </div>
+
+                        <div class="quiz-content">
+                            <h3>Quiz Question</h3>
+<p>What is the binary conversion of 123?</p>
+<h3>Quiz Answer</h3>
+<p>1111011</p>
+</div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

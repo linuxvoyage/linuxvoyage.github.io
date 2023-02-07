@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>routing-table</title>
+    <script
+        src="../static/assets/category/application-8013fdc35e4c79f95bcb3d655ff61f137ac05bcee52e6d96588427a84eddef12.js.download"
+        data-turbolinks-track="true"></script>
+    <link rel="stylesheet" media="all"
+        href="../static/assets/category/application-b0b91461d093aa2ed95d8a7467856e4dc16f55744d3c17a927c3598e5b26cd3f.css"
+        data-turbolinks-track="true">
+</head>
+
+<body>
+    <div id="wrapper" class="active">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul id="sidebar_menu" class="sidebar-nav">
+                <li class="sidebar-brand"><a>Routing</a>
+                </li>
+            </ul>
+            <ul class="sidebar-nav" id="sidebar">
+                
+                <li>
+                    <a class="" href="what-is-a-router">
+                        1. What is a router</a>
+                </li>
+                
+                <li>
+                    <a class="current" href="routing-table">
+                        2. Routing table</a>
+                </li>
+                
+                <li>
+                    <a class="" href="path-of-a-packet">
+                        3. Path of a packet</a>
+                </li>
+                
+                <li>
+                    <a class="" href="routing-protocols">
+                        4. Routing protocols</a>
+                </li>
+                
+                <li>
+                    <a class="" href="distance-vector-protocols">
+                        5. Distance vector protocols</a>
+                </li>
+                
+                <li>
+                    <a class="" href="link-state-protocols">
+                        6. Link state protocols</a>
+                </li>
+                
+                <li>
+                    <a class="" href="bgp-border-gateway-protocol">
+                        7. Bgp border gateway protocol</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- End of Sidebar -->
+
+
+        <div id="page-content-wrapper">
+            <!-- Keep all page content within the page-content inset div! -->
+            <div class="page-content inset">
+                <div class="row">
+                    <div class="col-md-6 lesson">
+
+                        <div class="user-app">
+                            <a class="btn btn-default btn-sm" href="../index.html">
+                                Home
+                            </a>
+                        </div>
+
+                        <div class="lesson-content">
+                            
+<h3>Routing Table</h3>
+<p>Look at your machine's routing table:</p>
+<pre>
+pete@icebox:~$ sudo route -n
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+0.0.0.0         192.168.224.2   0.0.0.0         UG    0      0        0 eth0
+192.168.224.0   0.0.0.0         255.255.255.0   U     1      0        0 eth0
+</pre>
+<p><b>Destination</b></p>
+<p>In the first field, we have a destination IP address of 192.168.224.0, this says that any packet that tries to go to this network, goes out through my Ethernet cable (eth0). If I was 192.168.224.5 and wanted to get to 192.168.224.7, I would just use the network interface eth0 directly. </p>
+<p>Notice that we have addresses of <b>0.0.0.0</b> this means that no address is specified or it's unknown. So if for example, I wanted to send a packet to IP address 151.123.43.6, our routing table doesn't know where that goes, so it denotes it as 0.0.0.0 and therefore routes our packet to the Gateway.</p>
+<p><b>Gateway</b></p>
+<p>If we are sending a packet that is not on the same network, it will be sent to this Gateway address. Which is aptly named as being a Gateway to another network.</p>
+<p><b>Genmask</b></p>
+<p>This is the subnet mask, used to figure out what IP addresses match what destination. </p>
+<p><b>Flags</b></p>
+<ul>
+<li>UG - Network is Up and is a Gateway</li>
+<li>U - Network is Up</li>
+</ul>
+<p><b>Iface</b></p>
+<p>This is the interface that our packet will be going out of, eth0 usually stands for the first Ethernet device on your system. </p>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 practice">
+                        <div class="exercise-content">
+                            <h3>Exercise</h3>
+<p>Look at your routing table and see where your packets can go.</p>
+
+                        </div>
+
+                        <div class="quiz-content">
+                            <h3>Quiz Question</h3>
+<p>Where are packets routed to if our routing table doesn't know?</p>
+<h3>Quiz Answer</h3>
+<p>Gateway</p>
+</div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>head-command</title>
+    <script
+        src="../static/assets/category/application-8013fdc35e4c79f95bcb3d655ff61f137ac05bcee52e6d96588427a84eddef12.js.download"
+        data-turbolinks-track="true"></script>
+    <link rel="stylesheet" media="all"
+        href="../static/assets/category/application-b0b91461d093aa2ed95d8a7467856e4dc16f55744d3c17a927c3598e5b26cd3f.css"
+        data-turbolinks-track="true">
+</head>
+
+<body>
+    <div id="wrapper" class="active">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul id="sidebar_menu" class="sidebar-nav">
+                <li class="sidebar-brand"><a>Text Fu</a>
+                </li>
+            </ul>
+            <ul class="sidebar-nav" id="sidebar">
+                
+                <li>
+                    <a class="" href="stdout-standard-out-redirect">
+                        1. Stdout standard out redirect</a>
+                </li>
+                
+                <li>
+                    <a class="" href="stdin-standard-in-redirect">
+                        2. Stdin standard in redirect</a>
+                </li>
+                
+                <li>
+                    <a class="" href="stderr-standard-error-redirect">
+                        3. Stderr standard error redirect</a>
+                </li>
+                
+                <li>
+                    <a class="" href="pipe-tee-redirect">
+                        4. Pipe tee redirect</a>
+                </li>
+                
+                <li>
+                    <a class="" href="env-environment">
+                        5. Env environment</a>
+                </li>
+                
+                <li>
+                    <a class="" href="cut-command">
+                        6. Cut command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="paste-command">
+                        7. Paste command</a>
+                </li>
+                
+                <li>
+                    <a class="current" href="head-command">
+                        8. Head command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="tail-command">
+                        9. Tail command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="expand-unexpand-command">
+                        10. Expand unexpand command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="join-split-command">
+                        11. Join split command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="sort-command">
+                        12. Sort command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="tr-translate-command">
+                        13. Tr translate command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="uniq-unique-command">
+                        14. Uniq unique command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="nl-wc-command">
+                        15. Nl wc command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="grep-command">
+                        16. Grep command</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- End of Sidebar -->
+
+
+        <div id="page-content-wrapper">
+            <!-- Keep all page content within the page-content inset div! -->
+            <div class="page-content inset">
+                <div class="row">
+                    <div class="col-md-6 lesson">
+
+                        <div class="user-app">
+                            <a class="btn btn-default btn-sm" href="../index.html">
+                                Home
+                            </a>
+                        </div>
+
+                        <div class="lesson-content">
+                            
+<h3>head</h3>
+<p>Let's say we have a very long file, in fact we have many to choose from, go ahead and cat /var/log/syslog. You should see pages upon pages of text. What if I just wanted to see the first couple of lines in this text file? Well we can do that with the head command, by default the head command will show you the first 10 lines in a file.</p>
+<pre>$ head /var/log/syslog</pre>
+<p>You can also modify the line count to whatever you choose, let's say I wanted to see the first 15 lines instead. </p>
+<pre>$ head -n 15 /var/log/syslog</pre>
+<p>The -n flag stands for number of lines. </p>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 practice">
+                        <div class="exercise-content">
+                            <h3>Exercise</h3>
+<p>What does the following command do and why? </p>
+<pre>$ head -c 15 /var/log/syslog</pre>
+
+                        </div>
+
+                        <div class="quiz-content">
+                            <h3>Quiz Question</h3>
+<p>What flag would you use to change the number of lines you want to view for the head command?</p>
+<h3>Quiz Answer</h3>
+<p>-n</p>
+</div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

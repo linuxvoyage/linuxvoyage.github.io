@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>compressed-archives-tar</title>
+    <script
+        src="../static/assets/category/application-8013fdc35e4c79f95bcb3d655ff61f137ac05bcee52e6d96588427a84eddef12.js.download"
+        data-turbolinks-track="true"></script>
+    <link rel="stylesheet" media="all"
+        href="../static/assets/category/application-b0b91461d093aa2ed95d8a7467856e4dc16f55744d3c17a927c3598e5b26cd3f.css"
+        data-turbolinks-track="true">
+</head>
+
+<body>
+    <div id="wrapper" class="active">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul id="sidebar_menu" class="sidebar-nav">
+                <li class="sidebar-brand"><a>Packages</a>
+                </li>
+            </ul>
+            <ul class="sidebar-nav" id="sidebar">
+                
+                <li>
+                    <a class="" href="software-distribution">
+                        1. Software distribution</a>
+                </li>
+                
+                <li>
+                    <a class="" href="package-repositories">
+                        2. Package repositories</a>
+                </li>
+                
+                <li>
+                    <a class="current" href="compressed-archives-tar">
+                        3. Compressed archives tar</a>
+                </li>
+                
+                <li>
+                    <a class="" href="package-dependencies">
+                        4. Package dependencies</a>
+                </li>
+                
+                <li>
+                    <a class="" href="package-install-tools">
+                        5. Package install tools</a>
+                </li>
+                
+                <li>
+                    <a class="" href="package-management-systems">
+                        6. Package management systems</a>
+                </li>
+                
+                <li>
+                    <a class="" href="compile-source-code">
+                        7. Compile source code</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- End of Sidebar -->
+
+
+        <div id="page-content-wrapper">
+            <!-- Keep all page content within the page-content inset div! -->
+            <div class="page-content inset">
+                <div class="row">
+                    <div class="col-md-6 lesson">
+
+                        <div class="user-app">
+                            <a class="btn btn-default btn-sm" href="../index.html">
+                                Home
+                            </a>
+                        </div>
+
+                        <div class="lesson-content">
+                            
+<h3>tar and gzip</h3>
+<p>Before we get into package installation and the different managers, we need to discuss archiving and compressing files, because you will most likely encounter these when you hunt for software on the internet. </p>
+<p>You probably already know what a file archive is, you've most likely encountered file types such as .rar and .zip. These are an archive of files, they contain many files inside of them, but they come in this very neat single file known as an archive.</p>
+<p><b>Compressing files with gzip</b></p>
+<p>gzip is program used to compress files in Linux, they end in a .gz extension. </p>
+<p>To compress a file down:<br/>
+<pre>$ gzip mycoolfile</pre></p>
+<p>To decompress the file:<br/>
+<pre>$ gunzip mycoolfile.gz</pre></p>
+<p><b>Creating archives with tar</b><br/>
+Unfortunately, gzip can't add multiple files into one archive for us. Luckily we have the tar program which does. When you create an archive using tar, it will have a .tar extension. </p>
+<pre>$ tar cvf mytarfile.tar mycoolfile1 mycoolfile 2</pre>
+<ul>
+<li>c - create</li>
+<li>v - tell the program to be verbose and let us see what it's doing</li>
+<li>f - the filename of the tar file has to come after this option, if you are creating a tar file you'll have to come up with a name</li>
+</ul>
+<p><b>Unpacking archives with tar</b></p>
+<p>To extract the contents of a tar file, use: </p>
+<pre>$ tar xvf mytarfile.tar</pre>
+<ul>
+<li>x - extract</li>
+<li>v - tell the program to be verbose and let us see what it's doing</li>
+<li>f - the file you want to extract</li>
+</ul>
+<p><b>Compressing/uncompressing archives with tar and gzip</b></p>
+<p>Many times you'll see a tar file that has been compressed such as: mycompressedarchive.tar.gz, all you need to do is work outside in, so first remove the compression with gunzip and then you can unpack the tar file. Or you can alternatively use the <b>z</b> option with tar, which just tells it to use the gzip or gunzip utility.</p>
+<p>Create a compressed tar file:<br/>
+<pre>$ tar czf myfile.tar.gz</pre></p>
+<p>Uncompress and unpack: <br/>
+<pre>$ tar xzf file.tar</pre></p>
+<p>If you need help remember this: e<b>X</b>tract all <b>Z</b>ee <b>F</b>iles!</p>
+<p>tar is one of those commands that is so important and yet you never really remember it, relevant xkcd: <a href="https://xkcd.com/1168/"><a href="https://xkcd.com/1168/&lt;/a&gt;">https://xkcd.com/1168/</a></a></p>
+<p><b>Other Utilities</b></p>
+<p>Throughout your journey of Linux, you'll encounter other archive and compression types such as: bzip2, compress, zip, unzip, etc. They are a little less common, but just keep in mind that different utilities will call for different commands.</p>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 practice">
+                        <div class="exercise-content">
+                            <h3>Exercise</h3>
+<p>Familiarize yourself with the tar documentation and look at the other options available in the manpage.</p>
+
+                        </div>
+
+                        <div class="quiz-content">
+                            <h3>Quiz Question</h3>
+<p>What tar flag is used to create archives?</p>
+<h3>Quiz Answer</h3>
+<p>c</p>
+</div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

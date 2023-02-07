@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>cron-jobs</title>
+    <script
+        src="../static/assets/category/application-8013fdc35e4c79f95bcb3d655ff61f137ac05bcee52e6d96588427a84eddef12.js.download"
+        data-turbolinks-track="true"></script>
+    <link rel="stylesheet" media="all"
+        href="../static/assets/category/application-b0b91461d093aa2ed95d8a7467856e4dc16f55744d3c17a927c3598e5b26cd3f.css"
+        data-turbolinks-track="true">
+</head>
+
+<body>
+    <div id="wrapper" class="active">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul id="sidebar_menu" class="sidebar-nav">
+                <li class="sidebar-brand"><a>Process Utilization</a>
+                </li>
+            </ul>
+            <ul class="sidebar-nav" id="sidebar">
+                
+                <li>
+                    <a class="" href="tracking-processes-top">
+                        1. Tracking processes top</a>
+                </li>
+                
+                <li>
+                    <a class="" href="tracking-processes-lsof-fuser">
+                        2. Tracking processes lsof fuser</a>
+                </li>
+                
+                <li>
+                    <a class="" href="process-threads">
+                        3. Process threads</a>
+                </li>
+                
+                <li>
+                    <a class="" href="cpu-monitoring">
+                        4. Cpu monitoring</a>
+                </li>
+                
+                <li>
+                    <a class="" href="io-monitoring">
+                        5. Io monitoring</a>
+                </li>
+                
+                <li>
+                    <a class="" href="memory-monitoring">
+                        6. Memory monitoring</a>
+                </li>
+                
+                <li>
+                    <a class="" href="continuous-monitoring">
+                        7. Continuous monitoring</a>
+                </li>
+                
+                <li>
+                    <a class="current" href="cron-jobs">
+                        8. Cron jobs</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- End of Sidebar -->
+
+
+        <div id="page-content-wrapper">
+            <!-- Keep all page content within the page-content inset div! -->
+            <div class="page-content inset">
+                <div class="row">
+                    <div class="col-md-6 lesson">
+
+                        <div class="user-app">
+                            <a class="btn btn-default btn-sm" href="../index.html">
+                                Home
+                            </a>
+                        </div>
+
+                        <div class="lesson-content">
+                            
+<h3>Cron Jobs</h3>
+<p>Although we have been talking about resource utilization, I think this would be a good point to mention a neat tool in Linux that is used to schedule tasks using cron. There is a service that runs programs for you at whatever time you schedule. This is a really useful if you have a script you want to run once a day that needs to execute something for you. </p>
+<p>For example, let's say I have a script located in /home/pete/scripts/change_wallpaper. I use this script every morning to change the picture I use for my wallpaper, but each morning I have to manually execute this script. Instead what I can do is create a cron job that executes my script through cron. I can specify the time I want this cron job to run and execute my script. </p>
+<pre>30 08 * * * /home/pete/scripts/change_wallpaper</pre>
+<p>The fields are as follows from left to right:<br/>
+<ul><br/>
+<li>Minute - (0-59)</li><br/>
+<li>Hour - (0-23)</li><br/>
+<li>Day of the month - (1-31)</li><br/>
+<li>Month - (1-12)</li><br/>
+<li>Day of the week - (0-7). 0 and 7 are denoted as Sunday</li><br/>
+</ul></p>
+<p>The asterisk in the field means to match every value. So in my above example, I want this to run every day in every month at 8:30am.</p>
+<p>To create a cronjob, just edit the crontab file:</p>
+<pre>crontab -e</pre>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 practice">
+                        <div class="exercise-content">
+                            <h3>Exercise</h3>
+<p>Create a cronjob that you want to run at a scheduled time.</p>
+
+                        </div>
+
+                        <div class="quiz-content">
+                            <h3>Quiz Question</h3>
+<p>What is the command to edit your cronjobs?</p>
+<h3>Quiz Answer</h3>
+<p>crontab -e</p>
+</div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

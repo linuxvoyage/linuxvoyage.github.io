@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>dns-process</title>
+    <script
+        src="../static/assets/category/application-8013fdc35e4c79f95bcb3d655ff61f137ac05bcee52e6d96588427a84eddef12.js.download"
+        data-turbolinks-track="true"></script>
+    <link rel="stylesheet" media="all"
+        href="../static/assets/category/application-b0b91461d093aa2ed95d8a7467856e4dc16f55744d3c17a927c3598e5b26cd3f.css"
+        data-turbolinks-track="true">
+</head>
+
+<body>
+    <div id="wrapper" class="active">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul id="sidebar_menu" class="sidebar-nav">
+                <li class="sidebar-brand"><a>Dns</a>
+                </li>
+            </ul>
+            <ul class="sidebar-nav" id="sidebar">
+                
+                <li>
+                    <a class="" href="what-is-dns">
+                        1. What is dns</a>
+                </li>
+                
+                <li>
+                    <a class="" href="dns-components">
+                        2. Dns components</a>
+                </li>
+                
+                <li>
+                    <a class="current" href="dns-process">
+                        3. Dns process</a>
+                </li>
+                
+                <li>
+                    <a class="" href="etc-hosts">
+                        4. Etc hosts</a>
+                </li>
+                
+                <li>
+                    <a class="" href="dns-setup">
+                        5. Dns setup</a>
+                </li>
+                
+                <li>
+                    <a class="" href="dns-tools">
+                        6. Dns tools</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- End of Sidebar -->
+
+
+        <div id="page-content-wrapper">
+            <!-- Keep all page content within the page-content inset div! -->
+            <div class="page-content inset">
+                <div class="row">
+                    <div class="col-md-6 lesson">
+
+                        <div class="user-app">
+                            <a class="btn btn-default btn-sm" href="../index.html">
+                                Home
+                            </a>
+                        </div>
+
+                        <div class="lesson-content">
+                            
+<h3>DNS Process</h3>
+<p>Let's look at an example of how your host finds a domain (catzontheinterwebz.com) with DNS. Essentially, we funnel our way down until we reach the DNS server that knows of that domain.</p>
+<p><b>Local DNS Server</b></p>
+<p>First our host asks, "Where is catzontheinterwebz.com?", our local DNS server doesn't know so it goes and starts from the top of the funnel to ask the Root Servers. Keep in mind that our host is not making these requests to find catzontheinterwebz.com directly, most users talk to a recursive DNS server provided by their ISPs and that server is then tasked to find the location of catzontheinterwebz.com.</p>
+<p><b>Root Servers</b></p>
+<p>There are 13 Root Servers for the Internet, they are mirrored and distributed around the world to handle DNS requests for the Internet, so there are really hundreds of servers that are working, they are controlled by different organizations and they contain information about Top-Level Domains. Top-level domains are what you know as .org, .com, .net, etc addresses. So the Root Server doesn't know where catzontheinterwebz.com is, so it tells us ask the .com Top-Level Domain DNS Server at an IP address it gives us. </p>
+<p><b>Top-Level Domain</b></p>
+<p>So now we send another request to the name server that knows about ".com" addresses and asks if it knows where catzontheinterwebz.com is? The TLD doesn't have the catzontheinterwebz.com in their zone files, but it does see a record for the name server for catzontheinterwebz.com. So it gives us the IP address of that name server and tells us to look there.</p>
+<p><b>Authoritative DNS Server</b></p>
+<p>Now we send a final request to the DNS server that actually has the record we want. The name server sees that it has a zone file for catzontheinterwebz.com and there is a resource record for 'www' for this host. It then gives us the IP address of this host and we can finally see some cats on the Internet. </p>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 practice">
+                        <div class="exercise-content">
+                            <h3>Exercise</h3>
+<p>No exercises for this lesson.</p>
+
+                        </div>
+
+                        <div class="quiz-content">
+                            <h3>Quiz Question</h3>
+<p>What is the abbreviation for the nameservers where .com, .net, .org, etc addresses are found? </p>
+<h3>Quiz Answer</h3>
+<p>TLD</p>
+</div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>arch-linux</title>
+    <script
+        src="../static/assets/category/application-8013fdc35e4c79f95bcb3d655ff61f137ac05bcee52e6d96588427a84eddef12.js.download"
+        data-turbolinks-track="true"></script>
+    <link rel="stylesheet" media="all"
+        href="../static/assets/category/application-b0b91461d093aa2ed95d8a7467856e4dc16f55744d3c17a927c3598e5b26cd3f.css"
+        data-turbolinks-track="true">
+</head>
+
+<body>
+    <div id="wrapper" class="active">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul id="sidebar_menu" class="sidebar-nav">
+                <li class="sidebar-brand"><a>Getting Started</a>
+                </li>
+            </ul>
+            <ul class="sidebar-nav" id="sidebar">
+                
+                <li>
+                    <a class="" href="linux-history">
+                        1. Linux history</a>
+                </li>
+                
+                <li>
+                    <a class="" href="choosing-a-linux-distribution">
+                        2. Choosing a linux distribution</a>
+                </li>
+                
+                <li>
+                    <a class="" href="debian">
+                        3. Debian</a>
+                </li>
+                
+                <li>
+                    <a class="" href="red-hat-enterprise-linux">
+                        4. Red hat enterprise linux</a>
+                </li>
+                
+                <li>
+                    <a class="" href="ubuntu">
+                        5. Ubuntu</a>
+                </li>
+                
+                <li>
+                    <a class="" href="fedora">
+                        6. Fedora</a>
+                </li>
+                
+                <li>
+                    <a class="" href="linux-mint">
+                        7. Linux mint</a>
+                </li>
+                
+                <li>
+                    <a class="" href="gentoo">
+                        8. Gentoo</a>
+                </li>
+                
+                <li>
+                    <a class="current" href="arch-linux">
+                        9. Arch linux</a>
+                </li>
+                
+                <li>
+                    <a class="" href="opensuse">
+                        10. Opensuse</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- End of Sidebar -->
+
+
+        <div id="page-content-wrapper">
+            <!-- Keep all page content within the page-content inset div! -->
+            <div class="page-content inset">
+                <div class="row">
+                    <div class="col-md-6 lesson">
+
+                        <div class="user-app">
+                            <a class="btn btn-default btn-sm" href="../index.html">
+                                Home
+                            </a>
+                        </div>
+
+                        <div class="lesson-content">
+                            
+<h3>Arch Linux</h3>
+<p><b>Overview</b><br/>
+Arch is a lightweight and flexible Linux distribution driven 100% by the community. Similar to Debian, Arch uses a rolling release model so incremental updates eventually become the Stable release. You really need to get your hands dirty to understand the system and its functions, but in turn you get complete and total control of your system.</p>
+<p><b>Package Management</b><br/>
+It uses its own package manager, Pacman, to install, update and manage packages. </p>
+<p><b>Configurability</b><br/>
+If you want a lightweight operating system and really want to understand Linux use Arch! There’s a bit of a learning curve, but for the hardcore Linux users, this is a great choice.</p>
+<p><b>Uses</b><br/>
+Great for desktop and laptop. If you also have a small device such as a Raspberry Pi and need to stick a lightweight OS on it, you can’t go wrong with Arch.</p>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 practice">
+                        <div class="exercise-content">
+                            <h3>Exercise</h3>
+<p>If you're interested in having Arch as your operating system, head over to the installation section and give it a try: <a href="https://www.archlinux.org/"><a href="https://www.archlinux.org/&lt;/a&gt;">https://www.archlinux.org/</a></a></p>
+
+                        </div>
+
+                        <div class="quiz-content">
+                            <h3>Quiz Questions</h3>
+<p>What package manager does Arch Linux use?</p>
+<h3>Quiz Answer</h3>
+<p>Pacman</p>
+</div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

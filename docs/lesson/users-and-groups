@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>users-and-groups</title>
+    <script
+        src="../static/assets/category/application-8013fdc35e4c79f95bcb3d655ff61f137ac05bcee52e6d96588427a84eddef12.js.download"
+        data-turbolinks-track="true"></script>
+    <link rel="stylesheet" media="all"
+        href="../static/assets/category/application-b0b91461d093aa2ed95d8a7467856e4dc16f55744d3c17a927c3598e5b26cd3f.css"
+        data-turbolinks-track="true">
+</head>
+
+<body>
+    <div id="wrapper" class="active">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul id="sidebar_menu" class="sidebar-nav">
+                <li class="sidebar-brand"><a>User Management</a>
+                </li>
+            </ul>
+            <ul class="sidebar-nav" id="sidebar">
+                
+                <li>
+                    <a class="current" href="users-and-groups">
+                        1. Users and groups</a>
+                </li>
+                
+                <li>
+                    <a class="" href="root-user">
+                        2. Root user</a>
+                </li>
+                
+                <li>
+                    <a class="" href="etc-passwd-file">
+                        3. Etc passwd file</a>
+                </li>
+                
+                <li>
+                    <a class="" href="etc-shadow-file">
+                        4. Etc shadow file</a>
+                </li>
+                
+                <li>
+                    <a class="" href="etc-group-file">
+                        5. Etc group file</a>
+                </li>
+                
+                <li>
+                    <a class="" href="user-management-tools">
+                        6. User management tools</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- End of Sidebar -->
+
+
+        <div id="page-content-wrapper">
+            <!-- Keep all page content within the page-content inset div! -->
+            <div class="page-content inset">
+                <div class="row">
+                    <div class="col-md-6 lesson">
+
+                        <div class="user-app">
+                            <a class="btn btn-default btn-sm" href="../index.html">
+                                Home
+                            </a>
+                        </div>
+
+                        <div class="lesson-content">
+                            
+<h3>Users and Groups</h3>
+<p>In any traditional operating system, there are users and groups. They exist solely for access and permissions. When running a process, it will run as the owner of that process whether that is Jane or Bob. File access and ownership is also permission dependent. You wouldn't want Jane to see Bob's documents and vice versa. </p>
+<p>Each user has their own home directory where their user specific files get stored, this is usually located in /home/username, but can vary in different distributions. </p>
+<p>The system uses user ids (UID) to manage users, usernames are the friendly way to associate users with identification, but the system identifies users by their UID. The system also uses groups to manage permissions, groups are just sets of users with permission set by that group, they are identified by the system with their group ID (GID).</p>
+<p>In Linux, you'll have users in addition to the normal humans that use the system. Sometimes these users are system daemons that continuously run processes to keep the system functioning. One of the most important users is root or superuser, root is the most powerful user on the system, root can access any file and start and terminate any process. For that reason, it can be dangerous to operate as root all the time, you could potentially remove system critical files. Luckily, if root access is needed and a user has root access, they can run a command as root instead with the sudo command. The sudo command (superuser do) is used to run a command with root access, we'll go more in depth on how a user receives root access in a later lesson.</p>
+<p>Go ahead and try to view a protected file like /etc/shadow:</p>
+<pre>$ cat /etc/shadow</pre>
+<p>Notice how you get a permission denied error, look at the permissions with: </p>
+<pre>$ ls -la /etc/shadow
+
+-rw-r----- 1 root shadow 1134 Dec 1 11:45 /etc/shadow
+</pre>
+<p>We haven't gone through permissions yet, but what's happening here is that root is the owner of the file and you'll need root access or be part of the shadow group to read the contents. Now run the command with sudo:</p>
+<pre>$ sudo cat /etc/shadow</pre>
+<p>Now you'll be able to see the contents of the file!</p>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 practice">
+                        <div class="exercise-content">
+                            <h3>Exercise</h3>
+<p>No exercises for this lesson.</p>
+
+                        </div>
+
+                        <div class="quiz-content">
+                            <h3>Quiz Question</h3>
+<p>What command do you use to run as root?</p>
+<h3>Quiz Answer</h3>
+<p>sudo</p>
+</div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>arp-command</title>
+    <script
+        src="../static/assets/category/application-8013fdc35e4c79f95bcb3d655ff61f137ac05bcee52e6d96588427a84eddef12.js.download"
+        data-turbolinks-track="true"></script>
+    <link rel="stylesheet" media="all"
+        href="../static/assets/category/application-b0b91461d093aa2ed95d8a7467856e4dc16f55744d3c17a927c3598e5b26cd3f.css"
+        data-turbolinks-track="true">
+</head>
+
+<body>
+    <div id="wrapper" class="active">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul id="sidebar_menu" class="sidebar-nav">
+                <li class="sidebar-brand"><a>Network Configuration</a>
+                </li>
+            </ul>
+            <ul class="sidebar-nav" id="sidebar">
+                
+                <li>
+                    <a class="" href="network-interfaces">
+                        1. Network interfaces</a>
+                </li>
+                
+                <li>
+                    <a class="" href="route">
+                        2. Route</a>
+                </li>
+                
+                <li>
+                    <a class="" href="dhclient">
+                        3. Dhclient</a>
+                </li>
+                
+                <li>
+                    <a class="" href="network-manager">
+                        4. Network manager</a>
+                </li>
+                
+                <li>
+                    <a class="current" href="arp-command">
+                        5. Arp command</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- End of Sidebar -->
+
+
+        <div id="page-content-wrapper">
+            <!-- Keep all page content within the page-content inset div! -->
+            <div class="page-content inset">
+                <div class="row">
+                    <div class="col-md-6 lesson">
+
+                        <div class="user-app">
+                            <a class="btn btn-default btn-sm" href="../index.html">
+                                Home
+                            </a>
+                        </div>
+
+                        <div class="lesson-content">
+                            
+<h3>arp</h3>
+<p>Remember when we lookup a MAC address with ARP, it first checks the locally stored ARP cache on our system, you can actually view this cache: </p>
+<pre>
+pete@icebox:~$ arp
+Address                  HWtype  HWaddress           Flags Mask            Iface
+192.168.22.1            ether   00:12:24:fc:12:cc   C                     eth0
+192.168.22.254          ether   00:12:45:f2:84:64   C                     eth0
+</pre>
+<p>The ARP cache is actually empty when a machine boots up, it gets populated as packets are being sent to other hosts. If we send a packet to a destination that isn't in the ARP cache, the following happens:</p>
+<ol>
+<li>The source host creates the Ethernet frame with an ARP request packet</li>
+<li>The source host broadcasts this frame to the entire network</li>
+<li>If one of the hosts on the network knows the correct MAC address, it will send a reply packet and frame containing the MAC address</li>
+<li>The source host adds the IP to MAC address mapping to the ARP cache and then proceeds with sending the packet</li>
+</ol>
+<p>You can also view your arp cache via the ip command:</p>
+<pre>
+$ ip neighbour show
+</pre>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 practice">
+                        <div class="exercise-content">
+                            <h3>Exercise</h3>
+<p>Observe what happens to your ARP cache when you reboot your machine and then do something on the network.</p>
+
+                        </div>
+
+                        <div class="quiz-content">
+                            <h3>Quiz Question</h3>
+<p>What command can you use to view your ARP cache?</p>
+<h3>Quiz Answer</h3>
+<p>arp</p>
+</div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>network-layer</title>
+    <script
+        src="../static/assets/category/application-8013fdc35e4c79f95bcb3d655ff61f137ac05bcee52e6d96588427a84eddef12.js.download"
+        data-turbolinks-track="true"></script>
+    <link rel="stylesheet" media="all"
+        href="../static/assets/category/application-b0b91461d093aa2ed95d8a7467856e4dc16f55744d3c17a927c3598e5b26cd3f.css"
+        data-turbolinks-track="true">
+</head>
+
+<body>
+    <div id="wrapper" class="active">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul id="sidebar_menu" class="sidebar-nav">
+                <li class="sidebar-brand"><a>Network Fundamentals</a>
+                </li>
+            </ul>
+            <ul class="sidebar-nav" id="sidebar">
+                
+                <li>
+                    <a class="" href="network-basics">
+                        1. Network basics</a>
+                </li>
+                
+                <li>
+                    <a class="" href="osi-model">
+                        2. Osi model</a>
+                </li>
+                
+                <li>
+                    <a class="" href="tcp-ip-model">
+                        3. Tcp ip model</a>
+                </li>
+                
+                <li>
+                    <a class="" href="network-addressing">
+                        4. Network addressing</a>
+                </li>
+                
+                <li>
+                    <a class="" href="application-layer">
+                        5. Application layer</a>
+                </li>
+                
+                <li>
+                    <a class="" href="transport-layer">
+                        6. Transport layer</a>
+                </li>
+                
+                <li>
+                    <a class="current" href="network-layer">
+                        7. Network layer</a>
+                </li>
+                
+                <li>
+                    <a class="" href="link-layer">
+                        8. Link layer</a>
+                </li>
+                
+                <li>
+                    <a class="" href="dhcp-overview">
+                        9. Dhcp overview</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- End of Sidebar -->
+
+
+        <div id="page-content-wrapper">
+            <!-- Keep all page content within the page-content inset div! -->
+            <div class="page-content inset">
+                <div class="row">
+                    <div class="col-md-6 lesson">
+
+                        <div class="user-app">
+                            <a class="btn btn-default btn-sm" href="../index.html">
+                                Home
+                            </a>
+                        </div>
+
+                        <div class="lesson-content">
+                            
+<h3>Network Layer</h3>
+<p>The Network layer determines the routing of our packets from our source host to a destination host. Fortunately in our example, our packet is only traveling within the same network, but the Internet is made up of many networks. These smaller networks that make up the Internet are known as subnets. All subnets connect to each other in some way, which is why we are able to get to <a href="http://www.google.com">www.google.com</a> even though it's on its own network. I won't go into detail as we have a whole course dedicated to subnets, but for now in regards to our Network layer, know that the IP addresses define the rules to travel to different subnets. </p>
+<p>In the network layer, it receives the segment coming from the transport layer and encapsulates this segment in an IP packet then attaches the IP address of the source host and the IP address of the destination host to the packet header. So at this point, our packet has information about where it is going and where it came from. Now it sends our packet to the physical hardware layer.</p>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 practice">
+                        <div class="exercise-content">
+                            <h3>Exercise</h3>
+<p>No exercises for this lesson.</p>
+
+                        </div>
+
+                        <div class="quiz-content">
+                            <h3>Quiz Question</h3>
+<p>What are smaller networks that make up the Internet called?</p>
+<h3>Quiz Answer</h3>
+<p>subnets</p>
+</div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

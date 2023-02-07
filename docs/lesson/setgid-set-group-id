@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>setgid-set-group-id</title>
+    <script
+        src="../static/assets/category/application-8013fdc35e4c79f95bcb3d655ff61f137ac05bcee52e6d96588427a84eddef12.js.download"
+        data-turbolinks-track="true"></script>
+    <link rel="stylesheet" media="all"
+        href="../static/assets/category/application-b0b91461d093aa2ed95d8a7467856e4dc16f55744d3c17a927c3598e5b26cd3f.css"
+        data-turbolinks-track="true">
+</head>
+
+<body>
+    <div id="wrapper" class="active">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul id="sidebar_menu" class="sidebar-nav">
+                <li class="sidebar-brand"><a>Access</a>
+                </li>
+            </ul>
+            <ul class="sidebar-nav" id="sidebar">
+                
+                <li>
+                    <a class="" href="file-permissions">
+                        1. File permissions</a>
+                </li>
+                
+                <li>
+                    <a class="" href="modifying-permissions">
+                        2. Modifying permissions</a>
+                </li>
+                
+                <li>
+                    <a class="" href="ownership-permissions">
+                        3. Ownership permissions</a>
+                </li>
+                
+                <li>
+                    <a class="" href="umask">
+                        4. Umask</a>
+                </li>
+                
+                <li>
+                    <a class="" href="setuid-set-user-id">
+                        5. Setuid set user id</a>
+                </li>
+                
+                <li>
+                    <a class="current" href="setgid-set-group-id">
+                        6. Setgid set group id</a>
+                </li>
+                
+                <li>
+                    <a class="" href="process-permissions">
+                        7. Process permissions</a>
+                </li>
+                
+                <li>
+                    <a class="" href="sticky-bit">
+                        8. Sticky bit</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- End of Sidebar -->
+
+
+        <div id="page-content-wrapper">
+            <!-- Keep all page content within the page-content inset div! -->
+            <div class="page-content inset">
+                <div class="row">
+                    <div class="col-md-6 lesson">
+
+                        <div class="user-app">
+                            <a class="btn btn-default btn-sm" href="../index.html">
+                                Home
+                            </a>
+                        </div>
+
+                        <div class="lesson-content">
+                            
+<h3>Setgid</h3>
+<p>Similar to the set user ID permission bit, there is a set group ID (SGID) permission bit. This bit allows a program to run as if it was a member of that group. </p>
+<p>Let's look at one example: </p>
+<pre>$ ls -l /usr/bin/wall
+-rwxr-sr-x 1 root tty 19024 Dec 14 11:45 /usr/bin/wall
+</pre>
+<p>We can see now that the permission bit is in the group permission set. </p>
+<p><b>Modifying SGID</b></p>
+<pre>$ sudo chmod g+s myfile
+$ sudo chmod 2555 myfile
+</pre>
+<p>The numerical representation for SGID is 2.</p>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 practice">
+                        <div class="exercise-content">
+                            <h3>Exercise</h3>
+<p>No exercises for this lesson.</p>
+
+                        </div>
+
+                        <div class="quiz-content">
+                            <h3>Quiz Question</h3>
+<p>What number represents the SGID?</p>
+<h3>Quiz Answer</h3>
+<p>2</p>
+</div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

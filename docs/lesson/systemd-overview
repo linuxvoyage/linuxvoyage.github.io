@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>systemd-overview</title>
+    <script
+        src="../static/assets/category/application-8013fdc35e4c79f95bcb3d655ff61f137ac05bcee52e6d96588427a84eddef12.js.download"
+        data-turbolinks-track="true"></script>
+    <link rel="stylesheet" media="all"
+        href="../static/assets/category/application-b0b91461d093aa2ed95d8a7467856e4dc16f55744d3c17a927c3598e5b26cd3f.css"
+        data-turbolinks-track="true">
+</head>
+
+<body>
+    <div id="wrapper" class="active">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul id="sidebar_menu" class="sidebar-nav">
+                <li class="sidebar-brand"><a>Init</a>
+                </li>
+            </ul>
+            <ul class="sidebar-nav" id="sidebar">
+                
+                <li>
+                    <a class="" href="sysv-overview">
+                        1. Sysv overview</a>
+                </li>
+                
+                <li>
+                    <a class="" href="sysv-services">
+                        2. Sysv services</a>
+                </li>
+                
+                <li>
+                    <a class="" href="upstart-overview">
+                        3. Upstart overview</a>
+                </li>
+                
+                <li>
+                    <a class="" href="upstart-jobs">
+                        4. Upstart jobs</a>
+                </li>
+                
+                <li>
+                    <a class="current" href="systemd-overview">
+                        5. Systemd overview</a>
+                </li>
+                
+                <li>
+                    <a class="" href="systemd-goals">
+                        6. Systemd goals</a>
+                </li>
+                
+                <li>
+                    <a class="" href="power-states">
+                        7. Power states</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- End of Sidebar -->
+
+
+        <div id="page-content-wrapper">
+            <!-- Keep all page content within the page-content inset div! -->
+            <div class="page-content inset">
+                <div class="row">
+                    <div class="col-md-6 lesson">
+
+                        <div class="user-app">
+                            <a class="btn btn-default btn-sm" href="../index.html">
+                                Home
+                            </a>
+                        </div>
+
+                        <div class="lesson-content">
+                            
+<h3>Systemd Overview</h3>
+<p>Systemd is slowly becoming the emerging standard for init. If you have a /usr/lib/systemd directory, you're most likely using systemd.</p>
+<p>Systemd uses goals to get your system up and running. Basically you have a target that you want to achieve and this target also has dependencies that we need to achieve. Systemd is extremely flexible and robust, it does not follow a strict sequence to get processes started. Here's what happens during the typical systemd boot:</p>
+<ol>
+<li>First, systemd loads it's configuration files, usually located in /etc/systemd/system or /usr/lib/systemd/system</li>
+<li>Then it determines its boot goal, which is usually default.target</li>
+<li>Systemd figures out the dependencies of the boot target and activates them
+</li></ol>
+<p>Similar to Sys V runlevels, systemd boots into different targets:</p>
+<ul>
+<li>poweroff.target - shutdown system</li>
+<li>rescue.target - single user mode</li>
+<li>multi-user.target - multiuser with networking</li>
+<li>graphical.target - multiuser with networking and GUI</li>
+<li>reboot.target - restart</li>
+</ul>
+<p>The default boot goal of default.target usually points to the graphical.target. </p>
+<p>The main object that systemd works with are known as units. Systemd doesn't just stop and start services, it can mount filesystems, monitor your network sockets, etc and because of that robustness it has different types of units it operates. The most common units are:</p>
+<ul>
+<li>Service units - these are the services we've been starting and stopping, these unit files end in .service</li>
+<li>Mount units - These mount filesystems, these unit files end in .mount</li>
+<li>Target units - These group together other units, the files end in .target</li>
+</ul>
+<p>For example, let's say we boot into our default.target, well this target groups together the networking.service unit, crond.service unit, etc, so once we activate a single unit, everything below that unit gets activated as well.</p>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 practice">
+                        <div class="exercise-content">
+                            <h3>Exercise</h3>
+<p>No exercises for this lesson.</p>
+
+                        </div>
+
+                        <div class="quiz-content">
+                            <h3>Quiz Question</h3>
+<p>What unit is used to group together other units?</p>
+<h3>Quiz Answer</h3>
+<p>target</p>
+</div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

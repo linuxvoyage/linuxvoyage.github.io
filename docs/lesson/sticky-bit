@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>sticky-bit</title>
+    <script
+        src="../static/assets/category/application-8013fdc35e4c79f95bcb3d655ff61f137ac05bcee52e6d96588427a84eddef12.js.download"
+        data-turbolinks-track="true"></script>
+    <link rel="stylesheet" media="all"
+        href="../static/assets/category/application-b0b91461d093aa2ed95d8a7467856e4dc16f55744d3c17a927c3598e5b26cd3f.css"
+        data-turbolinks-track="true">
+</head>
+
+<body>
+    <div id="wrapper" class="active">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul id="sidebar_menu" class="sidebar-nav">
+                <li class="sidebar-brand"><a>Access</a>
+                </li>
+            </ul>
+            <ul class="sidebar-nav" id="sidebar">
+                
+                <li>
+                    <a class="" href="file-permissions">
+                        1. File permissions</a>
+                </li>
+                
+                <li>
+                    <a class="" href="modifying-permissions">
+                        2. Modifying permissions</a>
+                </li>
+                
+                <li>
+                    <a class="" href="ownership-permissions">
+                        3. Ownership permissions</a>
+                </li>
+                
+                <li>
+                    <a class="" href="umask">
+                        4. Umask</a>
+                </li>
+                
+                <li>
+                    <a class="" href="setuid-set-user-id">
+                        5. Setuid set user id</a>
+                </li>
+                
+                <li>
+                    <a class="" href="setgid-set-group-id">
+                        6. Setgid set group id</a>
+                </li>
+                
+                <li>
+                    <a class="" href="process-permissions">
+                        7. Process permissions</a>
+                </li>
+                
+                <li>
+                    <a class="current" href="sticky-bit">
+                        8. Sticky bit</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- End of Sidebar -->
+
+
+        <div id="page-content-wrapper">
+            <!-- Keep all page content within the page-content inset div! -->
+            <div class="page-content inset">
+                <div class="row">
+                    <div class="col-md-6 lesson">
+
+                        <div class="user-app">
+                            <a class="btn btn-default btn-sm" href="../index.html">
+                                Home
+                            </a>
+                        </div>
+
+                        <div class="lesson-content">
+                            
+<h3>The Sticky Bit</h3>
+<p>One last special permission bit I want to talk about is the sticky bit. </p>
+<p>This permission bit, "sticks a file/directory" this means that only the owner or the root user can delete or modify the file. This is very useful for shared directories. Take a look at the example below:</p>
+<pre>$ ls -ld /tmp
+drwxrwxrwxt 6 root root 4096 Dec 15 11:45 /tmp
+</pre>
+<p>You'll see a special permission bit at the end here <b>t</b>, this means everyone can add files, write files, modify files in the /tmp directory, but only root can delete the /tmp directory. </p>
+<p><b>Modify sticky bit</b></p>
+<pre>$ sudo chmod +t mydir
+
+$ sudo chmod 1755 mydir</pre>
+<p>The numerical representation for the sticky bit is <b>1</b></p>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 practice">
+                        <div class="exercise-content">
+                            <h3>Exercise</h3>
+<p>What other files and directories do you think have a sticky bit enabled? </p>
+
+                        </div>
+
+                        <div class="quiz-content">
+                            <h3>Quiz Question</h3>
+<p>What symbol represents the sticky bit?</p>
+<h3>Quiz Answer</h3>
+<p>t</p>
+</div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

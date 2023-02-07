@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>stdout-standard-out-redirect</title>
+    <script
+        src="../static/assets/category/application-8013fdc35e4c79f95bcb3d655ff61f137ac05bcee52e6d96588427a84eddef12.js.download"
+        data-turbolinks-track="true"></script>
+    <link rel="stylesheet" media="all"
+        href="../static/assets/category/application-b0b91461d093aa2ed95d8a7467856e4dc16f55744d3c17a927c3598e5b26cd3f.css"
+        data-turbolinks-track="true">
+</head>
+
+<body>
+    <div id="wrapper" class="active">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul id="sidebar_menu" class="sidebar-nav">
+                <li class="sidebar-brand"><a>Text Fu</a>
+                </li>
+            </ul>
+            <ul class="sidebar-nav" id="sidebar">
+                
+                <li>
+                    <a class="current" href="stdout-standard-out-redirect">
+                        1. Stdout standard out redirect</a>
+                </li>
+                
+                <li>
+                    <a class="" href="stdin-standard-in-redirect">
+                        2. Stdin standard in redirect</a>
+                </li>
+                
+                <li>
+                    <a class="" href="stderr-standard-error-redirect">
+                        3. Stderr standard error redirect</a>
+                </li>
+                
+                <li>
+                    <a class="" href="pipe-tee-redirect">
+                        4. Pipe tee redirect</a>
+                </li>
+                
+                <li>
+                    <a class="" href="env-environment">
+                        5. Env environment</a>
+                </li>
+                
+                <li>
+                    <a class="" href="cut-command">
+                        6. Cut command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="paste-command">
+                        7. Paste command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="head-command">
+                        8. Head command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="tail-command">
+                        9. Tail command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="expand-unexpand-command">
+                        10. Expand unexpand command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="join-split-command">
+                        11. Join split command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="sort-command">
+                        12. Sort command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="tr-translate-command">
+                        13. Tr translate command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="uniq-unique-command">
+                        14. Uniq unique command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="nl-wc-command">
+                        15. Nl wc command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="grep-command">
+                        16. Grep command</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- End of Sidebar -->
+
+
+        <div id="page-content-wrapper">
+            <!-- Keep all page content within the page-content inset div! -->
+            <div class="page-content inset">
+                <div class="row">
+                    <div class="col-md-6 lesson">
+
+                        <div class="user-app">
+                            <a class="btn btn-default btn-sm" href="../index.html">
+                                Home
+                            </a>
+                        </div>
+
+                        <div class="lesson-content">
+                            
+<h3>stdout (Standard Out)</h3>
+<p>By now, we've become familiar with many commands and their output and that brings us to our next subject I/O (input/output) streams. Let's run the following command and we'll discuss how this works. </p>
+<pre>$ echo Hello World &gt; peanuts.txt</pre>
+<p>What just happened? Well check the directory where you ran that command and lo and behold you should see a file called peanuts.txt, look inside that file and you should see the text Hello World. Lots of things just happened in one command so let's break it down. </p>
+<p>First let's break down the first part: </p>
+<pre>$ echo Hello World</pre>
+<p>We know this prints out Hello World to the screen, but how? Processes use I/O streams to receive input and return output. By default the echo command takes the input (standard input or stdin) from the keyboard and returns the output (standard output or stdout) to the screen. So that's why when you type echo Hello World in your shell, you get Hello World on the screen. However, I/O redirection allows us to change this default behavior giving us greater file flexibility. </p>
+<p>Let's proceed to the next part of the command: </p>
+<pre> &gt; </pre>
+<p>The &gt; is a redirection operator that allows us the change where standard output goes. It allows us to send the output of echo Hello World to a file instead of the screen. If the file does not already exist it will create it for us. However, if it does exist it will overwrite it (you can add a shell flag to prevent this depending on what shell you are using).</p>
+<p>And that's basically how stdout redirection works!</p>
+<p>Well let's say I didn't want to overwrite my peanuts.txt, luckily there is a redirection operator for that as well, &gt;&gt;: </p>
+<pre>$ echo Hello World &gt;&gt; peanuts.txt</pre>
+<p>This will append Hello World to the end of the peanuts.txt file, if the file doesn't already exist it will create it for us like it did with the &gt; redirector! </p>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 practice">
+                        <div class="exercise-content">
+                            <h3>Exercise</h3>
+<p>Try a couple of commands: </p>
+<pre>
+$ ls -l /var/log &gt; myoutput.txt
+$ echo Hello World &gt; rm
+$ &gt; somefile.txt 
+</pre>
+
+                        </div>
+
+                        <div class="quiz-content">
+                            <h3>Quiz Question</h3>
+<p>What redirector do you use to append output to a file? </p>
+<h3>Quiz Answer</h3>
+<blockquote>
+<blockquote></blockquote>
+</blockquote>
+</div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

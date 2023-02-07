@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>file-permissions</title>
+    <script
+        src="../static/assets/category/application-8013fdc35e4c79f95bcb3d655ff61f137ac05bcee52e6d96588427a84eddef12.js.download"
+        data-turbolinks-track="true"></script>
+    <link rel="stylesheet" media="all"
+        href="../static/assets/category/application-b0b91461d093aa2ed95d8a7467856e4dc16f55744d3c17a927c3598e5b26cd3f.css"
+        data-turbolinks-track="true">
+</head>
+
+<body>
+    <div id="wrapper" class="active">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul id="sidebar_menu" class="sidebar-nav">
+                <li class="sidebar-brand"><a>Access</a>
+                </li>
+            </ul>
+            <ul class="sidebar-nav" id="sidebar">
+                
+                <li>
+                    <a class="current" href="file-permissions">
+                        1. File permissions</a>
+                </li>
+                
+                <li>
+                    <a class="" href="modifying-permissions">
+                        2. Modifying permissions</a>
+                </li>
+                
+                <li>
+                    <a class="" href="ownership-permissions">
+                        3. Ownership permissions</a>
+                </li>
+                
+                <li>
+                    <a class="" href="umask">
+                        4. Umask</a>
+                </li>
+                
+                <li>
+                    <a class="" href="setuid-set-user-id">
+                        5. Setuid set user id</a>
+                </li>
+                
+                <li>
+                    <a class="" href="setgid-set-group-id">
+                        6. Setgid set group id</a>
+                </li>
+                
+                <li>
+                    <a class="" href="process-permissions">
+                        7. Process permissions</a>
+                </li>
+                
+                <li>
+                    <a class="" href="sticky-bit">
+                        8. Sticky bit</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- End of Sidebar -->
+
+
+        <div id="page-content-wrapper">
+            <!-- Keep all page content within the page-content inset div! -->
+            <div class="page-content inset">
+                <div class="row">
+                    <div class="col-md-6 lesson">
+
+                        <div class="user-app">
+                            <a class="btn btn-default btn-sm" href="../index.html">
+                                Home
+                            </a>
+                        </div>
+
+                        <div class="lesson-content">
+                            
+<h3>File Permissions</h3>
+<p>As we learned previously, files have different permissions or file modes. Let's look at an example:</p>
+<pre>$ ls -l Desktop/
+drwxr-xr-x 2 pete penguins 4096 Dec 1 11:45 .
+</pre>
+<p>There are four parts to a file's permissions. The first part is the filetype, which is denoted by the first character in the permissions, in our case since we are looking at a directory it shows <b>d</b> for the filetype. Most commonly you will see a <b>-</b> for a regular file. </p>
+<p>The next three parts of the file mode are the actual permissions. The permissions are grouped into 3 bits each. The first 3 bits are user permissions, then group permissions and then other permissions. I've added the pipe to make it easier to differentiate.</p>
+<pre>d | rwx | r-x | r-x </pre>
+<p>Each character represent a different permission: <br/>
+<ul><br/>
+<li>r: readable</li><br/>
+<li>w: writable</li><br/>
+<li>x: executable (basically an executable program)</li><br/>
+<li>-: empty</li><br/>
+</ul></p>
+<p>So in the above example, we see that the user pete has read, write and execute permissions on the file. The group penguins has read and execute permissions. And finally, the other users (everyone else) has read and execute permissions. </p>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 practice">
+                        <div class="exercise-content">
+                            <h3>Exercise</h3>
+<p>Use the ls -l command on multiple files and recite their permissions, user and group. </p>
+
+                        </div>
+
+                        <div class="quiz-content">
+                            <h3>Quiz Question</h3>
+<p>What permission bit is used for executable? </p>
+<h3>Quiz Answer</h3>
+<p>x</p>
+</div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>path-of-a-packet</title>
+    <script
+        src="../static/assets/category/application-8013fdc35e4c79f95bcb3d655ff61f137ac05bcee52e6d96588427a84eddef12.js.download"
+        data-turbolinks-track="true"></script>
+    <link rel="stylesheet" media="all"
+        href="../static/assets/category/application-b0b91461d093aa2ed95d8a7467856e4dc16f55744d3c17a927c3598e5b26cd3f.css"
+        data-turbolinks-track="true">
+</head>
+
+<body>
+    <div id="wrapper" class="active">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul id="sidebar_menu" class="sidebar-nav">
+                <li class="sidebar-brand"><a>Routing</a>
+                </li>
+            </ul>
+            <ul class="sidebar-nav" id="sidebar">
+                
+                <li>
+                    <a class="" href="what-is-a-router">
+                        1. What is a router</a>
+                </li>
+                
+                <li>
+                    <a class="" href="routing-table">
+                        2. Routing table</a>
+                </li>
+                
+                <li>
+                    <a class="current" href="path-of-a-packet">
+                        3. Path of a packet</a>
+                </li>
+                
+                <li>
+                    <a class="" href="routing-protocols">
+                        4. Routing protocols</a>
+                </li>
+                
+                <li>
+                    <a class="" href="distance-vector-protocols">
+                        5. Distance vector protocols</a>
+                </li>
+                
+                <li>
+                    <a class="" href="link-state-protocols">
+                        6. Link state protocols</a>
+                </li>
+                
+                <li>
+                    <a class="" href="bgp-border-gateway-protocol">
+                        7. Bgp border gateway protocol</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- End of Sidebar -->
+
+
+        <div id="page-content-wrapper">
+            <!-- Keep all page content within the page-content inset div! -->
+            <div class="page-content inset">
+                <div class="row">
+                    <div class="col-md-6 lesson">
+
+                        <div class="user-app">
+                            <a class="btn btn-default btn-sm" href="../index.html">
+                                Home
+                            </a>
+                        </div>
+
+                        <div class="lesson-content">
+                            
+<h3>Path of a Packet</h3>
+<p><b>Let's look at how a packet travels within it's local network</b></p>
+<ol>
+<li>First the local machine will compare the destination IP address to see if it's in the same subnet by looking at its subnet mask.</li>
+<li>When packets are sent they need to have a source MAC address, destination MAC address, source IP address and destination IP address, at this point we do not know the destination MAC address.</li>
+<li>To get to the destination host, we use ARP to broadcast a request on the local network to find the MAC address of the destination host.</li>
+<li>Now the packet can be successfully sent!</li>
+</ol>
+<p><b>Let's see how a packet travels outside it's network</b></p>
+<ol>
+<li>First the local machine will compare the destination IP address, since it's outside of our network, it does not see the MAC address of the destination host. And we can't use ARP because the ARP request is a broadcast to locally connected hosts.</li>
+<li>So our packet now looks at the routing table, it doesn't know the address of the destination IP, so it sends it out to the default gateway (another router). So now our packet contains our source IP, destination IP and source MAC, however we don't have a destination MAC. Remember MAC addresses are only reached through the same network. So what does it do? It sends an ARP request to get the MAC address of the default gateway.</li>
+<li>The router looks at the packet and confirms the destination MAC address, but it's not the final destination IP address, so it keeps looking at the routing table to forward the packet to another IP address that can help the packet move along to its destination. Everytime the packet moves, it strips the old source and destination MAC address and updates the packet with the new source and destination MAC addresses.</li>
+<li>Once the packet gets forwarded to the same network, we use ARP to find the final destination MAC address</li>
+<li>During this process, our packet doesn't change the source or destination IP address.</li>
+</ol>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 practice">
+                        <div class="exercise-content">
+                            <h3>Exercise</h3>
+<p>No exercises for this lesson.</p>
+
+                        </div>
+
+                        <div class="quiz-content">
+                            <h3>Quiz Question</h3>
+<p>How do we find the MAC address of an IP address?</p>
+<h3>Quiz Answer</h3>
+<p>ARP</p>
+</div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

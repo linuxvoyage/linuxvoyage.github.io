@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>dns-setup</title>
+    <script
+        src="../static/assets/category/application-8013fdc35e4c79f95bcb3d655ff61f137ac05bcee52e6d96588427a84eddef12.js.download"
+        data-turbolinks-track="true"></script>
+    <link rel="stylesheet" media="all"
+        href="../static/assets/category/application-b0b91461d093aa2ed95d8a7467856e4dc16f55744d3c17a927c3598e5b26cd3f.css"
+        data-turbolinks-track="true">
+</head>
+
+<body>
+    <div id="wrapper" class="active">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul id="sidebar_menu" class="sidebar-nav">
+                <li class="sidebar-brand"><a>Dns</a>
+                </li>
+            </ul>
+            <ul class="sidebar-nav" id="sidebar">
+                
+                <li>
+                    <a class="" href="what-is-dns">
+                        1. What is dns</a>
+                </li>
+                
+                <li>
+                    <a class="" href="dns-components">
+                        2. Dns components</a>
+                </li>
+                
+                <li>
+                    <a class="" href="dns-process">
+                        3. Dns process</a>
+                </li>
+                
+                <li>
+                    <a class="" href="etc-hosts">
+                        4. Etc hosts</a>
+                </li>
+                
+                <li>
+                    <a class="current" href="dns-setup">
+                        5. Dns setup</a>
+                </li>
+                
+                <li>
+                    <a class="" href="dns-tools">
+                        6. Dns tools</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- End of Sidebar -->
+
+
+        <div id="page-content-wrapper">
+            <!-- Keep all page content within the page-content inset div! -->
+            <div class="page-content inset">
+                <div class="row">
+                    <div class="col-md-6 lesson">
+
+                        <div class="user-app">
+                            <a class="btn btn-default btn-sm" href="../index.html">
+                                Home
+                            </a>
+                        </div>
+
+                        <div class="lesson-content">
+                            
+<h3>DNS Setup</h3>
+<p>We won't got through setting up a DNS server, as that would be quite a lengthy tutorial. Instead here is a quick comparison list of the popular DNS servers to use with Linux.</p>
+<p><b>BIND</b></p>
+<p>The most popular DNS server on the Internet, it's the standard that is used with Linux distributions. It was originally developed at the University of California at Berkeley hence the name BIND (Berkeley Internet Name Domain). If you need full-featured power and flexibility, you can't go wrong with BIND.</p>
+<p><b>DNSmasq</b></p>
+<p>Lightweight and much easier to configure than BIND. If you want simplicity and don't need all the bells and whistles of BIND, use DNSmasq. It comes with all the tools you need to setup DHCP and DNS, recommended for a smaller network.</p>
+<p><b>PowerDNS</b></p>
+<p>Full-featured and similar to BIND, it offers you a little bit more flexibility with options. It reads information from multiple databases such as MySQL, PostgreSQL, etc. for easier administration. Just because BIND has been the way we do things, it doesn't mean it has to stay that way.</p>
+<p>This isn't a complete list, but it should give you an idea of where to look if you are setting up your own DNS server. </p>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 practice">
+                        <div class="exercise-content">
+                            <h3>Exercise</h3>
+<p>No exercises for this lesson.</p>
+
+                        </div>
+
+                        <div class="quiz-content">
+                            <h3>Quiz Question</h3>
+<p>What is the de facto DNS server for Linux?</p>
+<h3>Quiz Answer</h3>
+<p>BIND</p>
+</div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

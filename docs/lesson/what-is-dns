@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>what-is-dns</title>
+    <script
+        src="../static/assets/category/application-8013fdc35e4c79f95bcb3d655ff61f137ac05bcee52e6d96588427a84eddef12.js.download"
+        data-turbolinks-track="true"></script>
+    <link rel="stylesheet" media="all"
+        href="../static/assets/category/application-b0b91461d093aa2ed95d8a7467856e4dc16f55744d3c17a927c3598e5b26cd3f.css"
+        data-turbolinks-track="true">
+</head>
+
+<body>
+    <div id="wrapper" class="active">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul id="sidebar_menu" class="sidebar-nav">
+                <li class="sidebar-brand"><a>Dns</a>
+                </li>
+            </ul>
+            <ul class="sidebar-nav" id="sidebar">
+                
+                <li>
+                    <a class="current" href="what-is-dns">
+                        1. What is dns</a>
+                </li>
+                
+                <li>
+                    <a class="" href="dns-components">
+                        2. Dns components</a>
+                </li>
+                
+                <li>
+                    <a class="" href="dns-process">
+                        3. Dns process</a>
+                </li>
+                
+                <li>
+                    <a class="" href="etc-hosts">
+                        4. Etc hosts</a>
+                </li>
+                
+                <li>
+                    <a class="" href="dns-setup">
+                        5. Dns setup</a>
+                </li>
+                
+                <li>
+                    <a class="" href="dns-tools">
+                        6. Dns tools</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- End of Sidebar -->
+
+
+        <div id="page-content-wrapper">
+            <!-- Keep all page content within the page-content inset div! -->
+            <div class="page-content inset">
+                <div class="row">
+                    <div class="col-md-6 lesson">
+
+                        <div class="user-app">
+                            <a class="btn btn-default btn-sm" href="../index.html">
+                                Home
+                            </a>
+                        </div>
+
+                        <div class="lesson-content">
+                            
+<h3>What is DNS?</h3>
+<p>Imagine if every time you wanted to do a search on Google you had to type in <a href="http://192.78.12.4">http://192.78.12.4</a> instead of <a href="http://www.google.com">www.google.com</a>. Well without DNS ("Domain Name System") that's exactly what would happen. Low level networking only understands the raw IP address to identify a host. DNS allows us humans to keep track of websites and hosts by name instead of an IP address.  It's like a contact list for the Internet. If you know someone's name but don’t know their phone number, you can simply look it up in your contacts list.</p>
+<p>DNS is fundamentally a distributed database of hostnames to IP addresses, we manage our database so people know how to get to our site/domain, and somewhere else another person is managing their database so others can get to their domain. These domains are then able to talk to each other and build a massive contact list of the Internet.</p>
+<p>In this course, we will go over some basics of DNS, but be wary that DNS is an exhaustive topic and if you really want to get down and dirty with it, you'll need to do some additional research.</p>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 practice">
+                        <div class="exercise-content">
+                            <h3>Exercise</h3>
+<p>No exercises for this lesson.</p>
+
+                        </div>
+
+                        <div class="quiz-content">
+                            <h3>Quiz Question</h3>
+<p>True or false, DNS helps us find MAC addresses for hostnames?</p>
+<h3>Quiz Answer</h3>
+<p>false</p>
+</div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

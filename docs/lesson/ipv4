@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>ipv4</title>
+    <script
+        src="../static/assets/category/application-8013fdc35e4c79f95bcb3d655ff61f137ac05bcee52e6d96588427a84eddef12.js.download"
+        data-turbolinks-track="true"></script>
+    <link rel="stylesheet" media="all"
+        href="../static/assets/category/application-b0b91461d093aa2ed95d8a7467856e4dc16f55744d3c17a927c3598e5b26cd3f.css"
+        data-turbolinks-track="true">
+</head>
+
+<body>
+    <div id="wrapper" class="active">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul id="sidebar_menu" class="sidebar-nav">
+                <li class="sidebar-brand"><a>Subnetting</a>
+                </li>
+            </ul>
+            <ul class="sidebar-nav" id="sidebar">
+                
+                <li>
+                    <a class="current" href="ipv4">
+                        1. Ipv4</a>
+                </li>
+                
+                <li>
+                    <a class="" href="subnets">
+                        2. Subnets</a>
+                </li>
+                
+                <li>
+                    <a class="" href="subnet-math">
+                        3. Subnet math</a>
+                </li>
+                
+                <li>
+                    <a class="" href="subnetting-cheats">
+                        4. Subnetting cheats</a>
+                </li>
+                
+                <li>
+                    <a class="" href="classless-interdomain-routing-cidr">
+                        5. Classless interdomain routing cidr</a>
+                </li>
+                
+                <li>
+                    <a class="" href="nat-network-address-translation">
+                        6. Nat network address translation</a>
+                </li>
+                
+                <li>
+                    <a class="" href="ipv6">
+                        7. Ipv6</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- End of Sidebar -->
+
+
+        <div id="page-content-wrapper">
+            <!-- Keep all page content within the page-content inset div! -->
+            <div class="page-content inset">
+                <div class="row">
+                    <div class="col-md-6 lesson">
+
+                        <div class="user-app">
+                            <a class="btn btn-default btn-sm" href="../index.html">
+                                Home
+                            </a>
+                        </div>
+
+                        <div class="lesson-content">
+                            
+<h3>IPv4</h3>
+<p>So we know that network hosts have a unique address they can be found at. These addresses are known as IP addresses. An IPv4 address looks something like this:</p>
+<pre>204.23.124.23</pre>
+<p>This address actually contains two parts, the network portion that tells us know network it's on and the host portion that tells us which host on that network it is. For this course we will mostly be discussing IPv4 addresses, which are what you commonly will see when referring to IP addresses. </p>
+<p>An IP address is separated into octets by the periods. So there are 4 octets in an IPv4 address. If you know a bit of computer science, an octet is 8 bits and 8 bits actually equal 1 byte, so we also refer to an IPv4 address as having 4 bytes. We use bits frequently when dealing with subnets and IP addresses.</p>
+<p>You can view your IP address with the ifconfig -a command:</p>
+<pre>
+pete@icebox:~$ ifconfig -a
+eth0      Link encap:Ethernet  HWaddr 1d:3a:32:24:4d:ce  
+          inet addr:192.168.1.129  Bcast:192.168.1.255  Mask:255.255.255.0
+          inet6 addr: fd60::21c:29ff:fe63:5cdc/64 Scope:Link
+</pre>
+<p>As you can see my IPv4 address is: 192.168.1.129</p>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 practice">
+                        <div class="exercise-content">
+                            <h3>Exercise</h3>
+<p>Find your IP address with ifconfig.</p>
+
+                        </div>
+
+                        <div class="quiz-content">
+                            <h3>Quiz Question</h3>
+<p>How many bytes are in an IPv4 address?</p>
+<h3>Quiz Answer</h3>
+<p>4</p>
+</div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

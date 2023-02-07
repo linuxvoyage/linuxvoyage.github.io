@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>etc-shadow-file</title>
+    <script
+        src="../static/assets/category/application-8013fdc35e4c79f95bcb3d655ff61f137ac05bcee52e6d96588427a84eddef12.js.download"
+        data-turbolinks-track="true"></script>
+    <link rel="stylesheet" media="all"
+        href="../static/assets/category/application-b0b91461d093aa2ed95d8a7467856e4dc16f55744d3c17a927c3598e5b26cd3f.css"
+        data-turbolinks-track="true">
+</head>
+
+<body>
+    <div id="wrapper" class="active">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul id="sidebar_menu" class="sidebar-nav">
+                <li class="sidebar-brand"><a>User Management</a>
+                </li>
+            </ul>
+            <ul class="sidebar-nav" id="sidebar">
+                
+                <li>
+                    <a class="" href="users-and-groups">
+                        1. Users and groups</a>
+                </li>
+                
+                <li>
+                    <a class="" href="root-user">
+                        2. Root user</a>
+                </li>
+                
+                <li>
+                    <a class="" href="etc-passwd-file">
+                        3. Etc passwd file</a>
+                </li>
+                
+                <li>
+                    <a class="current" href="etc-shadow-file">
+                        4. Etc shadow file</a>
+                </li>
+                
+                <li>
+                    <a class="" href="etc-group-file">
+                        5. Etc group file</a>
+                </li>
+                
+                <li>
+                    <a class="" href="user-management-tools">
+                        6. User management tools</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- End of Sidebar -->
+
+
+        <div id="page-content-wrapper">
+            <!-- Keep all page content within the page-content inset div! -->
+            <div class="page-content inset">
+                <div class="row">
+                    <div class="col-md-6 lesson">
+
+                        <div class="user-app">
+                            <a class="btn btn-default btn-sm" href="../index.html">
+                                Home
+                            </a>
+                        </div>
+
+                        <div class="lesson-content">
+                            
+<h3>/etc/shadow</h3>
+<p>The /etc/shadow file is used to store information about user authentication. It requires superuser read permissions. </p>
+<pre>$ sudo cat /etc/shadow
+
+root:MyEPTEa$6Nonsense:15000:0:99999:7:::
+</pre>
+<p>You'll notice that it looks very similar to the contents of /etc/passwd, however in the password field you'll see an encrypted password. The fields are separated by colons as followed:</p>
+<ol>
+<li>Username</li>
+<li>Encrypted password</li>
+<li>Date of last password changed - expressed as the number of days since Jan 1, 1970. If there is a 0 that means the user should change their password the next time they login</li>
+<li>Minimum password age - Days that a user will have to wait before being able to change their password again</li>
+<li>Maximum password age - Maximum number of days before a user has to change their password</li>
+<li>Password warning period - Number of days before a password is going to expire</li>
+<li>Password inactivity period - Number of days after a password has expired to allow login with their password</li>
+<li>Account expiration date - date that user will not be able to login</li>
+<li>Reserved field for future use</li>
+</ol>
+<p>In most distributions today, user authentication doesn't rely on just the /etc/shadow file, there are other mechanisms in place such as PAM (Pluggable Authentication Modules) that replace authentication.</p>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 practice">
+                        <div class="exercise-content">
+                            <h3>Exercise</h3>
+<p>Take a look at the /etc/shadow file</p>
+
+                        </div>
+
+                        <div class="quiz-content">
+                            <h3>Quiz Question</h3>
+<p>No questions move along!</p>
+<h3>Quiz Answer</h3>
+</div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

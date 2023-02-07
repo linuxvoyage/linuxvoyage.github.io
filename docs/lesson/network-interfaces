@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>network-interfaces</title>
+    <script
+        src="../static/assets/category/application-8013fdc35e4c79f95bcb3d655ff61f137ac05bcee52e6d96588427a84eddef12.js.download"
+        data-turbolinks-track="true"></script>
+    <link rel="stylesheet" media="all"
+        href="../static/assets/category/application-b0b91461d093aa2ed95d8a7467856e4dc16f55744d3c17a927c3598e5b26cd3f.css"
+        data-turbolinks-track="true">
+</head>
+
+<body>
+    <div id="wrapper" class="active">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul id="sidebar_menu" class="sidebar-nav">
+                <li class="sidebar-brand"><a>Network Configuration</a>
+                </li>
+            </ul>
+            <ul class="sidebar-nav" id="sidebar">
+                
+                <li>
+                    <a class="current" href="network-interfaces">
+                        1. Network interfaces</a>
+                </li>
+                
+                <li>
+                    <a class="" href="route">
+                        2. Route</a>
+                </li>
+                
+                <li>
+                    <a class="" href="dhclient">
+                        3. Dhclient</a>
+                </li>
+                
+                <li>
+                    <a class="" href="network-manager">
+                        4. Network manager</a>
+                </li>
+                
+                <li>
+                    <a class="" href="arp-command">
+                        5. Arp command</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- End of Sidebar -->
+
+
+        <div id="page-content-wrapper">
+            <!-- Keep all page content within the page-content inset div! -->
+            <div class="page-content inset">
+                <div class="row">
+                    <div class="col-md-6 lesson">
+
+                        <div class="user-app">
+                            <a class="btn btn-default btn-sm" href="../index.html">
+                                Home
+                            </a>
+                        </div>
+
+                        <div class="lesson-content">
+                            
+<h3>Network Interfaces</h3>
+<p>A network interface is how the kernel links up the software side of networking to the hardware side. We've already seen an example of this: </p>
+<pre>
+pete@icebox:~$ ifconfig -a
+eth0      Link encap:Ethernet  HWaddr 1d:3a:32:24:4d:ce  
+          inet addr:192.168.1.129  Bcast:192.168.1.255  Mask:255.255.255.0
+          inet6 addr: fd60::21c:29ff:fe63:5cdc/64 Scope:Link
+</pre>
+<p><b> The ifconfig command</b></p>
+<p>The <b>ifconfig</b> tool allows us to configure our network interfaces, if we don't have any network interfaces set up, the kernel's device drivers and the network won't know how to talk to each other. Ifconfig runs on bootup and configures our interfaces through config files, but we can also manually modify them. The output of ifconfig shows the interface name on the left side and the right side shows detailed information. You'll most commonly see interfaces named eth0 (first Ethernet card in the machine), wlan0 (wireless interface), lo (loopback interface). The loopback interface is used to represent your computer, it just loops you back to yourself. This is good for debugging or connecting to servers running locally. </p>
+<p>The status of interfaces, can be up or down, as you can guess if you wanted to "turn off" an interface you can set it to go down. The fields you'll probably look at the most in the ifconfig output is the HWaddr (MAC address of the interface), inet address (IPv4 address) and inet6 (IPv6 address). Of course you can see that the subnet mask and broadcast address are there as well. You can also view interface information at /etc/network/interfaces.</p>
+<p><b>To create an interface and bring it up</b></p>
+<pre>$ ifconfig eth0 192.168.2.1 netmask 255.255.255.0 up</pre>
+<p>This assigns an IP address and netmask to the eth0 interface and also turns it up.</p>
+<p><b>To bring up or down an interface</b></p>
+<pre>
+$ ifup eth0
+$ ifdown eth0
+</pre>
+<p><b> The ip command </b></p>
+<p>The <b>ip</b> command also allows us to manipulate the networking stack of a system. Depending on the distribution you are using it may be the preferred method of manipulating your network settings. </p>
+<p>Here are some examples of its use:</p>
+<p><b>To show interface information for all interfaces </b><br/>
+<pre><br/>
+$ ip link show<br/>
+</pre></p>
+<p><b>To show the statistics of an interface</b><br/>
+<pre><br/>
+$ ip -s link show eth0<br/>
+</pre></p>
+<p><b>To show ip addresses allocated to interfaces</b><br/>
+<pre><br/>
+$ ip address show<br/>
+</pre></p>
+<p><b>To bring interfaces up and down</b><br/>
+<pre><br/>
+$ ip link set eth0 up<br/>
+$ ip link set eth0 down<br/>
+</pre></p>
+<p><b>To add an IP address to an interface</b><br/>
+<pre><br/>
+$ ip address add 192.168.1.1/24 dev eth0<br/>
+</pre></p>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 practice">
+                        <div class="exercise-content">
+                            <h3>Exercise</h3>
+<p>Try changing the state of your network interfaces to either up or down and observe what happens.</p>
+<p>Can you change your network interface's with both the ifconfig and ip commands ?</p>
+
+                        </div>
+
+                        <div class="quiz-content">
+                            <h3>Quiz Question</h3>
+<p>What is the command to configure our network interfaces?</p>
+<h3>Quiz Answer</h3>
+<p>ifconfig</p>
+</div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

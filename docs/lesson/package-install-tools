@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>package-install-tools</title>
+    <script
+        src="../static/assets/category/application-8013fdc35e4c79f95bcb3d655ff61f137ac05bcee52e6d96588427a84eddef12.js.download"
+        data-turbolinks-track="true"></script>
+    <link rel="stylesheet" media="all"
+        href="../static/assets/category/application-b0b91461d093aa2ed95d8a7467856e4dc16f55744d3c17a927c3598e5b26cd3f.css"
+        data-turbolinks-track="true">
+</head>
+
+<body>
+    <div id="wrapper" class="active">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul id="sidebar_menu" class="sidebar-nav">
+                <li class="sidebar-brand"><a>Packages</a>
+                </li>
+            </ul>
+            <ul class="sidebar-nav" id="sidebar">
+                
+                <li>
+                    <a class="" href="software-distribution">
+                        1. Software distribution</a>
+                </li>
+                
+                <li>
+                    <a class="" href="package-repositories">
+                        2. Package repositories</a>
+                </li>
+                
+                <li>
+                    <a class="" href="compressed-archives-tar">
+                        3. Compressed archives tar</a>
+                </li>
+                
+                <li>
+                    <a class="" href="package-dependencies">
+                        4. Package dependencies</a>
+                </li>
+                
+                <li>
+                    <a class="current" href="package-install-tools">
+                        5. Package install tools</a>
+                </li>
+                
+                <li>
+                    <a class="" href="package-management-systems">
+                        6. Package management systems</a>
+                </li>
+                
+                <li>
+                    <a class="" href="compile-source-code">
+                        7. Compile source code</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- End of Sidebar -->
+
+
+        <div id="page-content-wrapper">
+            <!-- Keep all page content within the page-content inset div! -->
+            <div class="page-content inset">
+                <div class="row">
+                    <div class="col-md-6 lesson">
+
+                        <div class="user-app">
+                            <a class="btn btn-default btn-sm" href="../index.html">
+                                Home
+                            </a>
+                        </div>
+
+                        <div class="lesson-content">
+                            
+<h3>rpm and dpkg</h3>
+<p>Although most of this course is about package management systems (the Batmans of package management), we mustn't forget about the Robins. Although very useful and reliable, they don't come with that sweet batmobile and utility belt.</p>
+<p>Just like .exe is a single executable file, so is .deb and .rpm. You normally wouldn't see these if you use package repositories, but if you directly download packages, you will most likely get them in these popular format. Obviously, they are exclusive to their distributions, .deb for Debian based and .rpm for Red Hat based.</p>
+<p>To install these direct packages, you can use the package management commands: rpm and dpkg. These tools are used to install package files, however they will not install the package dependencies, so if your package had 10 dependencies, you would have to install those packages separately and then their dependencies and so on and so forth. As you can see, that was one of the reasons that brought forth the full blown management systems that we will discuss this later.</p>
+<p>Keep in mind that there will be countless times when you need to install, query or verify a package with one of these tools, so remember these commands. </p>
+<p><b>Install a package</b></p>
+<pre>
+Debian: $ dpkg -i some_deb_package.deb
+RPM: $ rpm -i some_rpm_package.rpm
+</pre>
+<p>The <b>i</b> stands for install. You can also use the longer format of --install. </p>
+<p><b>Remove a package</b></p>
+<pre>
+Debian: $ dpkg -r some_deb_package.deb
+RPM: $ rpm -e some_rpm_package.rpm
+</pre>
+<p>Debian: <b>r</b> for remove<br/>
+RPM: <b>e</b> for erase</p>
+<p><b>List installed packages</b></p>
+<pre>
+Debian: $ dpkg -l
+RPM: $ rpm -qa
+</pre>
+<p>Debian: <b>l</b> for list<br/>
+RPM: <b>q</b> for query and <b>a</b> for all</p>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 practice">
+                        <div class="exercise-content">
+                            <h3>Exercise</h3>
+<p>Find a program that you want to install on your system like Google Chrome and install it using one of these commands.</p>
+
+                        </div>
+
+                        <div class="quiz-content">
+                            <h3>Quiz Question</h3>
+<p>What is the package management tool for .deb files?</p>
+<h3>Quiz Answer</h3>
+<p>dpkg</p>
+</div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

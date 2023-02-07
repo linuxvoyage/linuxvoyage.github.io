@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>application-layer</title>
+    <script
+        src="../static/assets/category/application-8013fdc35e4c79f95bcb3d655ff61f137ac05bcee52e6d96588427a84eddef12.js.download"
+        data-turbolinks-track="true"></script>
+    <link rel="stylesheet" media="all"
+        href="../static/assets/category/application-b0b91461d093aa2ed95d8a7467856e4dc16f55744d3c17a927c3598e5b26cd3f.css"
+        data-turbolinks-track="true">
+</head>
+
+<body>
+    <div id="wrapper" class="active">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul id="sidebar_menu" class="sidebar-nav">
+                <li class="sidebar-brand"><a>Network Fundamentals</a>
+                </li>
+            </ul>
+            <ul class="sidebar-nav" id="sidebar">
+                
+                <li>
+                    <a class="" href="network-basics">
+                        1. Network basics</a>
+                </li>
+                
+                <li>
+                    <a class="" href="osi-model">
+                        2. Osi model</a>
+                </li>
+                
+                <li>
+                    <a class="" href="tcp-ip-model">
+                        3. Tcp ip model</a>
+                </li>
+                
+                <li>
+                    <a class="" href="network-addressing">
+                        4. Network addressing</a>
+                </li>
+                
+                <li>
+                    <a class="current" href="application-layer">
+                        5. Application layer</a>
+                </li>
+                
+                <li>
+                    <a class="" href="transport-layer">
+                        6. Transport layer</a>
+                </li>
+                
+                <li>
+                    <a class="" href="network-layer">
+                        7. Network layer</a>
+                </li>
+                
+                <li>
+                    <a class="" href="link-layer">
+                        8. Link layer</a>
+                </li>
+                
+                <li>
+                    <a class="" href="dhcp-overview">
+                        9. Dhcp overview</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- End of Sidebar -->
+
+
+        <div id="page-content-wrapper">
+            <!-- Keep all page content within the page-content inset div! -->
+            <div class="page-content inset">
+                <div class="row">
+                    <div class="col-md-6 lesson">
+
+                        <div class="user-app">
+                            <a class="btn btn-default btn-sm" href="../index.html">
+                                Home
+                            </a>
+                        </div>
+
+                        <div class="lesson-content">
+                            
+<h3>Application Layer</h3>
+<p>Let's say I wanted to send an email to Patty. We'll go through each of the TCP/IP layers to see this in action. </p>
+<p>Remember that packets are used to transmit data across networks, a packet consists of a header and payload. The header contains information about where the packet is going and where it came from. The payload is the actual data that is being transferred. As our packet traverses the network, each layer adds a bit of information to the header of the packet. Also keep in mind that different layers use a different term for our "packet". In the transport layer we essentially encapsulate our data in a segment and in the link layer we refer to this as a frame, but just know that packet can be used in regards to the same thing.</p>
+<p>First we start off in the application layer. When we send our email through our email client, the application layer will encapsulate this data. The application layer talks to the transport layer through a specified port and through this port it sends its data. We want to send an email through the application layer protocol SMTP (simple mail transfer protocol). The data is sent through our transport protocol which opens a connection to this port (port 25 is used for SMTP), so we get this data sent through this port and that data is sent to the Transport layer to be encapsulated into segments.</p>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 practice">
+                        <div class="exercise-content">
+                            <h3>Exercise</h3>
+<p>No exercises for this lesson.</p>
+
+                        </div>
+
+                        <div class="quiz-content">
+                            <h3>Quiz Question</h3>
+<p>What layer is used to present the packet data in a user friendly format?</p>
+<h3>Quiz Answer</h3>
+<p>Application</p>
+</div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

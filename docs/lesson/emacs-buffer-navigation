@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>emacs-buffer-navigation</title>
+    <script
+        src="../static/assets/category/application-8013fdc35e4c79f95bcb3d655ff61f137ac05bcee52e6d96588427a84eddef12.js.download"
+        data-turbolinks-track="true"></script>
+    <link rel="stylesheet" media="all"
+        href="../static/assets/category/application-b0b91461d093aa2ed95d8a7467856e4dc16f55744d3c17a927c3598e5b26cd3f.css"
+        data-turbolinks-track="true">
+</head>
+
+<body>
+    <div id="wrapper" class="active">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul id="sidebar_menu" class="sidebar-nav">
+                <li class="sidebar-brand"><a>Text Fu Advanced</a>
+                </li>
+            </ul>
+            <ul class="sidebar-nav" id="sidebar">
+                
+                <li>
+                    <a class="" href="regular-expressions-regex">
+                        1. Regular expressions regex</a>
+                </li>
+                
+                <li>
+                    <a class="" href="text-editors-vim-or-emacs">
+                        2. Text editors vim or emacs</a>
+                </li>
+                
+                <li>
+                    <a class="" href="vim-text-editor">
+                        3. Vim text editor</a>
+                </li>
+                
+                <li>
+                    <a class="" href="vim-search-patterns">
+                        4. Vim search patterns</a>
+                </li>
+                
+                <li>
+                    <a class="" href="vim-navigation">
+                        5. Vim navigation</a>
+                </li>
+                
+                <li>
+                    <a class="" href="vim-inserting-appending-text">
+                        6. Vim inserting appending text</a>
+                </li>
+                
+                <li>
+                    <a class="" href="vim-editing">
+                        7. Vim editing</a>
+                </li>
+                
+                <li>
+                    <a class="" href="vim-saving-and-exiting">
+                        8. Vim saving and exiting</a>
+                </li>
+                
+                <li>
+                    <a class="" href="emacs-text-editor">
+                        9. Emacs text editor</a>
+                </li>
+                
+                <li>
+                    <a class="" href="emacs-manipulate-files">
+                        10. Emacs manipulate files</a>
+                </li>
+                
+                <li>
+                    <a class="current" href="emacs-buffer-navigation">
+                        11. Emacs buffer navigation</a>
+                </li>
+                
+                <li>
+                    <a class="" href="emacs-editing">
+                        12. Emacs editing</a>
+                </li>
+                
+                <li>
+                    <a class="" href="emacs-exiting-and-help">
+                        13. Emacs exiting and help</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- End of Sidebar -->
+
+
+        <div id="page-content-wrapper">
+            <!-- Keep all page content within the page-content inset div! -->
+            <div class="page-content inset">
+                <div class="row">
+                    <div class="col-md-6 lesson">
+
+                        <div class="user-app">
+                            <a class="btn btn-default btn-sm" href="../index.html">
+                                Home
+                            </a>
+                        </div>
+
+                        <div class="lesson-content">
+                            
+<h3>Emacs Buffer Navigation</h3>
+<p>To move around buffers (or files you're visiting) use the following commands:</p>
+<p><b>Switch buffers</b></p>
+<pre>
+C-x b - switch buffer
+C-x right arrow - right-cycle through buffer
+C-x left arrow - left-cycle through buffer
+</pre>
+<p><b>Close the buffer</b></p>
+<pre>C-x k</pre>
+<p><b>Split the current buffer</b></p>
+<pre>C-x 2</pre>
+<p>This allows you see multiple buffers on one screen. To move between these buffers use: C-x o</p>
+<p><b>Set a single buffer as the current screen</b></p>
+<pre>C-x 1</pre>
+<p>If you ever used a terminal multiplexer like screen and tmux, the buffer commands will feel very familiar.</p>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 practice">
+                        <div class="exercise-content">
+                            <h3>Exercise</h3>
+<p>Play around with buffers.</p>
+
+                        </div>
+
+                        <div class="quiz-content">
+                            <h3>Quiz Question</h3>
+<p>How do you kill a buffer?</p>
+<h3>Quiz Answer</h3>
+<p>C-x k</p>
+</div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

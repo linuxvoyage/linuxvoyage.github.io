@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>boot-process-init</title>
+    <script
+        src="../static/assets/category/application-8013fdc35e4c79f95bcb3d655ff61f137ac05bcee52e6d96588427a84eddef12.js.download"
+        data-turbolinks-track="true"></script>
+    <link rel="stylesheet" media="all"
+        href="../static/assets/category/application-b0b91461d093aa2ed95d8a7467856e4dc16f55744d3c17a927c3598e5b26cd3f.css"
+        data-turbolinks-track="true">
+</head>
+
+<body>
+    <div id="wrapper" class="active">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul id="sidebar_menu" class="sidebar-nav">
+                <li class="sidebar-brand"><a>Booting</a>
+                </li>
+            </ul>
+            <ul class="sidebar-nav" id="sidebar">
+                
+                <li>
+                    <a class="" href="boot-process-overview">
+                        1. Boot process overview</a>
+                </li>
+                
+                <li>
+                    <a class="" href="boot-process-bios">
+                        2. Boot process bios</a>
+                </li>
+                
+                <li>
+                    <a class="" href="boot-process-bootloader">
+                        3. Boot process bootloader</a>
+                </li>
+                
+                <li>
+                    <a class="" href="boot-process-kernel">
+                        4. Boot process kernel</a>
+                </li>
+                
+                <li>
+                    <a class="current" href="boot-process-init">
+                        5. Boot process init</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- End of Sidebar -->
+
+
+        <div id="page-content-wrapper">
+            <!-- Keep all page content within the page-content inset div! -->
+            <div class="page-content inset">
+                <div class="row">
+                    <div class="col-md-6 lesson">
+
+                        <div class="user-app">
+                            <a class="btn btn-default btn-sm" href="../index.html">
+                                Home
+                            </a>
+                        </div>
+
+                        <div class="lesson-content">
+                            
+<h3>Boot Process: Init</h3>
+<p>We've discussed init in previous lessons and know that it is the first process that gets started and it starts all the other essential services on our system. But how?</p>
+<p>There are actually three major implementations of init in Linux: </p>
+<p><b>System V init (sysv)</b></p>
+<p>This is the traditional init system. It sequentially starts and stops processes, based on startup scripts. The state of the machine is denoted by runlevels, each runlevel starts or stops a machine in a different way. </p>
+<p><b>Upstart</b></p>
+<p>This is the init you'll find on older Ubuntu installations. Upstart uses the idea of jobs and events and works by starting jobs that performs certain actions in response to events. </p>
+<p><b>Systemd</b></p>
+<p>This is the new standard for init, it is goal oriented. Basically you have a goal that you want to achieve and systemd tries to satisfy the goal's dependencies to complete the goal. </p>
+<p>We have an entire course on Init systems where we will dive into each of these systems in more detail.</p>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 practice">
+                        <div class="exercise-content">
+                            <h3>Exercise</h3>
+<p>No exercises for this lesson.</p>
+
+                        </div>
+
+                        <div class="quiz-content">
+                            <h3>Quiz Question</h3>
+<p>What is the newest standard for init?</p>
+<h3>Quiz Answer</h3>
+<p>systemd</p>
+</div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

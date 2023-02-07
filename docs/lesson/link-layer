@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>link-layer</title>
+    <script
+        src="../static/assets/category/application-8013fdc35e4c79f95bcb3d655ff61f137ac05bcee52e6d96588427a84eddef12.js.download"
+        data-turbolinks-track="true"></script>
+    <link rel="stylesheet" media="all"
+        href="../static/assets/category/application-b0b91461d093aa2ed95d8a7467856e4dc16f55744d3c17a927c3598e5b26cd3f.css"
+        data-turbolinks-track="true">
+</head>
+
+<body>
+    <div id="wrapper" class="active">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul id="sidebar_menu" class="sidebar-nav">
+                <li class="sidebar-brand"><a>Network Fundamentals</a>
+                </li>
+            </ul>
+            <ul class="sidebar-nav" id="sidebar">
+                
+                <li>
+                    <a class="" href="network-basics">
+                        1. Network basics</a>
+                </li>
+                
+                <li>
+                    <a class="" href="osi-model">
+                        2. Osi model</a>
+                </li>
+                
+                <li>
+                    <a class="" href="tcp-ip-model">
+                        3. Tcp ip model</a>
+                </li>
+                
+                <li>
+                    <a class="" href="network-addressing">
+                        4. Network addressing</a>
+                </li>
+                
+                <li>
+                    <a class="" href="application-layer">
+                        5. Application layer</a>
+                </li>
+                
+                <li>
+                    <a class="" href="transport-layer">
+                        6. Transport layer</a>
+                </li>
+                
+                <li>
+                    <a class="" href="network-layer">
+                        7. Network layer</a>
+                </li>
+                
+                <li>
+                    <a class="current" href="link-layer">
+                        8. Link layer</a>
+                </li>
+                
+                <li>
+                    <a class="" href="dhcp-overview">
+                        9. Dhcp overview</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- End of Sidebar -->
+
+
+        <div id="page-content-wrapper">
+            <!-- Keep all page content within the page-content inset div! -->
+            <div class="page-content inset">
+                <div class="row">
+                    <div class="col-md-6 lesson">
+
+                        <div class="user-app">
+                            <a class="btn btn-default btn-sm" href="../index.html">
+                                Home
+                            </a>
+                        </div>
+
+                        <div class="lesson-content">
+                            
+<h3>Link Layer</h3>
+<p>At the bottom of the TCP/IP model sits the Link Layer. This layer is the hardware specific layer.</p>
+<p>In the link layer, our packet is encapsulated once more into something called a frame. The frame header attaches the source and destination MAC addresses of our hosts, checksums and packet separators so that the receiver can tell when a packet ends. </p>
+<p>Fortunately we are on the same network, so our packet won't have to travel too far. First, the link layer attaches my source MAC address to the frame header, but it needs to know Patty's MAC address as well. How does it know that and how do I find it since it's not on the Internet? We use ARP!</p>
+<p><b>ARP (Address Resolution Protocol)</b></p>
+<p>ARP finds the MAC address associated with an IP address. ARP is used within the same network. If Patty was not on the same network, we would use a routing system to determine the next router that would receive the packet and once we were on the same network, we could use ARP. </p>
+<p>Once we are on the same network, systems first use the ARP look-up table that stores information about what IP addresses are associated with what MAC address. If the value is not there, then ARP is used. Then the system will send a broadcast message to the network using the ARP protocol to find out which host has IP 10.10.1.4. A broadcast message is a special message that is sent to all hosts on a network (aptly named for sending a broadcast). Any machine with the requested IP address will reply with an ARP packet containing the IP address and the MAC address.</p>
+<p>Now that we have all the necessary data we need, IP address and MAC addresses, our link layer forwards this frame through our network interface card, out to the next device and finds Patty's network. This step is a little more complex than how I just explained it, but we will discuss more details in the Routing course.</p>
+<p>And there it is a simple (or not so simple) packet traversal down the TCP/IP layer. Keep in mind that packets don't travel in a one way fashion like this. We haven't even gotten to Patty's network yet! When travelling through networks, it requires going through the TCP/IP model at least twice before any data is sent or received. In reality, the way this packet looks would be something like this: </p>
+<p><b>Packet Traversal</b></p>
+<ol>
+<li>Pete sends Patty an email: this data gets sent to the transport layer.</li>
+<li>The transport layer encapsulates the data into a TCP or UDP header to form a segment, the segment attaches the destination and source TCP or UDP port, then the segment is sent to the network layer.</li>
+<li>The network layer encapsulates the TCP segment inside an IP packet, it attaches the source and destination IP address. Then routes the packet to the link layer.</li>
+<li>The packet then reaches Pete's physical hardware and gets encapsulated in a frame. The source and destination MAC address get added to the frame.</li>
+<li>Patty's receives this data frame through her physical layer and checks each frame for data integrity, then de-encapsulates the frame contents and sends the IP packet to the network layer.</li>
+<li>The network layer reads the packet to find the source and destination IP that was previously attached. It checks if its IP is the same as the destination IP, which it is! It de-encapsulates the packet and sends the segment to the transport layer.</li>
+<li>The transport layer de-encapsulates the segments, checks the TCP or UDP port numbers and makes a connection to the application layer based on those port numbers.</li>
+<li>The application layer receives the data from the transport layer on the port that was specified and presents it to Patty in the form of the final email message</li>
+</ol>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 practice">
+                        <div class="exercise-content">
+                            <h3>Exercise</h3>
+<p>No exercises for this lesson.</p>
+
+                        </div>
+
+                        <div class="quiz-content">
+                            <h3>Quiz Question</h3>
+<p>What is used to find the MAC address on the same network?</p>
+<h3>Quiz Answer</h3>
+<p>ARP</p>
+</div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

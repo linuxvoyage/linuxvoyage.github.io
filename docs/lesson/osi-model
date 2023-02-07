@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>osi-model</title>
+    <script
+        src="../static/assets/category/application-8013fdc35e4c79f95bcb3d655ff61f137ac05bcee52e6d96588427a84eddef12.js.download"
+        data-turbolinks-track="true"></script>
+    <link rel="stylesheet" media="all"
+        href="../static/assets/category/application-b0b91461d093aa2ed95d8a7467856e4dc16f55744d3c17a927c3598e5b26cd3f.css"
+        data-turbolinks-track="true">
+</head>
+
+<body>
+    <div id="wrapper" class="active">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul id="sidebar_menu" class="sidebar-nav">
+                <li class="sidebar-brand"><a>Network Fundamentals</a>
+                </li>
+            </ul>
+            <ul class="sidebar-nav" id="sidebar">
+                
+                <li>
+                    <a class="" href="network-basics">
+                        1. Network basics</a>
+                </li>
+                
+                <li>
+                    <a class="current" href="osi-model">
+                        2. Osi model</a>
+                </li>
+                
+                <li>
+                    <a class="" href="tcp-ip-model">
+                        3. Tcp ip model</a>
+                </li>
+                
+                <li>
+                    <a class="" href="network-addressing">
+                        4. Network addressing</a>
+                </li>
+                
+                <li>
+                    <a class="" href="application-layer">
+                        5. Application layer</a>
+                </li>
+                
+                <li>
+                    <a class="" href="transport-layer">
+                        6. Transport layer</a>
+                </li>
+                
+                <li>
+                    <a class="" href="network-layer">
+                        7. Network layer</a>
+                </li>
+                
+                <li>
+                    <a class="" href="link-layer">
+                        8. Link layer</a>
+                </li>
+                
+                <li>
+                    <a class="" href="dhcp-overview">
+                        9. Dhcp overview</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- End of Sidebar -->
+
+
+        <div id="page-content-wrapper">
+            <!-- Keep all page content within the page-content inset div! -->
+            <div class="page-content inset">
+                <div class="row">
+                    <div class="col-md-6 lesson">
+
+                        <div class="user-app">
+                            <a class="btn btn-default btn-sm" href="../index.html">
+                                Home
+                            </a>
+                        </div>
+
+                        <div class="lesson-content">
+                            
+<h3>OSI Model</h3>
+<p>Before we can look at some practical networking stuff, we have to go over some boring jargon that you've probably heard of before. The OSI (Open Systems Interconnection) model is a theoretical model of networking. This model shows us how a packet traverses through a network in seven different layers. I won't get into specifics of this model, since most of these networking courses will be focused on the TCP/IP model, but it should be mentioned that such a theoretical networking model exists and has actually played a large part in the TCP/IP networking model that we use today.</p>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 practice">
+                        <div class="exercise-content">
+                            <h3>Exercise</h3>
+<p>Read more about the OSI model: <a href="https://en.wikipedia.org/wiki/OSI_model"><a href="https://en.wikipedia.org/wiki/OSI_model&lt;/a&gt;">https://en.wikipedia.org/wiki/OSI_model</a></a></p>
+
+                        </div>
+
+                        <div class="quiz-content">
+                            <h3>Quiz Question</h3>
+<p>What is used as the theoretical model of networking?</p>
+<h3>Quiz Answer</h3>
+<p>OSI</p>
+</div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

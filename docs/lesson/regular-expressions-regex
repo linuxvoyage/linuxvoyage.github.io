@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>regular-expressions-regex</title>
+    <script
+        src="../static/assets/category/application-8013fdc35e4c79f95bcb3d655ff61f137ac05bcee52e6d96588427a84eddef12.js.download"
+        data-turbolinks-track="true"></script>
+    <link rel="stylesheet" media="all"
+        href="../static/assets/category/application-b0b91461d093aa2ed95d8a7467856e4dc16f55744d3c17a927c3598e5b26cd3f.css"
+        data-turbolinks-track="true">
+</head>
+
+<body>
+    <div id="wrapper" class="active">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul id="sidebar_menu" class="sidebar-nav">
+                <li class="sidebar-brand"><a>Text Fu Advanced</a>
+                </li>
+            </ul>
+            <ul class="sidebar-nav" id="sidebar">
+                
+                <li>
+                    <a class="current" href="regular-expressions-regex">
+                        1. Regular expressions regex</a>
+                </li>
+                
+                <li>
+                    <a class="" href="text-editors-vim-or-emacs">
+                        2. Text editors vim or emacs</a>
+                </li>
+                
+                <li>
+                    <a class="" href="vim-text-editor">
+                        3. Vim text editor</a>
+                </li>
+                
+                <li>
+                    <a class="" href="vim-search-patterns">
+                        4. Vim search patterns</a>
+                </li>
+                
+                <li>
+                    <a class="" href="vim-navigation">
+                        5. Vim navigation</a>
+                </li>
+                
+                <li>
+                    <a class="" href="vim-inserting-appending-text">
+                        6. Vim inserting appending text</a>
+                </li>
+                
+                <li>
+                    <a class="" href="vim-editing">
+                        7. Vim editing</a>
+                </li>
+                
+                <li>
+                    <a class="" href="vim-saving-and-exiting">
+                        8. Vim saving and exiting</a>
+                </li>
+                
+                <li>
+                    <a class="" href="emacs-text-editor">
+                        9. Emacs text editor</a>
+                </li>
+                
+                <li>
+                    <a class="" href="emacs-manipulate-files">
+                        10. Emacs manipulate files</a>
+                </li>
+                
+                <li>
+                    <a class="" href="emacs-buffer-navigation">
+                        11. Emacs buffer navigation</a>
+                </li>
+                
+                <li>
+                    <a class="" href="emacs-editing">
+                        12. Emacs editing</a>
+                </li>
+                
+                <li>
+                    <a class="" href="emacs-exiting-and-help">
+                        13. Emacs exiting and help</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- End of Sidebar -->
+
+
+        <div id="page-content-wrapper">
+            <!-- Keep all page content within the page-content inset div! -->
+            <div class="page-content inset">
+                <div class="row">
+                    <div class="col-md-6 lesson">
+
+                        <div class="user-app">
+                            <a class="btn btn-default btn-sm" href="../index.html">
+                                Home
+                            </a>
+                        </div>
+
+                        <div class="lesson-content">
+                            
+<h3>regex (Regular Expressions)</h3>
+<p>Regular expressions are a powerful tool to do pattern based selection. It uses special notations similar to those we've encountered already such as the * wildcard. </p>
+<p>We'll go through a couple of the most common regular expressions, these are almost universal with any programming language.</p>
+<p>Well use this phrase as our test string:<br/>
+<pre><br/>
+sally sells seashells <br/>
+by the seashore<br/>
+</pre></p>
+<p><b>1. Beginning of a line with ^</b></p>
+<pre>
+<b>^</b>by
+would match the line "by the seashore"
+</pre>
+<p><b>2. End of a line with $</b></p>
+<pre>
+seashore<b>$</b>
+would match the line "by the seashore"
+</pre>
+<p><b>3. Matching any single character with .</b></p>
+<pre>
+b<b>.</b>
+would match by
+</pre>
+<p><b>4. Bracket notation with [] and ()</b></p>
+<p>This can be a little tricky, brackets allow us to specify characters found within the bracket. </p>
+<pre>
+d<b>[iou]</b>g
+would match: dig, dog, dug
+</pre>
+<p>The previous anchor tag ^ when used in a bracket means anything except the characters within the bracket. </p>
+<pre>
+d<b>[^i]</b>g
+would match: dog and dug but not dig
+</pre>
+<p>Brackets can also use ranges to increase the amount of characters you want to use. </p>
+<pre>
+d<b>[a-c]</b>g
+will match patterns like dag, dbg, and dcg
+</pre>
+<p>Be careful though as brackets are case sensitive:</p>
+<pre>
+d<b>[A-C]</b>g
+will match dAg, dBg and dCg but not dag, dbg and dcg
+</pre>
+<p>And those are some basic regular expressions.</p>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 practice">
+                        <div class="exercise-content">
+                            <h3>Exercise</h3>
+<p>Try to combine regular expressions with grep and search through some files.</p>
+<pre>
+grep [regular expression here] [file]
+
+## Quiz Question
+
+What regular expression would you use to match a single character?
+
+## Quiz Answer
+
+.
+            </pre></div
+                        </div>
+
+                        <div class="quiz-content">
+                            >
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

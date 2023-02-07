@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>nfs-network-file-share</title>
+    <script
+        src="../static/assets/category/application-8013fdc35e4c79f95bcb3d655ff61f137ac05bcee52e6d96588427a84eddef12.js.download"
+        data-turbolinks-track="true"></script>
+    <link rel="stylesheet" media="all"
+        href="../static/assets/category/application-b0b91461d093aa2ed95d8a7467856e4dc16f55744d3c17a927c3598e5b26cd3f.css"
+        data-turbolinks-track="true">
+</head>
+
+<body>
+    <div id="wrapper" class="active">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul id="sidebar_menu" class="sidebar-nav">
+                <li class="sidebar-brand"><a>Network Sharing</a>
+                </li>
+            </ul>
+            <ul class="sidebar-nav" id="sidebar">
+                
+                <li>
+                    <a class="" href="network-file-sharing">
+                        1. Network file sharing</a>
+                </li>
+                
+                <li>
+                    <a class="" href="rsync">
+                        2. Rsync</a>
+                </li>
+                
+                <li>
+                    <a class="" href="simple-http-server">
+                        3. Simple http server</a>
+                </li>
+                
+                <li>
+                    <a class="current" href="nfs-network-file-share">
+                        4. Nfs network file share</a>
+                </li>
+                
+                <li>
+                    <a class="" href="samba">
+                        5. Samba</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- End of Sidebar -->
+
+
+        <div id="page-content-wrapper">
+            <!-- Keep all page content within the page-content inset div! -->
+            <div class="page-content inset">
+                <div class="row">
+                    <div class="col-md-6 lesson">
+
+                        <div class="user-app">
+                            <a class="btn btn-default btn-sm" href="../index.html">
+                                Home
+                            </a>
+                        </div>
+
+                        <div class="lesson-content">
+                            
+<h3>NFS</h3>
+<p>The most standard network file share for Linux is NFS (Network File System), NFS allows a server to share directories and files with one or more clients over the network. </p>
+<p>We won't get into the details of how to create an NFS server as it can get complex, however we will discuss setting up NFS clients.</p>
+<p><b>Setting up NFS client</b></p>
+<pre>$ sudo service nfsclient start
+$ sudo mount server:/directory /mount_directory</pre>
+<p><b>Automounting</b></p>
+<p>Let's say you use the NFS server quite often and you want to keep it permanently mounted, normally you think you'd edit the /etc/fstab file, but you may not always get a connection to the server and that can cause issues on bootup. Instead what you want to do is setup automounting so that you can connect to the NFS server when you need to. This is done with the <b>automount</b> tool or in recent versions of Linux <b>amd</b>. When a file is accessed in a specified directory, automount will look up the remote server and automatically mount it. </p>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 practice">
+                        <div class="exercise-content">
+                            <h3>Exercise</h3>
+<p>Read the manpage for NFS to learn more.</p>
+
+                        </div>
+
+                        <div class="quiz-content">
+                            <h3>Quiz Question</h3>
+<p>What tool is used to manage mount points automatically?</p>
+<h3>Quiz Answer</h3>
+<p>automount</p>
+</div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>stderr-standard-error-redirect</title>
+    <script
+        src="../static/assets/category/application-8013fdc35e4c79f95bcb3d655ff61f137ac05bcee52e6d96588427a84eddef12.js.download"
+        data-turbolinks-track="true"></script>
+    <link rel="stylesheet" media="all"
+        href="../static/assets/category/application-b0b91461d093aa2ed95d8a7467856e4dc16f55744d3c17a927c3598e5b26cd3f.css"
+        data-turbolinks-track="true">
+</head>
+
+<body>
+    <div id="wrapper" class="active">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul id="sidebar_menu" class="sidebar-nav">
+                <li class="sidebar-brand"><a>Text Fu</a>
+                </li>
+            </ul>
+            <ul class="sidebar-nav" id="sidebar">
+                
+                <li>
+                    <a class="" href="stdout-standard-out-redirect">
+                        1. Stdout standard out redirect</a>
+                </li>
+                
+                <li>
+                    <a class="" href="stdin-standard-in-redirect">
+                        2. Stdin standard in redirect</a>
+                </li>
+                
+                <li>
+                    <a class="current" href="stderr-standard-error-redirect">
+                        3. Stderr standard error redirect</a>
+                </li>
+                
+                <li>
+                    <a class="" href="pipe-tee-redirect">
+                        4. Pipe tee redirect</a>
+                </li>
+                
+                <li>
+                    <a class="" href="env-environment">
+                        5. Env environment</a>
+                </li>
+                
+                <li>
+                    <a class="" href="cut-command">
+                        6. Cut command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="paste-command">
+                        7. Paste command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="head-command">
+                        8. Head command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="tail-command">
+                        9. Tail command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="expand-unexpand-command">
+                        10. Expand unexpand command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="join-split-command">
+                        11. Join split command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="sort-command">
+                        12. Sort command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="tr-translate-command">
+                        13. Tr translate command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="uniq-unique-command">
+                        14. Uniq unique command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="nl-wc-command">
+                        15. Nl wc command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="grep-command">
+                        16. Grep command</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- End of Sidebar -->
+
+
+        <div id="page-content-wrapper">
+            <!-- Keep all page content within the page-content inset div! -->
+            <div class="page-content inset">
+                <div class="row">
+                    <div class="col-md-6 lesson">
+
+                        <div class="user-app">
+                            <a class="btn btn-default btn-sm" href="../index.html">
+                                Home
+                            </a>
+                        </div>
+
+                        <div class="lesson-content">
+                            
+<h3>stderr (Standard Error)</h3>
+<p>Let's try something a little different now, let's try to list the contents of a directory that doesn't exist on your system and redirect the output to the peanuts.txt file again.</p>
+<pre>$ ls /fake/directory &gt; peanuts.txt </pre>
+<p>What you should see is: </p>
+<pre>ls: cannot access /fake/directory: No such file or directory</pre>
+<p>Now you're probably thinking, shouldn't that message have been sent to the file? There is actually another I/O stream in play here called standard error (stderr). By default, stderr sends its output to the screen as well, it's a completely different stream than stdout. So you'll need to redirect its output a different way. </p>
+<p>Unfortunately the redirector is not as nice as using <b>&lt;</b> or <b>&gt;</b> but it's pretty close. We will have to use file descriptors. A file descriptor is a non-negative number that is used to access a file or stream. We will go in depth about this later, but for now know that the file descriptor for stdin, stdout and stderr is 0, 1, and 2 respectively. </p>
+<p>So now if we want to redirect our stderr to the file we can do this: </p>
+<pre>$ ls /fake/directory 2&gt; peanuts.txt</pre>
+<p>You should see just the stderr messages in peanuts.txt. </p>
+<p>Now what if I wanted to see both stderr and stdout in the peanuts.txt file? It's possible to do this with file descriptors as well: </p>
+<pre>$ ls /fake/directory &gt; peanuts.txt 2&gt;&amp;1</pre>
+<p>This sends the results of ls /fake/directory to the peanuts.txt file and then it redirects stderr to the stdout via 2&gt;&amp;1. The order of operations here matters, 2&gt;&amp;1 sends stderr to whatever stdout is pointing to. In this case stdout is pointing to a file, so 2&gt;&amp;1 also sends stderr to a file. So if you open up that peanuts.txt file you should see both stderr and stdout. In our case, the above command only outputs stderr.</p>
+<p>There is a shorter way to redirect both stdout and stderr to a file:</p>
+<pre>$ ls /fake/directory &amp;&gt; peanuts.txt</pre>
+<p>Now what if I don't want any of that cruft and want to get rid of stderr messages completely? Well you can also redirect output to a special file call /dev/null and it will discard any input.</p>
+<pre>$ ls /fake/directory 2&gt; /dev/null</pre>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 practice">
+                        <div class="exercise-content">
+                            <h3>Exercise</h3>
+<p>What is the following command doing? </p>
+<pre>$ ls /fake/directory &gt;&gt; /dev/null 2&gt;&amp;1</pre>
+
+                        </div>
+
+                        <div class="quiz-content">
+                            <h3>Quiz Question</h3>
+<p>What is the redirector for stderr?</p>
+<h3>Quiz Answer</h3>
+<p>2&gt;</p>
+</div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

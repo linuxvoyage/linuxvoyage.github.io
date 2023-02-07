@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>process-termination</title>
+    <script
+        src="../static/assets/category/application-8013fdc35e4c79f95bcb3d655ff61f137ac05bcee52e6d96588427a84eddef12.js.download"
+        data-turbolinks-track="true"></script>
+    <link rel="stylesheet" media="all"
+        href="../static/assets/category/application-b0b91461d093aa2ed95d8a7467856e4dc16f55744d3c17a927c3598e5b26cd3f.css"
+        data-turbolinks-track="true">
+</head>
+
+<body>
+    <div id="wrapper" class="active">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul id="sidebar_menu" class="sidebar-nav">
+                <li class="sidebar-brand"><a>Processes</a>
+                </li>
+            </ul>
+            <ul class="sidebar-nav" id="sidebar">
+                
+                <li>
+                    <a class="" href="monitor-processes-ps-command">
+                        1. Monitor processes ps command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="controlling-terminal">
+                        2. Controlling terminal</a>
+                </li>
+                
+                <li>
+                    <a class="" href="process-details">
+                        3. Process details</a>
+                </li>
+                
+                <li>
+                    <a class="" href="process-creation">
+                        4. Process creation</a>
+                </li>
+                
+                <li>
+                    <a class="current" href="process-termination">
+                        5. Process termination</a>
+                </li>
+                
+                <li>
+                    <a class="" href="process-signals">
+                        6. Process signals</a>
+                </li>
+                
+                <li>
+                    <a class="" href="killing-processes">
+                        7. Killing processes</a>
+                </li>
+                
+                <li>
+                    <a class="" href="process-niceness">
+                        8. Process niceness</a>
+                </li>
+                
+                <li>
+                    <a class="" href="process-states">
+                        9. Process states</a>
+                </li>
+                
+                <li>
+                    <a class="" href="proc-filesystem">
+                        10. Proc filesystem</a>
+                </li>
+                
+                <li>
+                    <a class="" href="job-control">
+                        11. Job control</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- End of Sidebar -->
+
+
+        <div id="page-content-wrapper">
+            <!-- Keep all page content within the page-content inset div! -->
+            <div class="page-content inset">
+                <div class="row">
+                    <div class="col-md-6 lesson">
+
+                        <div class="user-app">
+                            <a class="btn btn-default btn-sm" href="../index.html">
+                                Home
+                            </a>
+                        </div>
+
+                        <div class="lesson-content">
+                            
+<h3>Process Termination</h3>
+<p>Now that we know what goes on when a process gets created, what is happening when we don't need it anymore? Be forewarned, sometimes Linux can get a little dark...</p>
+<p>A process can exit using the _exit system call, this will free up the resources that process was using for reallocation. So when a process is ready to terminate, it lets the kernel know why it's terminating with something called a termination status. Most commonly a status of 0 means that the process succeeded. However, that's not enough to completely terminate a process. The parent process has to acknowledge the termination of the child process by using the wait system call and what this does is it checks the termination status of the child process. I know it's gruesome to think about, but the wait call is a necessity, after all what parent wouldn't want to know how their child died?</p>
+<p>There is another way to terminate a process and that involves using signals, which we will discuss soon.</p>
+<p><b>Orphan Processes</b></p>
+<p>When a parent process dies before a child process, the kernel knows that it's not going to get a wait call, so instead it makes these processes "orphans" and puts them under the care of init (remember mother of all processes). Init will eventually perform the wait system call for these orphans so they can die. </p>
+<p><b>Zombie Processes</b></p>
+<p>What happens when a child terminates and the parent process hasn't called wait yet? We still want to be able to see how a child process terminated, so even though the child process finished, the kernel turns the child process into a zombie process. The resources the child process used are still freed up for other processes, however there is still an entry in the process table for this zombie. Zombie processes also cannot be killed, since they are technically "dead", so you can't use signals to kill them. Eventually if the parent process calls the wait system call, the zombie will disappear, this is known as "reaping". If the parent doesn't perform a wait call, init will adopt the zombie and automatically perform wait and remove the zombie. It can be a bad thing to have too many zombie processes, since they take up space on the process table, if it fills up it will prevent other processes from running.</p>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 practice">
+                        <div class="exercise-content">
+                            <h3>Exercise</h3>
+<p>No exercises for this lesson.</p>
+
+                        </div>
+
+                        <div class="quiz-content">
+                            <h3>Quiz Question</h3>
+<p>What is the most common termination status for a process succeeding?</p>
+<h3>Quiz Answer</h3>
+<p>0</p>
+</div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

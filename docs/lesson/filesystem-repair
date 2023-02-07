@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>filesystem-repair</title>
+    <script
+        src="../static/assets/category/application-8013fdc35e4c79f95bcb3d655ff61f137ac05bcee52e6d96588427a84eddef12.js.download"
+        data-turbolinks-track="true"></script>
+    <link rel="stylesheet" media="all"
+        href="../static/assets/category/application-b0b91461d093aa2ed95d8a7467856e4dc16f55744d3c17a927c3598e5b26cd3f.css"
+        data-turbolinks-track="true">
+</head>
+
+<body>
+    <div id="wrapper" class="active">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul id="sidebar_menu" class="sidebar-nav">
+                <li class="sidebar-brand"><a>Filesystem</a>
+                </li>
+            </ul>
+            <ul class="sidebar-nav" id="sidebar">
+                
+                <li>
+                    <a class="" href="filesystem-hierarchy">
+                        1. Filesystem hierarchy</a>
+                </li>
+                
+                <li>
+                    <a class="" href="filesystem-types">
+                        2. Filesystem types</a>
+                </li>
+                
+                <li>
+                    <a class="" href="anatomy-of-a-disk">
+                        3. Anatomy of a disk</a>
+                </li>
+                
+                <li>
+                    <a class="" href="disk-partitioning">
+                        4. Disk partitioning</a>
+                </li>
+                
+                <li>
+                    <a class="" href="creating-filesystems">
+                        5. Creating filesystems</a>
+                </li>
+                
+                <li>
+                    <a class="" href="mounting-and-unmounting-filesystems">
+                        6. Mounting and unmounting filesystems</a>
+                </li>
+                
+                <li>
+                    <a class="" href="etc-fstab-file-system-table">
+                        7. Etc fstab file system table</a>
+                </li>
+                
+                <li>
+                    <a class="" href="swap-space">
+                        8. Swap space</a>
+                </li>
+                
+                <li>
+                    <a class="" href="disk-usage">
+                        9. Disk usage</a>
+                </li>
+                
+                <li>
+                    <a class="current" href="filesystem-repair">
+                        10. Filesystem repair</a>
+                </li>
+                
+                <li>
+                    <a class="" href="inodes">
+                        11. Inodes</a>
+                </li>
+                
+                <li>
+                    <a class="" href="symlinks">
+                        12. Symlinks</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- End of Sidebar -->
+
+
+        <div id="page-content-wrapper">
+            <!-- Keep all page content within the page-content inset div! -->
+            <div class="page-content inset">
+                <div class="row">
+                    <div class="col-md-6 lesson">
+
+                        <div class="user-app">
+                            <a class="btn btn-default btn-sm" href="../index.html">
+                                Home
+                            </a>
+                        </div>
+
+                        <div class="lesson-content">
+                            
+<h3>Filesystem Repair</h3>
+<p>Sometimes our filesystem isn't always in the best condition, if we have a sudden shutdown, our data can become corrupt. It's up to the system to try to get us back in a working state (although we sure can try ourselves). </p>
+<p>The <b>fsck</b> (filesystem check) command is used to check the consistency of a filesystem and can even try to repair it for us. Usually when you boot up a disk, fsck will run before your disk is mounted to make sure everything is ok. Sometimes though, your disk is so bad that you'll need to manually do this. However, be sure to do this while you are in a rescue disk or somewhere where you can access your filesystem without it being mounted.</p>
+<pre>$ sudo fsck /dev/sda</pre>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 practice">
+                        <div class="exercise-content">
+                            <h3>Exercise</h3>
+<p>Look at the manpage for fsck to see what else it can do.</p>
+
+                        </div>
+
+                        <div class="quiz-content">
+                            <h3>Quiz Question</h3>
+<p>What command is used to check the integrity of a filesystem?</p>
+<h3>Quiz Answer</h3>
+<p>fsck</p>
+</div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

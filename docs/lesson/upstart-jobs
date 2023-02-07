@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>upstart-jobs</title>
+    <script
+        src="../static/assets/category/application-8013fdc35e4c79f95bcb3d655ff61f137ac05bcee52e6d96588427a84eddef12.js.download"
+        data-turbolinks-track="true"></script>
+    <link rel="stylesheet" media="all"
+        href="../static/assets/category/application-b0b91461d093aa2ed95d8a7467856e4dc16f55744d3c17a927c3598e5b26cd3f.css"
+        data-turbolinks-track="true">
+</head>
+
+<body>
+    <div id="wrapper" class="active">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul id="sidebar_menu" class="sidebar-nav">
+                <li class="sidebar-brand"><a>Init</a>
+                </li>
+            </ul>
+            <ul class="sidebar-nav" id="sidebar">
+                
+                <li>
+                    <a class="" href="sysv-overview">
+                        1. Sysv overview</a>
+                </li>
+                
+                <li>
+                    <a class="" href="sysv-services">
+                        2. Sysv services</a>
+                </li>
+                
+                <li>
+                    <a class="" href="upstart-overview">
+                        3. Upstart overview</a>
+                </li>
+                
+                <li>
+                    <a class="current" href="upstart-jobs">
+                        4. Upstart jobs</a>
+                </li>
+                
+                <li>
+                    <a class="" href="systemd-overview">
+                        5. Systemd overview</a>
+                </li>
+                
+                <li>
+                    <a class="" href="systemd-goals">
+                        6. Systemd goals</a>
+                </li>
+                
+                <li>
+                    <a class="" href="power-states">
+                        7. Power states</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- End of Sidebar -->
+
+
+        <div id="page-content-wrapper">
+            <!-- Keep all page content within the page-content inset div! -->
+            <div class="page-content inset">
+                <div class="row">
+                    <div class="col-md-6 lesson">
+
+                        <div class="user-app">
+                            <a class="btn btn-default btn-sm" href="../index.html">
+                                Home
+                            </a>
+                        </div>
+
+                        <div class="lesson-content">
+                            
+<h3>Upstart Jobs</h3>
+<p>Upstart can trigger a lot of events and jobs to run, unfortunately there is no easy way to see where an event or job originated, so you'll have to poke around the job configurations in /etc/init. Most of the time, you won't ever need to look at the Upstart job configuration files, but you will want to control some specific jobs more easily. There are a lot of useful commands you can use in an Upstart system. </p>
+<p><b>View jobs</b></p>
+<pre>initctl list
+
+shutdown stop/waiting
+console stop/waiting
+...
+</pre>
+<p>You'll see a list of Upstart jobs with different statuses applied to them. In each line, the job name is the first value and the second field (before the /) is actually the goal of the job, the third value (after the /) is the current status. So we see that our shutdown job eventually wants to stop, but it is currently in a state of waiting. The job status and goals will change as you start or stop jobs. </p>
+<p><b>View specific job</b></p>
+<pre>initctl status networking
+networking start/running
+</pre>
+<p>We won't get into the details of how to write an Upstart job configuration, however we already know that jobs are stopped, started and restarted in these configurations. These jobs also emit events, so they can start other jobs. We'll go through the manual commands of the Upstart operation, but if you are curious, you should dig into the .conf files in more depth.</p>
+<p><b>Manually start a job</b></p>
+<pre>$ sudo initctl start networking</pre>
+<p><b>Manually stop a job</b></p>
+<pre>$ sudo initctl stop networking</pre>
+<p><b>Manually restart a job</b></p>
+<pre>$ sudo initctl restart networking</pre>
+<p><b>Manually emit an event</b></p>
+<pre>$ sudo initctl emit some_event</pre>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 practice">
+                        <div class="exercise-content">
+                            <h3>Exercise</h3>
+<p>Observe your list of Upstart jobs, now change the job state with one of the commands we learned today. What do you notice afterwards?</p>
+
+                        </div>
+
+                        <div class="quiz-content">
+                            <h3>Quiz Question</h3>
+<p>How would I manually restart an Upstart job called peanuts?</p>
+<h3>Quiz Answer</h3>
+<p>sudo initctl restart peanuts</p>
+</div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

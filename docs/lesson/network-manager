@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>network-manager</title>
+    <script
+        src="../static/assets/category/application-8013fdc35e4c79f95bcb3d655ff61f137ac05bcee52e6d96588427a84eddef12.js.download"
+        data-turbolinks-track="true"></script>
+    <link rel="stylesheet" media="all"
+        href="../static/assets/category/application-b0b91461d093aa2ed95d8a7467856e4dc16f55744d3c17a927c3598e5b26cd3f.css"
+        data-turbolinks-track="true">
+</head>
+
+<body>
+    <div id="wrapper" class="active">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul id="sidebar_menu" class="sidebar-nav">
+                <li class="sidebar-brand"><a>Network Configuration</a>
+                </li>
+            </ul>
+            <ul class="sidebar-nav" id="sidebar">
+                
+                <li>
+                    <a class="" href="network-interfaces">
+                        1. Network interfaces</a>
+                </li>
+                
+                <li>
+                    <a class="" href="route">
+                        2. Route</a>
+                </li>
+                
+                <li>
+                    <a class="" href="dhclient">
+                        3. Dhclient</a>
+                </li>
+                
+                <li>
+                    <a class="current" href="network-manager">
+                        4. Network manager</a>
+                </li>
+                
+                <li>
+                    <a class="" href="arp-command">
+                        5. Arp command</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- End of Sidebar -->
+
+
+        <div id="page-content-wrapper">
+            <!-- Keep all page content within the page-content inset div! -->
+            <div class="page-content inset">
+                <div class="row">
+                    <div class="col-md-6 lesson">
+
+                        <div class="user-app">
+                            <a class="btn btn-default btn-sm" href="../index.html">
+                                Home
+                            </a>
+                        </div>
+
+                        <div class="lesson-content">
+                            
+<h3>Network Manager</h3>
+<p>Of course if you wanted to have your system's networking up and running automatically there is something already in place for that. Most distributions utilize the NetworkManager daemon to configure their networks automatically. </p>
+<p>You'll notice NetworkManager in the form of an applet somewhere on your desktop taskbar if you are using a GUI. As you can see it manages your network's hardware and connection information. For instance on startup, NetworkManager will gather network hardware information, search for connections to wireless, wired, etc. and then activates it.</p>
+<p>There are also command-line tools to interact with NetworkManager:</p>
+<p><b>nm-tool</b></p>
+<p>nm-tools reports NetworkManager's state and it's devices</p>
+<pre>
+pete@icebox:/$ nm-tool
+NetworkManager Tool
+
+State: connected (global)
+
+- Device: eth0  [Wired connection 1] -------------------------------------------
+  Type:              Wired
+  Driver:            pcnet32
+  State:             connected
+  Default:           yes
+  HW Address:        12:3D:45:56:7D:CC
+
+  Capabilities:
+    Carrier Detect:  yes
+
+  Wired Properties
+    Carrier:         on
+
+  IPv4 Settings:
+    Address:         192.168.22.1
+    Prefix:          24 (255.255.255.0)
+    Gateway:         192.168.22.2
+
+    DNS:             192.168.22.2
+</pre>
+<p><b>nmcli</b></p>
+<p>The nmcli command allows you to control and modify NetworkManager, see the manpage for more details.</p>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 practice">
+                        <div class="exercise-content">
+                            <h3>Exercise</h3>
+<p>No exercises for this lesson.</p>
+
+                        </div>
+
+                        <div class="quiz-content">
+                            <h3>Quiz Question</h3>
+<p>What is the command to view NetworkManager information?</p>
+<h3>Quiz Answer</h3>
+<p>nm-tool</p>
+</div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>subnet-math</title>
+    <script
+        src="../static/assets/category/application-8013fdc35e4c79f95bcb3d655ff61f137ac05bcee52e6d96588427a84eddef12.js.download"
+        data-turbolinks-track="true"></script>
+    <link rel="stylesheet" media="all"
+        href="../static/assets/category/application-b0b91461d093aa2ed95d8a7467856e4dc16f55744d3c17a927c3598e5b26cd3f.css"
+        data-turbolinks-track="true">
+</head>
+
+<body>
+    <div id="wrapper" class="active">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul id="sidebar_menu" class="sidebar-nav">
+                <li class="sidebar-brand"><a>Subnetting</a>
+                </li>
+            </ul>
+            <ul class="sidebar-nav" id="sidebar">
+                
+                <li>
+                    <a class="" href="ipv4">
+                        1. Ipv4</a>
+                </li>
+                
+                <li>
+                    <a class="" href="subnets">
+                        2. Subnets</a>
+                </li>
+                
+                <li>
+                    <a class="current" href="subnet-math">
+                        3. Subnet math</a>
+                </li>
+                
+                <li>
+                    <a class="" href="subnetting-cheats">
+                        4. Subnetting cheats</a>
+                </li>
+                
+                <li>
+                    <a class="" href="classless-interdomain-routing-cidr">
+                        5. Classless interdomain routing cidr</a>
+                </li>
+                
+                <li>
+                    <a class="" href="nat-network-address-translation">
+                        6. Nat network address translation</a>
+                </li>
+                
+                <li>
+                    <a class="" href="ipv6">
+                        7. Ipv6</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- End of Sidebar -->
+
+
+        <div id="page-content-wrapper">
+            <!-- Keep all page content within the page-content inset div! -->
+            <div class="page-content inset">
+                <div class="row">
+                    <div class="col-md-6 lesson">
+
+                        <div class="user-app">
+                            <a class="btn btn-default btn-sm" href="../index.html">
+                                Home
+                            </a>
+                        </div>
+
+                        <div class="lesson-content">
+                            
+<h3>Subnet Math</h3>
+<p>Ok, we know that subnet masks are important to figure out how many hosts we can have on our subnet. So how many hosts would that be? </p>
+<p>Let's say I have an IP address of <b>192.168.1.0</b> and a subnet mask of <b>255.255.255.0</b>, now let's line up these numbers in binary form. For now use an online calculator to convert these values from decimal to binary.</p>
+<pre>
+192.168.1.165  = 11000000.10101000.00000001.10100101
+255.255.255.0  = 11111111.11111111.11111111.00000000
+</pre>
+<p>The IP address is masked by our subnet mask, when you see a 1, it is masked and we pretend like we don't see it. So the only possible hosts we can have are from the 00000000 region. Remember 11111111 in binary form equals 255, we also account 0 as a host number, so there are 256 possible options. However, it may look like we have 256 possible options, but we actually subtract 2 hosts because we have to account for the broadcast address and the subnet address, leaving us with 254 possible hosts on our subnet. So we know that we can have hosts with IP addresses ranging from 192.168.1.1 - 192.168.1.254.</p>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 practice">
+                        <div class="exercise-content">
+                            <h3>Exercise</h3>
+<p>No exercises for this lesson.</p>
+
+                        </div>
+
+                        <div class="quiz-content">
+                            <h3>Quiz Question</h3>
+<p>What is the binary equivalent of 255?</p>
+<h3>Quiz Answer</h3>
+<p>11111111</p>
+</div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

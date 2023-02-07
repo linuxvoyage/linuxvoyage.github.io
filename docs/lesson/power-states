@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>power-states</title>
+    <script
+        src="../static/assets/category/application-8013fdc35e4c79f95bcb3d655ff61f137ac05bcee52e6d96588427a84eddef12.js.download"
+        data-turbolinks-track="true"></script>
+    <link rel="stylesheet" media="all"
+        href="../static/assets/category/application-b0b91461d093aa2ed95d8a7467856e4dc16f55744d3c17a927c3598e5b26cd3f.css"
+        data-turbolinks-track="true">
+</head>
+
+<body>
+    <div id="wrapper" class="active">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul id="sidebar_menu" class="sidebar-nav">
+                <li class="sidebar-brand"><a>Init</a>
+                </li>
+            </ul>
+            <ul class="sidebar-nav" id="sidebar">
+                
+                <li>
+                    <a class="" href="sysv-overview">
+                        1. Sysv overview</a>
+                </li>
+                
+                <li>
+                    <a class="" href="sysv-services">
+                        2. Sysv services</a>
+                </li>
+                
+                <li>
+                    <a class="" href="upstart-overview">
+                        3. Upstart overview</a>
+                </li>
+                
+                <li>
+                    <a class="" href="upstart-jobs">
+                        4. Upstart jobs</a>
+                </li>
+                
+                <li>
+                    <a class="" href="systemd-overview">
+                        5. Systemd overview</a>
+                </li>
+                
+                <li>
+                    <a class="" href="systemd-goals">
+                        6. Systemd goals</a>
+                </li>
+                
+                <li>
+                    <a class="current" href="power-states">
+                        7. Power states</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- End of Sidebar -->
+
+
+        <div id="page-content-wrapper">
+            <!-- Keep all page content within the page-content inset div! -->
+            <div class="page-content inset">
+                <div class="row">
+                    <div class="col-md-6 lesson">
+
+                        <div class="user-app">
+                            <a class="btn btn-default btn-sm" href="../index.html">
+                                Home
+                            </a>
+                        </div>
+
+                        <div class="lesson-content">
+                            
+<h3>Power States</h3>
+<p>Hard to believe we haven't actually discussed ways to control your system state through the command line, but when talking about init, we not only talk about the modes that get us starting our system, but also the ones that stop our system.</p>
+<p>To shutdown your system:</p>
+<pre>$ sudo shutdown -h now</pre>
+<p>This will halt the system (power it off), you must also specify a time when you want this to take place. You can add a time in minutes that will shutdown the system in that amount of time.</p>
+<pre>$ sudo shutdown -h +2</pre>
+<p>This will shutdown your system in two minutes. You can also restart with the shutdown command: </p>
+<pre>$ sudo shutdown -r now</pre>
+<p>Or just use the reboot command:</p>
+<pre>$ sudo reboot</pre>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 practice">
+                        <div class="exercise-content">
+                            <h3>Exercise</h3>
+<p>What do you think is happening with init when you shutdown your machine?</p>
+
+                        </div>
+
+                        <div class="quiz-content">
+                            <h3>Quiz Question</h3>
+<p>What is the command to poweroff your system in 4 minutes?</p>
+<h3>Quiz Answer</h3>
+<p>sudo shutdown -h +4</p>
+</div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

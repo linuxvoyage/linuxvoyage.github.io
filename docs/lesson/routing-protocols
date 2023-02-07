@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>routing-protocols</title>
+    <script
+        src="../static/assets/category/application-8013fdc35e4c79f95bcb3d655ff61f137ac05bcee52e6d96588427a84eddef12.js.download"
+        data-turbolinks-track="true"></script>
+    <link rel="stylesheet" media="all"
+        href="../static/assets/category/application-b0b91461d093aa2ed95d8a7467856e4dc16f55744d3c17a927c3598e5b26cd3f.css"
+        data-turbolinks-track="true">
+</head>
+
+<body>
+    <div id="wrapper" class="active">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul id="sidebar_menu" class="sidebar-nav">
+                <li class="sidebar-brand"><a>Routing</a>
+                </li>
+            </ul>
+            <ul class="sidebar-nav" id="sidebar">
+                
+                <li>
+                    <a class="" href="what-is-a-router">
+                        1. What is a router</a>
+                </li>
+                
+                <li>
+                    <a class="" href="routing-table">
+                        2. Routing table</a>
+                </li>
+                
+                <li>
+                    <a class="" href="path-of-a-packet">
+                        3. Path of a packet</a>
+                </li>
+                
+                <li>
+                    <a class="current" href="routing-protocols">
+                        4. Routing protocols</a>
+                </li>
+                
+                <li>
+                    <a class="" href="distance-vector-protocols">
+                        5. Distance vector protocols</a>
+                </li>
+                
+                <li>
+                    <a class="" href="link-state-protocols">
+                        6. Link state protocols</a>
+                </li>
+                
+                <li>
+                    <a class="" href="bgp-border-gateway-protocol">
+                        7. Bgp border gateway protocol</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- End of Sidebar -->
+
+
+        <div id="page-content-wrapper">
+            <!-- Keep all page content within the page-content inset div! -->
+            <div class="page-content inset">
+                <div class="row">
+                    <div class="col-md-6 lesson">
+
+                        <div class="user-app">
+                            <a class="btn btn-default btn-sm" href="../index.html">
+                                Home
+                            </a>
+                        </div>
+
+                        <div class="lesson-content">
+                            
+<h3>Routing Protocols</h3>
+<p>It would be a pain to have to manually configure routes on a routing table for every device on your network, so instead we use what are known as routing protocols. Routing protocols are used to help our system adapt to network changes, it learns of different routes, builds them in the routing table and then routes our packets through that way. There are two primary routing protocol types, distance vector protocols and link state protocols.</p>
+<p><b>Convergence</b></p>
+<p>Before we talk about the protocols, we should go over a term using in routing known as convergence. When using routing protocols, routers communicate with other routers to collect and exchange information about the network. When they agree on how a network should look, every routing table maps out the complete topology of the network, thus "converging". When something occurs in the network topology, the convergence will temporarily break until all routers are aware of this change. </p>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 practice">
+                        <div class="exercise-content">
+                            <h3>Exercise</h3>
+<p>No exercises for this lesson.</p>
+
+                        </div>
+
+                        <div class="quiz-content">
+                            <h3>Quiz Question</h3>
+<p>What is the term used when all routing tables know the network topology?</p>
+<h3>Quiz Answer</h3>
+<p>convergence</p>
+</div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

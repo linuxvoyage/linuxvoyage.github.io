@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>network-file-sharing</title>
+    <script
+        src="../static/assets/category/application-8013fdc35e4c79f95bcb3d655ff61f137ac05bcee52e6d96588427a84eddef12.js.download"
+        data-turbolinks-track="true"></script>
+    <link rel="stylesheet" media="all"
+        href="../static/assets/category/application-b0b91461d093aa2ed95d8a7467856e4dc16f55744d3c17a927c3598e5b26cd3f.css"
+        data-turbolinks-track="true">
+</head>
+
+<body>
+    <div id="wrapper" class="active">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul id="sidebar_menu" class="sidebar-nav">
+                <li class="sidebar-brand"><a>Network Sharing</a>
+                </li>
+            </ul>
+            <ul class="sidebar-nav" id="sidebar">
+                
+                <li>
+                    <a class="current" href="network-file-sharing">
+                        1. Network file sharing</a>
+                </li>
+                
+                <li>
+                    <a class="" href="rsync">
+                        2. Rsync</a>
+                </li>
+                
+                <li>
+                    <a class="" href="simple-http-server">
+                        3. Simple http server</a>
+                </li>
+                
+                <li>
+                    <a class="" href="nfs-network-file-share">
+                        4. Nfs network file share</a>
+                </li>
+                
+                <li>
+                    <a class="" href="samba">
+                        5. Samba</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- End of Sidebar -->
+
+
+        <div id="page-content-wrapper">
+            <!-- Keep all page content within the page-content inset div! -->
+            <div class="page-content inset">
+                <div class="row">
+                    <div class="col-md-6 lesson">
+
+                        <div class="user-app">
+                            <a class="btn btn-default btn-sm" href="../index.html">
+                                Home
+                            </a>
+                        </div>
+
+                        <div class="lesson-content">
+                            
+<h3>File Sharing Overview</h3>
+<p>You usually are not the only computer on your network, this is especially the case if you're working in a commercial environment. When we want to transfer data from one machine to another, sometimes it maybe easier to connect a USB drive and manually copy them. But for the most part, if you're working with machines on the same network, the way to transfer data is through network file sharing. </p>
+<p>In this course we'll go over a couple of different methods to copy data to and from different machines on your network. We'll discuss some simple file copies, then we'll talk about mounting entire directories on your machine that act as a separate drive. </p>
+<p>One simple file sharing tool is the <b>scp</b> command. The scp command stands for secure copy, it works exactly the way the cp command does, but allows you to copy from one host over to another host on the same network. It works via ssh so all your actions are using the same authentication and security as ssh. </p>
+<p><b>To copy a file over from local host to a remote host</b></p>
+<pre>$ scp myfile.txt username@remotehost.com:/remote/directory</pre>
+<p><b>To copy a file from a remote host to your local host</b></p>
+<pre>$ scp username@remotehost.com:/remote/directory/myfile.txt /local/directory</pre>
+<p><b>To copy over a directory from your local host to a remote host</b></p>
+<pre>$ scp -r mydir username@remotehost.com:/remote/directory</pre>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 practice">
+                        <div class="exercise-content">
+                            <h3>Exercise</h3>
+<p>Try to copy a file over with scp from one machine to another.</p>
+
+                        </div>
+
+                        <div class="quiz-content">
+                            <h3>Quiz Question</h3>
+<p>What command can you use to securely copy files from one host to another?</p>
+<h3>Quiz Answer</h3>
+<p>scp</p>
+</div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

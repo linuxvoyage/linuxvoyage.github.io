@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>general-logging</title>
+    <script
+        src="../static/assets/category/application-8013fdc35e4c79f95bcb3d655ff61f137ac05bcee52e6d96588427a84eddef12.js.download"
+        data-turbolinks-track="true"></script>
+    <link rel="stylesheet" media="all"
+        href="../static/assets/category/application-b0b91461d093aa2ed95d8a7467856e4dc16f55744d3c17a927c3598e5b26cd3f.css"
+        data-turbolinks-track="true">
+</head>
+
+<body>
+    <div id="wrapper" class="active">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul id="sidebar_menu" class="sidebar-nav">
+                <li class="sidebar-brand"><a>Logging</a>
+                </li>
+            </ul>
+            <ul class="sidebar-nav" id="sidebar">
+                
+                <li>
+                    <a class="" href="system-logging">
+                        1. System logging</a>
+                </li>
+                
+                <li>
+                    <a class="" href="syslog">
+                        2. Syslog</a>
+                </li>
+                
+                <li>
+                    <a class="current" href="general-logging">
+                        3. General logging</a>
+                </li>
+                
+                <li>
+                    <a class="" href="kernel-logging">
+                        4. Kernel logging</a>
+                </li>
+                
+                <li>
+                    <a class="" href="authentication-logging">
+                        5. Authentication logging</a>
+                </li>
+                
+                <li>
+                    <a class="" href="managing-log-files">
+                        6. Managing log files</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- End of Sidebar -->
+
+
+        <div id="page-content-wrapper">
+            <!-- Keep all page content within the page-content inset div! -->
+            <div class="page-content inset">
+                <div class="row">
+                    <div class="col-md-6 lesson">
+
+                        <div class="user-app">
+                            <a class="btn btn-default btn-sm" href="../index.html">
+                                Home
+                            </a>
+                        </div>
+
+                        <div class="lesson-content">
+                            
+<h3>General Logging</h3>
+<p>There are many log files you can view on your system, many important ones can be found under /var/log. We won't go through them all, but we'll discuss a couple of the major ones. </p>
+<p>There are two general log files you can view to get a glimpse of what your system is doing:</p>
+<p><b>/var/log/messages</b></p>
+<p>This log contains all non-critical and non-debug messages, includes messages logged during bootup (dmesg), auth, cron, daemon, etc. Very useful to get a glimpse of how your machine is acting. </p>
+<p><b>/var/log/syslog</b></p>
+<p>This logs everything except auth messages, it's extremely useful for debugging errors on your machine. </p>
+<p>These two logs should be more than enough when troubleshooting issues with your system, However, if you just want to view a specific log component, there are also separate logs for those as well.</p>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 practice">
+                        <div class="exercise-content">
+                            <h3>Exercise</h3>
+<p>Look at your /var/log/messages and /var/log/syslog files and see what the differences are.</p>
+
+                        </div>
+
+                        <div class="quiz-content">
+                            <h3>Quiz Question</h3>
+<p>What log file logs everything except auth messages?</p>
+<h3>Quiz Answer</h3>
+<p>syslog</p>
+</div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

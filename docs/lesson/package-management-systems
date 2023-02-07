@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>package-management-systems</title>
+    <script
+        src="../static/assets/category/application-8013fdc35e4c79f95bcb3d655ff61f137ac05bcee52e6d96588427a84eddef12.js.download"
+        data-turbolinks-track="true"></script>
+    <link rel="stylesheet" media="all"
+        href="../static/assets/category/application-b0b91461d093aa2ed95d8a7467856e4dc16f55744d3c17a927c3598e5b26cd3f.css"
+        data-turbolinks-track="true">
+</head>
+
+<body>
+    <div id="wrapper" class="active">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul id="sidebar_menu" class="sidebar-nav">
+                <li class="sidebar-brand"><a>Packages</a>
+                </li>
+            </ul>
+            <ul class="sidebar-nav" id="sidebar">
+                
+                <li>
+                    <a class="" href="software-distribution">
+                        1. Software distribution</a>
+                </li>
+                
+                <li>
+                    <a class="" href="package-repositories">
+                        2. Package repositories</a>
+                </li>
+                
+                <li>
+                    <a class="" href="compressed-archives-tar">
+                        3. Compressed archives tar</a>
+                </li>
+                
+                <li>
+                    <a class="" href="package-dependencies">
+                        4. Package dependencies</a>
+                </li>
+                
+                <li>
+                    <a class="" href="package-install-tools">
+                        5. Package install tools</a>
+                </li>
+                
+                <li>
+                    <a class="current" href="package-management-systems">
+                        6. Package management systems</a>
+                </li>
+                
+                <li>
+                    <a class="" href="compile-source-code">
+                        7. Compile source code</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- End of Sidebar -->
+
+
+        <div id="page-content-wrapper">
+            <!-- Keep all page content within the page-content inset div! -->
+            <div class="page-content inset">
+                <div class="row">
+                    <div class="col-md-6 lesson">
+
+                        <div class="user-app">
+                            <a class="btn btn-default btn-sm" href="../index.html">
+                                Home
+                            </a>
+                        </div>
+
+                        <div class="lesson-content">
+                            
+<h3>yum and apt</h3>
+<p>Ah, the Batmans of package management, these systems come with all the fixins to make package installation, removal and changes easier, including installing package dependencies. Two of the most popular management systems is <b>yum</b> and <b>apt</b>. Yum is exclusive to the Red Hat family and apt is exclusively to the Debian family.</p>
+<p><b>Install a package from a repository</b></p>
+<pre>
+Debian: $ apt install package_name
+RPM: $ yum install package_name
+</pre>
+<p><b>Remove a package</b></p>
+<pre>
+Debian: $ apt remove package_name
+RPM: $ yum erase package_name
+</pre>
+<p><b>Updating packages for a repository</b></p>
+<p>It's always best practice to update your package repositories so they are up to date before you install and update a package. </p>
+<pre>
+Debian: apt update; apt upgrade
+RPM: yum update
+</pre>
+<p><b>Get information about an installed package</b></p>
+<pre>
+Debian: apt show package_name
+RPM: yum info package_name
+</pre>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 practice">
+                        <div class="exercise-content">
+                            <h3>Exercise</h3>
+<p>Run through each of these package commands and see the output you receive.</p>
+
+                        </div>
+
+                        <div class="quiz-content">
+                            <h3>Quiz Question</h3>
+<p>What command is used to show package information on a Debian system?</p>
+<h3>Quiz Answer</h3>
+<p>apt show</p>
+</div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

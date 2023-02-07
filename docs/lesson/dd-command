@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>dd-command</title>
+    <script
+        src="../static/assets/category/application-8013fdc35e4c79f95bcb3d655ff61f137ac05bcee52e6d96588427a84eddef12.js.download"
+        data-turbolinks-track="true"></script>
+    <link rel="stylesheet" media="all"
+        href="../static/assets/category/application-b0b91461d093aa2ed95d8a7467856e4dc16f55744d3c17a927c3598e5b26cd3f.css"
+        data-turbolinks-track="true">
+</head>
+
+<body>
+    <div id="wrapper" class="active">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul id="sidebar_menu" class="sidebar-nav">
+                <li class="sidebar-brand"><a>Devices</a>
+                </li>
+            </ul>
+            <ul class="sidebar-nav" id="sidebar">
+                
+                <li>
+                    <a class="" href="dev-directory">
+                        1. Dev directory</a>
+                </li>
+                
+                <li>
+                    <a class="" href="device-types">
+                        2. Device types</a>
+                </li>
+                
+                <li>
+                    <a class="" href="device-names">
+                        3. Device names</a>
+                </li>
+                
+                <li>
+                    <a class="" href="sysfs">
+                        4. Sysfs</a>
+                </li>
+                
+                <li>
+                    <a class="" href="udev">
+                        5. Udev</a>
+                </li>
+                
+                <li>
+                    <a class="" href="listing-devices">
+                        6. Listing devices</a>
+                </li>
+                
+                <li>
+                    <a class="current" href="dd-command">
+                        7. Dd command</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- End of Sidebar -->
+
+
+        <div id="page-content-wrapper">
+            <!-- Keep all page content within the page-content inset div! -->
+            <div class="page-content inset">
+                <div class="row">
+                    <div class="col-md-6 lesson">
+
+                        <div class="user-app">
+                            <a class="btn btn-default btn-sm" href="../index.html">
+                                Home
+                            </a>
+                        </div>
+
+                        <div class="lesson-content">
+                            
+<h3>dd</h3>
+<p>The dd tool is super useful for converting and copying data. It reads input from a file or data stream and writes it to a file or data stream. </p>
+<p>Consider the following command: </p>
+<pre>$ dd if=/home/pete/backup.img of=/dev/sdb bs=1024 </pre>
+<p>This command is copying the contents of backup.img to /dev/sdb. It will copy the data in blocks of 1024 bytes until there is no more data to be copied. </p>
+<ul>
+<li>if=file - Input file, read from a file instead of standard input</li>
+<li>of=file - Output file, write to a file instead of standard output</li>
+<li>bs=bytes - Block size, it reads and writes this many bytes of data at a time. You can use different size metrics by denoting the size with a k for kilobyte, m for megabyte, etc, so 1024 bytes is 1k</li>
+<li>count=number - Number of blocks to copy.</li>
+</ul>
+<p>You will see some dd commands that use the count option, usually with dd if you want to copy a file that is 1 megabyte, you'll usually want to see that file as 1 megabyte when it's done being copied. Let's say you run the following command: </p>
+<pre>$ dd if=/home/pete/backup.img of=/dev/sdb bs=1M count=2</pre>
+<p>Our backup.img file is 10M, however, we are saying in this command to copy over 1M 2 times, so only 2M is being copied, leaving our copied data incomplete. Count can come in handy in many situations, but if you are just copying over data, you can pretty much omit count and even bs for that matter. If you really want to optimize your data transfers, then you'll want to start using those options.</p>
+<p>dd is extremely powerful, you can use it to make backups of anything, including whole disk drives, restoring disks images, and more. Be careful, that powerful tool can come at a price if you aren't sure what you are doing.</p>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 practice">
+                        <div class="exercise-content">
+                            <h3>Exercise</h3>
+<p>Use the dd command to make a backup of your drive and set the output to a .img file.</p>
+
+                        </div>
+
+                        <div class="quiz-content">
+                            <h3>Quiz Question</h3>
+<p>What is the dd option for block size?</p>
+<h3>Quiz Answer</h3>
+<p>bs</p>
+</div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

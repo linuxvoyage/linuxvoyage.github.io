@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>systemd-goals</title>
+    <script
+        src="../static/assets/category/application-8013fdc35e4c79f95bcb3d655ff61f137ac05bcee52e6d96588427a84eddef12.js.download"
+        data-turbolinks-track="true"></script>
+    <link rel="stylesheet" media="all"
+        href="../static/assets/category/application-b0b91461d093aa2ed95d8a7467856e4dc16f55744d3c17a927c3598e5b26cd3f.css"
+        data-turbolinks-track="true">
+</head>
+
+<body>
+    <div id="wrapper" class="active">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul id="sidebar_menu" class="sidebar-nav">
+                <li class="sidebar-brand"><a>Init</a>
+                </li>
+            </ul>
+            <ul class="sidebar-nav" id="sidebar">
+                
+                <li>
+                    <a class="" href="sysv-overview">
+                        1. Sysv overview</a>
+                </li>
+                
+                <li>
+                    <a class="" href="sysv-services">
+                        2. Sysv services</a>
+                </li>
+                
+                <li>
+                    <a class="" href="upstart-overview">
+                        3. Upstart overview</a>
+                </li>
+                
+                <li>
+                    <a class="" href="upstart-jobs">
+                        4. Upstart jobs</a>
+                </li>
+                
+                <li>
+                    <a class="" href="systemd-overview">
+                        5. Systemd overview</a>
+                </li>
+                
+                <li>
+                    <a class="current" href="systemd-goals">
+                        6. Systemd goals</a>
+                </li>
+                
+                <li>
+                    <a class="" href="power-states">
+                        7. Power states</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- End of Sidebar -->
+
+
+        <div id="page-content-wrapper">
+            <!-- Keep all page content within the page-content inset div! -->
+            <div class="page-content inset">
+                <div class="row">
+                    <div class="col-md-6 lesson">
+
+                        <div class="user-app">
+                            <a class="btn btn-default btn-sm" href="../index.html">
+                                Home
+                            </a>
+                        </div>
+
+                        <div class="lesson-content">
+                            
+<h3>Systemd Goals</h3>
+<p>We won't get into the details of writing systemd unit files. We will however go over a brief overview of a unit file and how to manually control units. </p>
+<p>Here is a basic service unit file: foobar.service</p>
+<pre>
+[Unit]
+Description=My Foobar
+Before=bar.target
+
+[Service]
+ExecStart=/usr/bin/foobar
+
+[Install]
+WantedBy=multi-user.target
+</pre>
+<p>This is a simple service target, at the beginning of the file we see a section for [Unit], this allows us to give our unit file a description as well as control the ordering of when to activate the unit. The next portion is the [Service] section, under here we can start, stop or reload a service. And the [Install] section is used for dependency. This is only the tip of the iceberg for writing systemd files, so I implore you to read up on the subject if you want to know more. </p>
+<p>Now, let's get into some commands you can use with systemd units: </p>
+<p><b>List units</b></p>
+<pre>$ systemctl list-units</pre>
+<p><b>View status of unit</b></p>
+<pre>$ systemctl status networking.service</pre>
+<p><b>Start a service</b></p>
+<pre>$ sudo systemctl start networking.service</pre>
+<p><b>Stop a service</b></p>
+<pre>$ sudo systemctl stop networking.service</pre>
+<p><b>Restart a service</b></p>
+<pre>$ sudo systemctl restart networking.service</pre>
+<p><b>Enable a unit</b></p>
+<pre>$ sudo systemctl enable networking.service</pre>
+<p><b>Disable a unit</b></p>
+<pre>$ sudo systemctl disable networking.service</pre>
+<p>Again, you have yet to see how much depth systemd gets into, so read up on it if you want to learn more.</p>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 practice">
+                        <div class="exercise-content">
+                            <h3>Exercise</h3>
+<p>View the unit statuses and start and stop a few services. What do you observe?</p>
+
+                        </div>
+
+                        <div class="quiz-content">
+                            <h3>Quiz Question</h3>
+<p>What is the command to start a service named peanut.service?</p>
+<h3>Quiz Answer</h3>
+<p>sudo systemctl start peanut.service</p>
+</div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

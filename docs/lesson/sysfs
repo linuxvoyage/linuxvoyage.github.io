@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>sysfs</title>
+    <script
+        src="../static/assets/category/application-8013fdc35e4c79f95bcb3d655ff61f137ac05bcee52e6d96588427a84eddef12.js.download"
+        data-turbolinks-track="true"></script>
+    <link rel="stylesheet" media="all"
+        href="../static/assets/category/application-b0b91461d093aa2ed95d8a7467856e4dc16f55744d3c17a927c3598e5b26cd3f.css"
+        data-turbolinks-track="true">
+</head>
+
+<body>
+    <div id="wrapper" class="active">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul id="sidebar_menu" class="sidebar-nav">
+                <li class="sidebar-brand"><a>Devices</a>
+                </li>
+            </ul>
+            <ul class="sidebar-nav" id="sidebar">
+                
+                <li>
+                    <a class="" href="dev-directory">
+                        1. Dev directory</a>
+                </li>
+                
+                <li>
+                    <a class="" href="device-types">
+                        2. Device types</a>
+                </li>
+                
+                <li>
+                    <a class="" href="device-names">
+                        3. Device names</a>
+                </li>
+                
+                <li>
+                    <a class="current" href="sysfs">
+                        4. Sysfs</a>
+                </li>
+                
+                <li>
+                    <a class="" href="udev">
+                        5. Udev</a>
+                </li>
+                
+                <li>
+                    <a class="" href="listing-devices">
+                        6. Listing devices</a>
+                </li>
+                
+                <li>
+                    <a class="" href="dd-command">
+                        7. Dd command</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- End of Sidebar -->
+
+
+        <div id="page-content-wrapper">
+            <!-- Keep all page content within the page-content inset div! -->
+            <div class="page-content inset">
+                <div class="row">
+                    <div class="col-md-6 lesson">
+
+                        <div class="user-app">
+                            <a class="btn btn-default btn-sm" href="../index.html">
+                                Home
+                            </a>
+                        </div>
+
+                        <div class="lesson-content">
+                            
+<h3>sysfs</h3>
+<p>Sysfs was created long ago to better manage devices on our system that the /dev directory failed to do. Sysfs is a virtual filesystem, most often mounted to the /sys directory. It gives us more detailed information than what we would be able to see in the /dev directory. Both directories /sys and /dev seem to be very similar and they are in some regards, but they do have major differences. Basically, the /dev directory is simple, it allows other programs to access devices themselves, while the /sys filesystem is used to view information and manage the device. </p>
+<p>The /sys filesystem basically contains all the information for all devices on your system, such as the manufacturer and model, where the device is plugged in, the state of the device, the hierarchy of devices and more. The files you see here aren't device nodes, so you don't really interact with devices from the /sys directory, rather you are managing devices. </p>
+<p>Take a look at the contents of the /sys directory:</p>
+<pre>
+pete@icebox:~$ ls /sys/block/sda
+alignment_offset  discard_alignment  holders   removable  sda6       trace
+bdi               events             inflight  ro         size       uevent
+capability        events_async       power     sda1       slaves
+dev               events_poll_msecs  queue     sda2       stat
+device            ext_range          range     sda5       subsystem
+</pre>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 practice">
+                        <div class="exercise-content">
+                            <h3>Exercise</h3>
+<p>Check out the contents of the /sys directory and see what files are located in there.</p>
+
+                        </div>
+
+                        <div class="quiz-content">
+                            <h3>Quiz Question</h3>
+<p>What directory is used to view detailed information on devices? </p>
+<h3>Quiz Answer</h3>
+<p>/sys</p>
+</div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

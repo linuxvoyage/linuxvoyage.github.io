@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>touch-command</title>
+    <script
+        src="../static/assets/category/application-8013fdc35e4c79f95bcb3d655ff61f137ac05bcee52e6d96588427a84eddef12.js.download"
+        data-turbolinks-track="true"></script>
+    <link rel="stylesheet" media="all"
+        href="../static/assets/category/application-b0b91461d093aa2ed95d8a7467856e4dc16f55744d3c17a927c3598e5b26cd3f.css"
+        data-turbolinks-track="true">
+</head>
+
+<body>
+    <div id="wrapper" class="active">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul id="sidebar_menu" class="sidebar-nav">
+                <li class="sidebar-brand"><a>Command Line</a>
+                </li>
+            </ul>
+            <ul class="sidebar-nav" id="sidebar">
+                
+                <li>
+                    <a class="" href="the-shell">
+                        1. The shell</a>
+                </li>
+                
+                <li>
+                    <a class="" href="print-working-directory-pwd-command">
+                        2. Print working directory pwd command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="change-directory-cd-command">
+                        3. Change directory cd command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="list-directories-ls-command">
+                        4. List directories ls command</a>
+                </li>
+                
+                <li>
+                    <a class="current" href="touch-command">
+                        5. Touch command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="file-command">
+                        6. File command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="cat-command">
+                        7. Cat command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="less-command">
+                        8. Less command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="history-command">
+                        9. History command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="copy-cp-command">
+                        10. Copy cp command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="move-mv-command">
+                        11. Move mv command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="make-directory-mkdir-command">
+                        12. Make directory mkdir command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="remove-rm-command">
+                        13. Remove rm command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="find-command">
+                        14. Find command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="help-command">
+                        15. Help command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="man-command">
+                        16. Man command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="whatis-command">
+                        17. Whatis command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="alias-command">
+                        18. Alias command</a>
+                </li>
+                
+                <li>
+                    <a class="" href="exit-command">
+                        19. Exit command</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- End of Sidebar -->
+
+
+        <div id="page-content-wrapper">
+            <!-- Keep all page content within the page-content inset div! -->
+            <div class="page-content inset">
+                <div class="row">
+                    <div class="col-md-6 lesson">
+
+                        <div class="user-app">
+                            <a class="btn btn-default btn-sm" href="../index.html">
+                                Home
+                            </a>
+                        </div>
+
+                        <div class="lesson-content">
+                            
+<h3>touch</h3>
+<p>Let’s learn how to make some files. A very simple way is to use the touch command. Touch allows you to the create new empty files.</p>
+<pre>$ touch mysuperduperfile</pre>
+<p>And boom, new file! </p>
+<p>Touch is also used to change timestamps on existing files and directories. Give it a try, do an ls -l on a file and note the timestamp, then touch that file and it will update the timestamp. </p>
+<p>There are many other ways to create files that involve other things like redirection and text editors, but we’ll get to that in the Text Manipulation course.</p>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 practice">
+                        <div class="exercise-content">
+                            <h3>Exercise</h3>
+<ol>
+<li>Create a new file</li>
+<li>Note the timestamp</li>
+<li>Touch the file and check the timestamp once again</li>
+</ol>
+
+                        </div>
+
+                        <div class="quiz-content">
+                            <h3>Quiz Question</h3>
+<p>How do you create a file called myfile?</p>
+<h3>Quiz Answer</h3>
+<p>touch myfile</p>
+</div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>setuid-set-user-id</title>
+    <script
+        src="../static/assets/category/application-8013fdc35e4c79f95bcb3d655ff61f137ac05bcee52e6d96588427a84eddef12.js.download"
+        data-turbolinks-track="true"></script>
+    <link rel="stylesheet" media="all"
+        href="../static/assets/category/application-b0b91461d093aa2ed95d8a7467856e4dc16f55744d3c17a927c3598e5b26cd3f.css"
+        data-turbolinks-track="true">
+</head>
+
+<body>
+    <div id="wrapper" class="active">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul id="sidebar_menu" class="sidebar-nav">
+                <li class="sidebar-brand"><a>Access</a>
+                </li>
+            </ul>
+            <ul class="sidebar-nav" id="sidebar">
+                
+                <li>
+                    <a class="" href="file-permissions">
+                        1. File permissions</a>
+                </li>
+                
+                <li>
+                    <a class="" href="modifying-permissions">
+                        2. Modifying permissions</a>
+                </li>
+                
+                <li>
+                    <a class="" href="ownership-permissions">
+                        3. Ownership permissions</a>
+                </li>
+                
+                <li>
+                    <a class="" href="umask">
+                        4. Umask</a>
+                </li>
+                
+                <li>
+                    <a class="current" href="setuid-set-user-id">
+                        5. Setuid set user id</a>
+                </li>
+                
+                <li>
+                    <a class="" href="setgid-set-group-id">
+                        6. Setgid set group id</a>
+                </li>
+                
+                <li>
+                    <a class="" href="process-permissions">
+                        7. Process permissions</a>
+                </li>
+                
+                <li>
+                    <a class="" href="sticky-bit">
+                        8. Sticky bit</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- End of Sidebar -->
+
+
+        <div id="page-content-wrapper">
+            <!-- Keep all page content within the page-content inset div! -->
+            <div class="page-content inset">
+                <div class="row">
+                    <div class="col-md-6 lesson">
+
+                        <div class="user-app">
+                            <a class="btn btn-default btn-sm" href="../index.html">
+                                Home
+                            </a>
+                        </div>
+
+                        <div class="lesson-content">
+                            
+<h3>Setuid</h3>
+<p>There are many cases in which normal users need elevated access to do stuff. The system administrator can't always be there to enter in a root password every time a user needed access to a protected file, so there are special file permission bits to allow this behavior. The Set User ID (SUID) allows a user to run a program as the owner of the program file rather than as themselves.</p>
+<p>Let's look at an example: </p>
+<p>Let's say I want to change my password, simple right? I just use the passwd command:</p>
+<pre>$ passwd</pre>
+<p>What is the password command doing? It's modifying a couple of files, but most importantly it's modifying the /etc/shadow file. Let's look at that file for a second: </p>
+<pre>$ ls -l /etc/shadow
+
+-rw-r----- 1 root shadow 1134 Dec 1 11:45 /etc/shadow
+</pre>
+<p>Oh wait a minute here, this file is owned by root? How is it possible that we are able to modify a file owned by root? </p>
+<p>Let's look at another permission set, this time of the command we ran: </p>
+<pre>$ ls -l /usr/bin/passwd
+
+-rwsr-xr-x 1 root root 47032 Dec 1 11:45 /usr/bin/passwd
+</pre>
+<p>You'll notice a new permission bit here <b>s</b>. This permission bit is the SUID, when a file has this permission set, it allows the users who launched the program to get the file owner's permission as well as execution permission, in this case root. So essentially while a user is running the password command, they are running as root.</p>
+<p>That's why we are able to access a protected file like /etc/shadow when we run the passwd command. Now if you removed that bit, you would see that you will not be able to modify /etc/shadow and therefore change your password. </p>
+<p><b>Modifying SUID</b></p>
+<p>Just like regular permissions there are two ways to modify SUID permissions. </p>
+<p><i>Symbolic way:</i><br/>
+<pre>$ sudo chmod u+s myfile</pre></p>
+<p><i>Numerical way:</i><br/>
+<pre> sudo chmod 4755 myfile</pre></p>
+<p>As you can see the SUID is denoted by a 4 and pre-pended to the permission set. You may see the SUID denoted as a capital <b>S</b> this means that it still does the same thing, but it does not have execute permissions.</p>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 practice">
+                        <div class="exercise-content">
+                            <h3>Exercise</h3>
+<p>Look at the permission for /etc/passwd in detail, do you notice anything else? Files with SUID enabled are also easily distinguishable.</p>
+
+                        </div>
+
+                        <div class="quiz-content">
+                            <h3>Quiz Question</h3>
+<p>What number represents the SUID?</p>
+<h3>Quiz Answer</h3>
+<p>4</p>
+</div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

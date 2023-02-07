@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>boot-process-bootloader</title>
+    <script
+        src="../static/assets/category/application-8013fdc35e4c79f95bcb3d655ff61f137ac05bcee52e6d96588427a84eddef12.js.download"
+        data-turbolinks-track="true"></script>
+    <link rel="stylesheet" media="all"
+        href="../static/assets/category/application-b0b91461d093aa2ed95d8a7467856e4dc16f55744d3c17a927c3598e5b26cd3f.css"
+        data-turbolinks-track="true">
+</head>
+
+<body>
+    <div id="wrapper" class="active">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul id="sidebar_menu" class="sidebar-nav">
+                <li class="sidebar-brand"><a>Booting</a>
+                </li>
+            </ul>
+            <ul class="sidebar-nav" id="sidebar">
+                
+                <li>
+                    <a class="" href="boot-process-overview">
+                        1. Boot process overview</a>
+                </li>
+                
+                <li>
+                    <a class="" href="boot-process-bios">
+                        2. Boot process bios</a>
+                </li>
+                
+                <li>
+                    <a class="current" href="boot-process-bootloader">
+                        3. Boot process bootloader</a>
+                </li>
+                
+                <li>
+                    <a class="" href="boot-process-kernel">
+                        4. Boot process kernel</a>
+                </li>
+                
+                <li>
+                    <a class="" href="boot-process-init">
+                        5. Boot process init</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- End of Sidebar -->
+
+
+        <div id="page-content-wrapper">
+            <!-- Keep all page content within the page-content inset div! -->
+            <div class="page-content inset">
+                <div class="row">
+                    <div class="col-md-6 lesson">
+
+                        <div class="user-app">
+                            <a class="btn btn-default btn-sm" href="../index.html">
+                                Home
+                            </a>
+                        </div>
+
+                        <div class="lesson-content">
+                            
+<h3>Boot Process: Bootloader</h3>
+<p>The bootloader's main responsibilities are:</p>
+<ul>
+<li>Booting into an operating system, it can also be used to boot to non-Linux operating systems</li>
+<li>Select a kernel to use</li>
+<li>Specify kernel parameters</li>
+</ul>
+<p>The most common bootloader for Linux is GRUB, you are most likely using it on your system. There are many other bootloaders that you can use such as LILO, efilinux, coreboot, SYSLINUX and more. However, we will just be working with GRUB as our bootloader. </p>
+<p>So we know that the bootloader's main goal is to load up the kernel, but where does it find the kernel? To find it, we will need to look at our kernel parameters. The parameters can be found by going into the GRUB menu on startup using the 'e' key. If you don't have GRUB no worries, we'll go through the boot parameters that you will see:</p>
+<ul>
+<li>initrd - Specifies the location of initial RAM disk (we'll talk more about this in the next lesson).
+<li>BOOT_IMAGE  - This is where the kernel image is located</li>
+<li>root - The location of the root filesystem, the kernel searches inside this location to find init. It is often represented by it's UUID or the device name such as /dev/sda1.</li>
+<li>ro - This parameter is pretty standard, it mounts the fileystem as read-only mode.</li>
+<li>quiet - This is added so that you don't see display messages that are going on in the background during boot.</li>
+<li>splash - This lets the splash screen be shown.</li>
+</li></ul>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 practice">
+                        <div class="exercise-content">
+                            <h3>Exercise</h3>
+<p>If you have GRUB as your bootloader, go into the GRUB menu with 'e' and take a look at the settings.</p>
+
+                        </div>
+
+                        <div class="quiz-content">
+                            <h3>Quiz Question</h3>
+<p>What kernel parameter makes it so you don't see bootup messages?</p>
+<h3>Quiz Answer</h3>
+<p>quiet</p>
+</div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>
