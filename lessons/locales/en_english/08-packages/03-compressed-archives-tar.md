@@ -8,7 +8,7 @@ You probably already know what a file archive is, you've most likely encountered
 
 <b>Compressing files with gzip</b>
 
-gzip is program used to compress files in Linux, they end in a .gz extension. 
+gzip is a program used to compress files in Linux, they end in a .gz extension.
 
 To compress a file down:
 <pre>$ gzip mycoolfile</pre>
