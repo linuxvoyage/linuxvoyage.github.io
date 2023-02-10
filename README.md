@@ -34,8 +34,8 @@ And...
 
 Though Linux Journey was created to document the journey of the [original author](https://github.com/cindyq) and their contributors to learn Linux, everyone's journey is a little different. So, One fine day, the linuxjourney.com website went down and open source community was concerned. Hence, someone volunteered to help us serve it locally and then put it together as static site. After over 2 months, it seems the domain owner/author of the site, resurrected it up again.  So, Now We can further improve the knowledge of the greater Linux community through contribution and collaboration, again. Feel free to refer to below issues and may be make a contribution or PR. Good day!
 
-#### Related GH Issues:
-* [214](https://github.com/cindyq/linuxjourney/issues/214)
+#### Related GitHub Issues:
+* [213](https://github.com/cindyq/linuxjourney/issues/213#issuecomment-1420893647)
 * [216](https://github.com/cindyq/linuxjourney/issues/216)
 
 
