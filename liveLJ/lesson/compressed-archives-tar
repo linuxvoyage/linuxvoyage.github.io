@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Learning | Linux Journey</title>
+  <script src="../assets/application-8013fdc35e4c79f95bcb3d655ff61f137ac05bcee52e6d96588427a84eddef12.js" data-turbolinks-track="true"></script>
+  <link rel="stylesheet" media="all" href="../assets/application-b0b91461d093aa2ed95d8a7467856e4dc16f55744d3c17a927c3598e5b26cd3f.css" data-turbolinks-track="true" />
+  <link rel="shortcut icon" type="image/x-icon" href="../assets/favicon-e8bea7a0071e296638a3a1a08be81f0a30b9c945625e5a200fefecd8d9b2ed6c.ico" />
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="Vko+Z9GuWTpqF2bpbqa8cmHx8EqnL8zJk+blBoiF4Crt9hjeBhzwI3JKMWINVEBM6koJDPwhA9AZx5ldmIoxBA==" />
+</head>
+  <body>
+
+    <div id="wrapper" class="active">
+      
+      
+<!-- Sidebar -->
+<div id="sidebar-wrapper">
+  <ul id="sidebar_menu" class="sidebar-nav">
+    <li class="sidebar-brand"><a href="compressed-archives-tar#">Paketler
+      <span id="menu-toggle" class="main_icon glyphicon glyphicon-align-justify"></span>
+    </a></li>
+  </ul>
+  <ul class="sidebar-nav" id="sidebar">
+    <li><a class="" href="software-distribution">1. Software Distribution</a></li>
+    <li><a class="" href="package-repositories">2. Package Repositories</a></li>
+    <li><a class="current" href="compressed-archives-tar">3. tar and gzip</a></li>
+    <li><a class="" href="package-dependencies">4. Package Dependencies</a></li>
+    <li><a class="" href="package-install-tools">5. rpm and dpkg</a></li>
+    <li><a class="" href="package-management-systems">6. yum and apt</a></li>
+    <li><a class="" href="compile-source-code">7. Compile Source Code</a></li>
+  </ul>
+</div>
+    
+<!-- Page content -->
+<div id="page-content-wrapper">
+  <!-- Keep all page content within the page-content inset div! -->
+  <div class="page-content inset">
+    <div class="row">
+      <div class="col-md-6 lesson">
+        
+        <div class="user-app">
+          <a class="btn btn-default btn-sm" href="../change_locale/tr">
+            <i class="glyphicon glyphicon glyphicon-home"></i> Anasayfa
+</a>        </div>
+        
+        <div class="lesson-content">
+          <h3>3. tar and gzip</h3>
+          <p class="lesson-text"><p>Before we get into package installation and the different managers, we need to discuss archiving and compressing files, because you will most likely encounter these when you hunt for software on the internet. </p>
+
+<p>You probably already know what a file archive is, you've most likely encountered file types such as .rar and .zip. These are an archive of files, they contain many files inside of them, but they come in this very neat single file known as an archive.</p>
+
+<p><b>Compressing files with gzip</b></p>
+
+<p>gzip is program used to compress files in Linux, they end in a .gz extension. </p>
+
+<p>To compress a file down:
+<br /><pre>$ gzip mycoolfile</pre></p>
+
+<p>To decompress the file:
+<br /><pre>$ gunzip mycoolfile.gz</pre></p>
+
+<p><b>Creating archives with tar</b>
+<br />Unfortunately, gzip can't add multiple files into one archive for us. Luckily we have the tar program which does. When you create an archive using tar, it will have a .tar extension. </p>
+
+<p><pre>$ tar cvf mytarfile.tar mycoolfile1 mycoolfile2</pre></p>
+
+<p><ul>
+<br /><li>c - create</li>
+<br /><li>v - tell the program to be verbose and let us see what it's doing</li>
+<br /><li>f - the filename of the tar file has to come after this option, if you are creating a tar file you'll have to come up with a name</li>
+<br /></ul></p>
+
+<p><b>Unpacking archives with tar</b></p>
+
+<p>To extract the contents of a tar file, use: </p>
+
+<p><pre>$ tar xvf mytarfile.tar</pre></p>
+
+<p><ul>
+<br /><li>x - extract</li>
+<br /><li>v - tell the program to be verbose and let us see what it's doing</li>
+<br /><li>f - the file you want to extract</li>
+<br /></ul></p>
+
+<p><b>Compressing/uncompressing archives with tar and gzip</b></p>
+
+<p>Many times you'll see a tar file that has been compressed such as: mycompressedarchive.tar.gz, all you need to do is work outside in, so first remove the compression with gunzip and then you can unpack the tar file. Or you can alternatively use the <b>z</b> option with tar, which just tells it to use the gzip or gunzip utility.</p>
+
+<p>Create a compressed tar file:
+<br /><pre>$ tar czf myfile.tar.gz</pre></p>
+
+<p>Uncompress and unpack: 
+<br /><pre>$ tar xzf file.tar</pre></p>
+
+<p>If you need help remember this: e<b>X</b>tract all <b>Z</b>ee <b>F</b>iles!</p>
+
+<p>tar is one of those commands that is so important and yet you never really remember it, relevant xkcd: <a href="https://xkcd.com/1168/">https://xkcd.com/1168/</a></p>
+
+<p><b>Other Utilities</b></p>
+
+<p>Throughout your journey of Linux, you'll encounter other archive and compression types such as: bzip2, compress, zip, unzip, etc. They are a little less common, but just keep in mind that different utilities will call for different commands.</p>
+        </div>
+      </div>
+      
+      <div class="col-md-6 practice">
+        <div class="exercise-content">
+          <h3>Alıştırmalar</h3>
+          <p><p>Familiarize yourself with the tar documentation and look at the other options available in the manpage.</p></p>
+        </div>
+        
+        <div class="quiz-content">
+          <h3>Quiz</h3>
+          <p>What tar flag is used to create archives?<p>
+            
+          <div class="course-actions">
+            <div id="check-answer"></div>
+            <form action="https://linuxjourney.com/answer?lesson_id=113&amp;subject_id=8" accept-charset="UTF-8" data-remote="true" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+              <input type="text" name="user_answer" id="user_answer" size="30" class="input-sm" />
+              <input type="submit" name="commit" value="Cevabı Kontrol Et" class="btn btn-info btn-sm" />
+</form>            
+              <a class="btn btn-warning" href="package-dependencies">Devam et</a>
+          </div>
+          
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div><!-- end of page content -->
+      
+      
+    </div><!-- end of wrapper -->
+    
+    <script>
+      $(document).ready(optimizeMobile);
+      $(window).on('resize', optimizeMobile);
+      
+      function optimizeMobile() {
+        if (($(window).width() <= 767) || ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )){
+          $("#wrapper").removeClass("active");
+        } else {
+          $("#wrapper").addClass("active");
+        }
+      }
+      
+      $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("active");
+      });
+      
+      $("#hint-toggle").click(function(e) {
+        $("#hint").toggle();
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Learning | Linux Journey</title>
+  <script src="../assets/application-8013fdc35e4c79f95bcb3d655ff61f137ac05bcee52e6d96588427a84eddef12.js" data-turbolinks-track="true"></script>
+  <link rel="stylesheet" media="all" href="../assets/application-b0b91461d093aa2ed95d8a7467856e4dc16f55744d3c17a927c3598e5b26cd3f.css" data-turbolinks-track="true" />
+  <link rel="shortcut icon" type="image/x-icon" href="../assets/favicon-e8bea7a0071e296638a3a1a08be81f0a30b9c945625e5a200fefecd8d9b2ed6c.ico" />
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="F63koC2cBiDE25R+flSUz7nZYER4p++qLlijCnIzWmysEcIZ+i6vOdyGw/UdpmjxMmKZAiOpILOked9RYjyLQg==" />
+</head>
+  <body>
+
+    <div id="wrapper" class="active">
+      
+      
+<!-- Sidebar -->
+<div id="sidebar-wrapper">
+  <ul id="sidebar_menu" class="sidebar-nav">
+    <li class="sidebar-brand"><a href="list-directories-ls-commmand#">Komut Satırı
+      <span id="menu-toggle" class="main_icon glyphicon glyphicon-align-justify"></span>
+    </a></li>
+  </ul>
+  <ul class="sidebar-nav" id="sidebar">
+    <li><a class="" href="the-shell">1. The Shell</a></li>
+    <li><a class="" href="print-working-directory-pwd-command">2. pwd (Print Working Directory)</a></li>
+    <li><a class="" href="change-directory-cd-command">3. cd (Change Directory)</a></li>
+    <li><a class="current" href="list-directories-ls-commmand">4. ls (List Directories)</a></li>
+    <li><a class="" href="touch-command">5. touch</a></li>
+    <li><a class="" href="file-command">6. file</a></li>
+    <li><a class="" href="cat-command">7. cat</a></li>
+    <li><a class="" href="less-command">8. less</a></li>
+    <li><a class="" href="history-command">9. history</a></li>
+    <li><a class="" href="copy-cp-command">10. cp (Copy)</a></li>
+    <li><a class="" href="move-mv-command">11. mv (Move)</a></li>
+    <li><a class="" href="make-directory-mkdir-command">12. mkdir (Make Directory)</a></li>
+    <li><a class="" href="remove-rm-command">13. rm (Remove)</a></li>
+    <li><a class="" href="find-command">14. find</a></li>
+    <li><a class="" href="help-command">15. help</a></li>
+    <li><a class="" href="man-command">16. man</a></li>
+    <li><a class="" href="whatis-command">17. whatis</a></li>
+    <li><a class="" href="alias-command">18. alias</a></li>
+    <li><a class="" href="exit-command">19. exit</a></li>
+  </ul>
+</div>
+    
+<!-- Page content -->
+<div id="page-content-wrapper">
+  <!-- Keep all page content within the page-content inset div! -->
+  <div class="page-content inset">
+    <div class="row">
+      <div class="col-md-6 lesson">
+        
+        <div class="user-app">
+          <a class="btn btn-default btn-sm" href="../change_locale/tr">
+            <i class="glyphicon glyphicon glyphicon-home"></i> Anasayfa
+</a>        </div>
+        
+        <div class="lesson-content">
+          <h3>4. ls (List Directories)</h3>
+          <p class="lesson-text"><p>Now that we know how to move around the system, how do we figure out what is available to us? Right now it’s like we are moving around in the dark. Well, we can use the wonderful ls command to list directory contents. The ls command will list directories and files in the current directory by default, however you can specify which path you want to list the directories of.</p>
+
+<p><pre>$ ls
+<br />$ ls /home/pete</pre></p>
+
+<p>ls is a quite useful tool, it also shows you detailed information about the files and directories you are looking at.</p>
+
+<p>Also note that not all files in a directory will be visible. Filenames that start with . are hidden, you can view them however with the ls command and pass the -a flag to it (a for all). </p>
+
+<p><pre>$ ls -a</pre></p>
+
+<p>There is also one more useful ls flag, -l for long, this shows a detailed list of files in a long format. This will show you detailed information, starting from the left: file permissions, number of links, owner name, owner group, file size, timestamp of last modification, and file/directory name. </p>
+
+<p><pre>$ ls -l</pre></p>
+
+<p><pre>pete@icebox:~$ ls -l
+<br />total 80
+<br />drwxr-x--- 7 pete penguingroup   4096 Nov 20 16:37 Desktop
+<br />drwxr-x--- 2 pete penguingroup   4096 Oct 19 10:46  Documents
+<br />drwxr-x--- 4 pete penguingroup   4096 Nov 20 09:30 Downloads
+<br />drwxr-x--- 2 pete penguingroup   4096 Oct  7 13:13   Music
+<br />drwxr-x--- 2 pete penguingroup   4096 Sep 21 14:02 Pictures
+<br />drwxr-x--- 2 pete penguingroup   4096 Jul 27 12:41   Public
+<br />drwxr-x--- 2 pete penguingroup   4096 Jul 27 12:41   Templates
+<br />drwxr-x--- 2 pete penguingroup   4096 Jul 27 12:41   Videos</pre></p>
+
+<p>Commands have things called flags (or arguments or options, whatever you want to call it) to add more functionality. See how we added -a and -l, well you can add them both together with -la. The order of the flags determines which order it goes in, most of the time this doesn’t really matter so you can also do ls -al and it would still work.</p>
+
+<p><pre>$ ls -la</pre></p>
+        </div>
+      </div>
+      
+      <div class="col-md-6 practice">
+        <div class="exercise-content">
+          <h3>Alıştırmalar</h3>
+          <p><p>Run ls with different flags and see the output you receive.</p>
+
+<p><ul>
+<br /><li>ls -R: recursively list directory contents</li>
+<br /><li>ls -r: reverse order while sorting</li>
+<br /><li>ls -t: sort by modification time, newest first</li>
+<br /></ul></p></p>
+        </div>
+        
+        <div class="quiz-content">
+          <h3>Quiz</h3>
+          <p>What command would you use to see hidden files?<p>
+            
+          <div class="course-actions">
+            <div id="check-answer"></div>
+            <form action="https://linuxjourney.com/answer?lesson_id=5&amp;subject_id=1" accept-charset="UTF-8" data-remote="true" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+              <input type="text" name="user_answer" id="user_answer" size="30" class="input-sm" />
+              <input type="submit" name="commit" value="Cevabı Kontrol Et" class="btn btn-info btn-sm" />
+</form>            
+              <a class="btn btn-warning" href="touch-command">Devam et</a>
+          </div>
+          
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div><!-- end of page content -->
+      
+      
+    </div><!-- end of wrapper -->
+    
+    <script>
+      $(document).ready(optimizeMobile);
+      $(window).on('resize', optimizeMobile);
+      
+      function optimizeMobile() {
+        if (($(window).width() <= 767) || ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )){
+          $("#wrapper").removeClass("active");
+        } else {
+          $("#wrapper").addClass("active");
+        }
+      }
+      
+      $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("active");
+      });
+      
+      $("#hint-toggle").click(function(e) {
+        $("#hint").toggle();
+      });
+    </script>
+  </body>
+</html>

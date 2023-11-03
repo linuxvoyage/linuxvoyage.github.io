@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Learning | Linux Journey</title>
+  <script src="../assets/application-8013fdc35e4c79f95bcb3d655ff61f137ac05bcee52e6d96588427a84eddef12.js" data-turbolinks-track="true"></script>
+  <link rel="stylesheet" media="all" href="../assets/application-b0b91461d093aa2ed95d8a7467856e4dc16f55744d3c17a927c3598e5b26cd3f.css" data-turbolinks-track="true" />
+  <link rel="shortcut icon" type="image/x-icon" href="../assets/favicon-e8bea7a0071e296638a3a1a08be81f0a30b9c945625e5a200fefecd8d9b2ed6c.ico" />
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="/Dcu79hTOP54Bt3/Hn1atwcrpBuc1MyUbKUYcOVLtgBHiwhWD+GR52BbinR9j6aJjJBdXcfaA43mhGQr9URnLg==" />
+</head>
+  <body>
+
+    <div id="wrapper" class="active">
+      
+      
+<!-- Sidebar -->
+<div id="sidebar-wrapper">
+  <ul id="sidebar_menu" class="sidebar-nav">
+    <li class="sidebar-brand"><a href="network-interfaces#">Ağ Yapılandırma
+      <span id="menu-toggle" class="main_icon glyphicon glyphicon-align-justify"></span>
+    </a></li>
+  </ul>
+  <ul class="sidebar-nav" id="sidebar">
+    <li><a class="current" href="network-interfaces">1. Network Interfaces</a></li>
+    <li><a class="" href="route">2. route</a></li>
+    <li><a class="" href="dhclient">3. dhclient</a></li>
+    <li><a class="" href="network-manager">4. Network Manager</a></li>
+    <li><a class="" href="arp-command">5. arp</a></li>
+  </ul>
+</div>
+    
+<!-- Page content -->
+<div id="page-content-wrapper">
+  <!-- Keep all page content within the page-content inset div! -->
+  <div class="page-content inset">
+    <div class="row">
+      <div class="col-md-6 lesson">
+        
+        <div class="user-app">
+          <a class="btn btn-default btn-sm" href="../change_locale/tr">
+            <i class="glyphicon glyphicon glyphicon-home"></i> Anasayfa
+</a>        </div>
+        
+        <div class="lesson-content">
+          <h3>1. Network Interfaces</h3>
+          <p class="lesson-text"><p>A network interface is how the kernel links up the software side of networking to the hardware side. We've already seen an example of this: </p>
+
+<p><pre>
+<br />pete@icebox:~$ ifconfig -a
+<br />eth0      Link encap:Ethernet  HWaddr 1d:3a:32:24:4d:ce  
+<br />          inet addr:192.168.1.129  Bcast:192.168.1.255  Mask:255.255.255.0
+<br />          inet6 addr: fd60::21c:29ff:fe63:5cdc/64 Scope:Link
+<br /></pre></p>
+
+<p><b> The ifconfig command</b></p>
+
+<p>The <b>ifconfig</b> tool allows us to configure our network interfaces, if we don't have any network interfaces set up, the kernel's device drivers and the network won't know how to talk to each other. Ifconfig runs on bootup and configures our interfaces through config files, but we can also manually modify them. The output of ifconfig shows the interface name on the left side and the right side shows detailed information. You'll most commonly see interfaces named eth0 (first Ethernet card in the machine), wlan0 (wireless interface), lo (loopback interface). The loopback interface is used to represent your computer, it just loops you back to yourself. This is good for debugging or connecting to servers running locally. </p>
+
+<p>The status of interfaces, can be up or down, as you can guess if you wanted to "turn off" an interface you can set it to go down. The fields you'll probably look at the most in the ifconfig output is the HWaddr (MAC address of the interface), inet address (IPv4 address) and inet6 (IPv6 address). Of course you can see that the subnet mask and broadcast address are there as well. You can also view interface information at /etc/network/interfaces.</p>
+
+<p><b>To create an interface and bring it up</b></p>
+
+<p><pre>$ ifconfig eth0 192.168.2.1 netmask 255.255.255.0 up</pre></p>
+
+<p>This assigns an IP address and netmask to the eth0 interface and also turns it up.</p>
+
+<p><b>To bring up or down an interface</b></p>
+
+<p><pre>
+<br />$ ifup eth0
+<br />$ ifdown eth0
+<br /></pre></p>
+
+<p><b> The ip command </b></p>
+
+<p>The <b>ip</b> command also allows us to manipulate the networking stack of a system. Depending on the distribution you are using it may be the preferred method of manipulating your network settings. </p>
+
+<p>Here are some examples of its use:</p>
+
+<p><b>To show interface information for all interfaces </b>
+<br /><pre>
+<br />$ ip link show
+<br /></pre></p>
+
+<p><b>To show the statistics of an interface</b>
+<br /><pre>
+<br />$ ip -s link show eth0
+<br /></pre></p>
+
+<p><b>To show ip addresses allocated to interfaces</b>
+<br /><pre>
+<br />$ ip address show
+<br /></pre></p>
+
+<p><b>To bring interfaces up and down</b>
+<br /><pre>
+<br />$ ip link set eth0 up
+<br />$ ip link set eth0 down
+<br /></pre></p>
+
+<p><b>To add an IP address to an interface</b>
+<br /><pre>
+<br />$ ip address add 192.168.1.1/24 dev eth0
+<br /></pre></p>
+        </div>
+      </div>
+      
+      <div class="col-md-6 practice">
+        <div class="exercise-content">
+          <h3>Alıştırmalar</h3>
+          <p><p>Try changing the state of your network interfaces to either up or down and observe what happens.</p>
+
+<p>Can you change your network interface's with both the ifconfig and ip commands ?</p></p>
+        </div>
+        
+        <div class="quiz-content">
+          <h3>Quiz</h3>
+          <p>What is the command to configure our network interfaces?<p>
+            
+          <div class="course-actions">
+            <div id="check-answer"></div>
+            <form action="https://linuxjourney.com/answer?lesson_id=248&amp;subject_id=18" accept-charset="UTF-8" data-remote="true" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+              <input type="text" name="user_answer" id="user_answer" size="30" class="input-sm" />
+              <input type="submit" name="commit" value="Cevabı Kontrol Et" class="btn btn-info btn-sm" />
+</form>            
+              <a class="btn btn-warning" href="route">Devam et</a>
+          </div>
+          
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div><!-- end of page content -->
+      
+      
+    </div><!-- end of wrapper -->
+    
+    <script>
+      $(document).ready(optimizeMobile);
+      $(window).on('resize', optimizeMobile);
+      
+      function optimizeMobile() {
+        if (($(window).width() <= 767) || ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )){
+          $("#wrapper").removeClass("active");
+        } else {
+          $("#wrapper").addClass("active");
+        }
+      }
+      
+      $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("active");
+      });
+      
+      $("#hint-toggle").click(function(e) {
+        $("#hint").toggle();
+      });
+    </script>
+  </body>
+</html>
