@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Learning | Linux Journey</title>
+  <script src="../assets/application-8013fdc35e4c79f95bcb3d655ff61f137ac05bcee52e6d96588427a84eddef12.js" data-turbolinks-track="true"></script>
+  <link rel="stylesheet" media="all" href="../assets/application-b0b91461d093aa2ed95d8a7467856e4dc16f55744d3c17a927c3598e5b26cd3f.css" data-turbolinks-track="true" />
+  <link rel="shortcut icon" type="image/x-icon" href="../assets/favicon-e8bea7a0071e296638a3a1a08be81f0a30b9c945625e5a200fefecd8d9b2ed6c.ico" />
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="drszV0shFOKaABO9pzdq8xUeb3Md47oYAE24HZx9fWXNBxXunJO9+4JdRDbExZbNnqWWNUbtdQGKbMRGjHKsSw==" />
+</head>
+  <body>
+
+    <div id="wrapper" class="active">
+      
+      
+<!-- Sidebar -->
+<div id="sidebar-wrapper">
+  <ul id="sidebar_menu" class="sidebar-nav">
+    <li class="sidebar-brand"><a href="nfs-network-file-share#">Ağ Paylaşımı
+      <span id="menu-toggle" class="main_icon glyphicon glyphicon-align-justify"></span>
+    </a></li>
+  </ul>
+  <ul class="sidebar-nav" id="sidebar">
+    <li><a class="" href="network-file-sharing.html">1. File Sharing Overview</a></li>
+    <li><a class="" href="rsync.html">2. rsync</a></li>
+    <li><a class="" href="simple-http-server.html">3. Simple HTTP Server</a></li>
+    <li><a class="current" href="nfs-network-file-share.html">4. NFS</a></li>
+    <li><a class="" href="samba.html">5. Samba </a></li>
+  </ul>
+</div>
+    
+<!-- Page content -->
+<div id="page-content-wrapper">
+  <!-- Keep all page content within the page-content inset div! -->
+  <div class="page-content inset">
+    <div class="row">
+      <div class="col-md-6 lesson">
+        
+        <div class="user-app">
+          <a class="btn btn-default btn-sm" href="../change_locale/tr">
+            <i class="glyphicon glyphicon glyphicon-home"></i> Anasayfa
+</a>        </div>
+        
+        <div class="lesson-content">
+          <h3>4. NFS</h3>
+          <p class="lesson-text"><p>The most standard network file share for Linux is NFS (Network File System), NFS allows a server to share directories and files with one or more clients over the network. </p>
+
+<p>We won't get into the details of how to create an NFS server as it can get complex, however we will discuss setting up NFS clients.</p>
+
+<p><b>Setting up NFS client</b></p>
+
+<p><pre>$ sudo service nfsclient start
+<br />$ sudo mount server:/directory /mount_directory</pre></p>
+
+<p><b>Automounting</b></p>
+
+<p>Let's say you use the NFS server quite often and you want to keep it permanently mounted, normally you think you'd edit the /etc/fstab file, but you may not always get a connection to the server and that can cause issues on bootup. Instead what you want to do is setup automounting so that you can connect to the NFS server when you need to. This is done with the <b>automount</b> tool or in recent versions of Linux <b>amd</b>. When a file is accessed in a specified directory, automount will look up the remote server and automatically mount it. </p>
+        </div>
+      </div>
+      
+      <div class="col-md-6 practice">
+        <div class="exercise-content">
+          <h3>Alıştırmalar</h3>
+          <p><p>Read the manpage for NFS to learn more.</p></p>
+        </div>
+        
+        <div class="quiz-content">
+          <h3>Quiz</h3>
+          <p>What tool is used to manage mount points automatically?<p>
+            
+          <div class="course-actions">
+            <div id="check-answer"></div>
+            <form action="https://linuxjourney.com/answer?lesson_id=178&amp;subject_id=16" accept-charset="UTF-8" data-remote="true" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+              <input type="text" name="user_answer" id="user_answer" size="30" class="input-sm" />
+              <input type="submit" name="commit" value="Cevabı Kontrol Et" class="btn btn-info btn-sm" />
+</form>            
+              <a class="btn btn-warning" href="samba.html">Devam et</a>
+          </div>
+          
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div><!-- end of page content -->
+      
+      
+    </div><!-- end of wrapper -->
+    
+    <script>
+      $(document).ready(optimizeMobile);
+      $(window).on('resize', optimizeMobile);
+      
+      function optimizeMobile() {
+        if (($(window).width() <= 767) || ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )){
+          $("#wrapper").removeClass("active");
+        } else {
+          $("#wrapper").addClass("active");
+        }
+      }
+      
+      $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("active");
+      });
+      
+      $("#hint-toggle").click(function(e) {
+        $("#hint").toggle();
+      });
+    </script>
+  </body>
+</html>

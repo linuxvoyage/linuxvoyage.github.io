@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Learning | Linux Journey</title>
+  <script src="../assets/application-8013fdc35e4c79f95bcb3d655ff61f137ac05bcee52e6d96588427a84eddef12.js" data-turbolinks-track="true"></script>
+  <link rel="stylesheet" media="all" href="../assets/application-b0b91461d093aa2ed95d8a7467856e4dc16f55744d3c17a927c3598e5b26cd3f.css" data-turbolinks-track="true" />
+  <link rel="shortcut icon" type="image/x-icon" href="../assets/favicon-e8bea7a0071e296638a3a1a08be81f0a30b9c945625e5a200fefecd8d9b2ed6c.ico" />
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="rD0iWYG+nVrtmLJRD7IaaAZjFgYoTYRB9RSym0b/1w0XgQTgVgw0Q/XF5dpsQOZWjdjvQHNDS1h/Nc7AVvAGIw==" />
+</head>
+  <body>
+
+    <div id="wrapper" class="active">
+      
+      
+<!-- Sidebar -->
+<div id="sidebar-wrapper">
+  <ul id="sidebar_menu" class="sidebar-nav">
+    <li class="sidebar-brand"><a href="what-is-a-router#">Yönlendirme
+      <span id="menu-toggle" class="main_icon glyphicon glyphicon-align-justify"></span>
+    </a></li>
+  </ul>
+  <ul class="sidebar-nav" id="sidebar">
+    <li><a class="current" href="what-is-a-router.html">1. What is a router?</a></li>
+    <li><a class="" href="routing-table.html">2. Routing Table</a></li>
+    <li><a class="" href="path-of-a-packet.html">3. Path of a Packet</a></li>
+    <li><a class="" href="routing-protocols.html">4. Routing Protocols</a></li>
+    <li><a class="" href="distance-vector-protocols.html">5. Distance Vector Protocols</a></li>
+    <li><a class="" href="link-state-protocols.html">6. Link State Protocols</a></li>
+    <li><a class="" href="bgp-border-gateway-protocol.html">7. Border Gateway Protocol</a></li>
+  </ul>
+</div>
+    
+<!-- Page content -->
+<div id="page-content-wrapper">
+  <!-- Keep all page content within the page-content inset div! -->
+  <div class="page-content inset">
+    <div class="row">
+      <div class="col-md-6 lesson">
+        
+        <div class="user-app">
+          <a class="btn btn-default btn-sm" href="../change_locale/tr">
+            <i class="glyphicon glyphicon glyphicon-home"></i> Anasayfa
+</a>        </div>
+        
+        <div class="lesson-content">
+          <h3>1. What is a router?</h3>
+          <p class="lesson-text"><p>We've used this term router before, hopefully you know what one is, since you probably have one in your home. A router enables machines on a network to communicate with each other as well as other networks. On a typical router, you will have LAN ports, that allow your machines to connect to the same local area network and you will also have an Internet uplink port that connects you to the Internet, sometimes you'll see this port being labelled as WAN, because it is essentially connecting you to a wider network. When we do any sort of networking activity, it has to go through the router. The router decides where our network packets go and which ones come in. It routes our packets between multiple networks to get from it's source host to it's destination host. </p>
+
+<p><b>How does a router work?</b></p>
+
+<p>Think about routing the same way as mail delivery, we have an address we want to send a letter to, when we send it off to the post office, they get the letter and see, oh this is going to California, I'll put it on the truck going to California (I honestly have no idea how the postal system works). The letter then gets sent to San Francisco, inside San Francisco there are different zip codes, and then in those zip codes there are smaller address codes, until finally someone is able to deliver your letter to the address you wanted. On the other hand, if you already lived in San Francisco and in the same zipcode, the mail deliverer will probably know exactly where the letter has to go to without handing it off to anyone else. </p>
+
+<p>When we route packets, they use similar address "routes", such as to get to network A, send these packets to network B. When we don't have a route set for that, we have a default route that our packets will use. These routes are set on a routing table that our system uses to navigate us across networks.</p>
+
+<p><b>Hops</b></p>
+
+<p>As packets move across networks, they travel in hops, a hop is how we roughly measure the distance that the packet must travel to get from the source to the destination. Let's say to I have two routers connecting host A to host B, so therefore we say there are two hops between host A and host B. Each hop is a intermediate device like the routers that we must pass through.</p>
+
+<p><b>Understanding the basic difference between Switching, Routing &amp; Flooding?</b>
+<br />Packet SWITCHING is basically receiving, processing and forwarding data to the destination device.
+<br />ROUTING is a process of creating the routing table, so that we can do SWITCHING better.
+<br />Before routing, FLOODING was used. If a router don't know which way to send a packet than every incoming packet is sent through every outgoing link except the one it arrived on.
+</p>
+        </div>
+      </div>
+      
+      <div class="col-md-6 practice">
+        <div class="exercise-content">
+          <h3>Alıştırmalar</h3>
+          <p><p>No exercises for this lesson.</p></p>
+        </div>
+        
+        <div class="quiz-content">
+          <h3>Quiz</h3>
+          <p>How do packets measure distance?<p>
+            
+          <div class="course-actions">
+            <div id="check-answer"></div>
+            <form action="https://linuxjourney.com/answer?lesson_id=238&amp;subject_id=22" accept-charset="UTF-8" data-remote="true" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+              <input type="text" name="user_answer" id="user_answer" size="30" class="input-sm" />
+              <input type="submit" name="commit" value="Cevabı Kontrol Et" class="btn btn-info btn-sm" />
+</form>            
+              <a class="btn btn-warning" href="routing-table.html">Devam et</a>
+          </div>
+          
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div><!-- end of page content -->
+      
+      
+    </div><!-- end of wrapper -->
+    
+    <script>
+      $(document).ready(optimizeMobile);
+      $(window).on('resize', optimizeMobile);
+      
+      function optimizeMobile() {
+        if (($(window).width() <= 767) || ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )){
+          $("#wrapper").removeClass("active");
+        } else {
+          $("#wrapper").addClass("active");
+        }
+      }
+      
+      $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("active");
+      });
+      
+      $("#hint-toggle").click(function(e) {
+        $("#hint").toggle();
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Learning | Linux Journey</title>
+  <script src="../assets/application-8013fdc35e4c79f95bcb3d655ff61f137ac05bcee52e6d96588427a84eddef12.js" data-turbolinks-track="true"></script>
+  <link rel="stylesheet" media="all" href="../assets/application-b0b91461d093aa2ed95d8a7467856e4dc16f55744d3c17a927c3598e5b26cd3f.css" data-turbolinks-track="true" />
+  <link rel="shortcut icon" type="image/x-icon" href="../assets/favicon-e8bea7a0071e296638a3a1a08be81f0a30b9c945625e5a200fefecd8d9b2ed6c.ico" />
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="H6PuAtUl40FsY6tEiOCc39MHNRqogqyyOY10f8/rVF+kH8i7ApdKWHQ+/M/rEmDhWLzMXPOMY6uzrAgk3+SFcQ==" />
+</head>
+  <body>
+
+    <div id="wrapper" class="active">
+      
+      
+<!-- Sidebar -->
+<div id="sidebar-wrapper">
+  <ul id="sidebar_menu" class="sidebar-nav">
+    <li class="sidebar-brand"><a href="systemd-overview#">Init
+      <span id="menu-toggle" class="main_icon glyphicon glyphicon-align-justify"></span>
+    </a></li>
+  </ul>
+  <ul class="sidebar-nav" id="sidebar">
+    <li><a class="" href="sysv-overview.html">1. System V Overview</a></li>
+    <li><a class="" href="sysv-services.html">2. System V Service</a></li>
+    <li><a class="" href="upstart-overview.html">3. Upstart Overview</a></li>
+    <li><a class="" href="upstart-jobs.html">4. Upstart Jobs</a></li>
+    <li><a class="current" href="systemd-overview.html">5. Systemd Overview</a></li>
+    <li><a class="" href="systemd-goals.html">6. Systemd Goals</a></li>
+    <li><a class="" href="power-states.html">7. Power States</a></li>
+  </ul>
+</div>
+    
+<!-- Page content -->
+<div id="page-content-wrapper">
+  <!-- Keep all page content within the page-content inset div! -->
+  <div class="page-content inset">
+    <div class="row">
+      <div class="col-md-6 lesson">
+        
+        <div class="user-app">
+          <a class="btn btn-default btn-sm" href="../change_locale/tr">
+            <i class="glyphicon glyphicon glyphicon-home"></i> Anasayfa
+</a>        </div>
+        
+        <div class="lesson-content">
+          <h3>5. Systemd Overview</h3>
+          <p class="lesson-text"><p>Systemd is slowly becoming the emerging standard for init. If you have a /usr/lib/systemd directory, you're most likely using systemd.</p>
+
+<p>Systemd uses goals to get your system up and running. Basically you have a target that you want to achieve and this target also has dependencies that we need to achieve. Systemd is extremely flexible and robust, it does not follow a strict sequence to get processes started. Here's what happens during the typical systemd boot:</p>
+
+<p><ol>
+<br /><li>First, systemd loads its configuration files, usually located in /etc/systemd/system or /usr/lib/systemd/system</li>
+<br /><li>Then it determines its boot goal, which is usually default.target</li>
+<br /><li>Systemd figures out the dependencies of the boot target and activates them
+<br /></li>
+<br /></ol></p>
+
+<p>Similar to Sys V runlevels, systemd boots into different targets:</p>
+
+<p><ul>
+<br /><li>poweroff.target - shutdown system</li>
+<br /><li>rescue.target - single user mode</li>
+<br /><li>multi-user.target - multiuser with networking</li>
+<br /><li>graphical.target - multiuser with networking and GUI</li>
+<br /><li>reboot.target - restart</li>
+<br /></ul></p>
+
+<p>The default boot goal of default.target usually points to the graphical.target. </p>
+
+<p>The main object that systemd works with are known as units. Systemd doesn't just stop and start services, it can mount filesystems, monitor your network sockets, etc and because of that robustness it has different types of units it operates. The most common units are:</p>
+
+<p><ul>
+<br /><li>Service units - these are the services we've been starting and stopping, these unit files end in .service</li>
+<br /><li>Mount units - These mount filesystems, these unit files end in .mount</li>
+<br /><li>Target units - These group together other units, the files end in .target</li>
+<br /></ul></p>
+
+<p>For example, let's say we boot into our default.target, well this target groups together the networking.service unit, crond.service unit, etc, so once we activate a single unit, everything below that unit gets activated as well.</p>
+        </div>
+      </div>
+      
+      <div class="col-md-6 practice">
+        <div class="exercise-content">
+          <h3>Alıştırmalar</h3>
+          <p><p>No exercises for this lesson.</p></p>
+        </div>
+        
+        <div class="quiz-content">
+          <h3>Quiz</h3>
+          <p>What unit is used to group together other units?<p>
+            
+          <div class="course-actions">
+            <div id="check-answer"></div>
+            <form action="https://linuxjourney.com/answer?lesson_id=161&amp;subject_id=13" accept-charset="UTF-8" data-remote="true" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+              <input type="text" name="user_answer" id="user_answer" size="30" class="input-sm" />
+              <input type="submit" name="commit" value="Cevabı Kontrol Et" class="btn btn-info btn-sm" />
+</form>            
+              <a class="btn btn-warning" href="systemd-goals.html">Devam et</a>
+          </div>
+          
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div><!-- end of page content -->
+      
+      
+    </div><!-- end of wrapper -->
+    
+    <script>
+      $(document).ready(optimizeMobile);
+      $(window).on('resize', optimizeMobile);
+      
+      function optimizeMobile() {
+        if (($(window).width() <= 767) || ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )){
+          $("#wrapper").removeClass("active");
+        } else {
+          $("#wrapper").addClass("active");
+        }
+      }
+      
+      $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("active");
+      });
+      
+      $("#hint-toggle").click(function(e) {
+        $("#hint").toggle();
+      });
+    </script>
+  </body>
+</html>

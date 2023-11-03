@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Learning | Linux Journey</title>
+  <script src="../assets/application-8013fdc35e4c79f95bcb3d655ff61f137ac05bcee52e6d96588427a84eddef12.js" data-turbolinks-track="true"></script>
+  <link rel="stylesheet" media="all" href="../assets/application-b0b91461d093aa2ed95d8a7467856e4dc16f55744d3c17a927c3598e5b26cd3f.css" data-turbolinks-track="true" />
+  <link rel="shortcut icon" type="image/x-icon" href="../assets/favicon-e8bea7a0071e296638a3a1a08be81f0a30b9c945625e5a200fefecd8d9b2ed6c.ico" />
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="GbxkdUPIGovnzbXD3YL5U+e3qAzqaFD19z4f2fBV0PiiAELMlHqzkv+Q4ki+cAVtbAxRSrFmn+x9H2OC4FoB1g==" />
+</head>
+  <body>
+
+    <div id="wrapper" class="active">
+      
+      
+<!-- Sidebar -->
+<div id="sidebar-wrapper">
+  <ul id="sidebar_menu" class="sidebar-nav">
+    <li class="sidebar-brand"><a href="upstart-overview#">Init
+      <span id="menu-toggle" class="main_icon glyphicon glyphicon-align-justify"></span>
+    </a></li>
+  </ul>
+  <ul class="sidebar-nav" id="sidebar">
+    <li><a class="" href="sysv-overview.html">1. System V Overview</a></li>
+    <li><a class="" href="sysv-services.html">2. System V Service</a></li>
+    <li><a class="current" href="upstart-overview.html">3. Upstart Overview</a></li>
+    <li><a class="" href="upstart-jobs.html">4. Upstart Jobs</a></li>
+    <li><a class="" href="systemd-overview.html">5. Systemd Overview</a></li>
+    <li><a class="" href="systemd-goals.html">6. Systemd Goals</a></li>
+    <li><a class="" href="power-states.html">7. Power States</a></li>
+  </ul>
+</div>
+    
+<!-- Page content -->
+<div id="page-content-wrapper">
+  <!-- Keep all page content within the page-content inset div! -->
+  <div class="page-content inset">
+    <div class="row">
+      <div class="col-md-6 lesson">
+        
+        <div class="user-app">
+          <a class="btn btn-default btn-sm" href="../change_locale/tr">
+            <i class="glyphicon glyphicon glyphicon-home"></i> Anasayfa
+</a>        </div>
+        
+        <div class="lesson-content">
+          <h3>3. Upstart Overview</h3>
+          <p class="lesson-text"><p>Upstart was developed by Canonical, so it was the init implementation on Ubuntu for a while, however on modern Ubuntu installations systemd is now used. Upstart was created to improve upon the issues with Sys V, such as the strict startup processes, blocking of tasks, etc. Upstart's event and job driven model allow it to respond to events as they happen. </p>
+
+<p>To find out if you are using Upstart, if you have a /usr/share/upstart directory that's a pretty good indicator. </p>
+
+<p>Jobs are the actions that Upstart performs and events are messages that are received from other processes to trigger jobs. To see a list of jobs and their configuration:</p>
+
+<p><pre>
+<br />pete@icebox:~$ ls /etc/init
+<br />acpid.conf                   mountnfs.sh.conf
+<br />alsa-restore.conf            mtab.sh.conf
+<br />alsa-state.conf              networking.conf
+<br />alsa-store.conf              network-interface.conf
+<br />anacron.conf                 network-interface-container.conf
+<br /></pre></p>
+
+<p>Inside these job configurations, it'll include information on how to start jobs and when to start jobs.</p>
+
+<p>For example, in the networking.conf file, it could say something as simple as:
+<br /><pre>
+<br />start on runlevel [235]
+<br />stop on runlevel [0]
+<br /></pre></p>
+
+<p>This means that it will start setting up networking on runlevel 2, 3 or 5 and will stop networking on runlevel 0. There are many ways to write the configuration file and you'll discover that when you look at the different job configurations available. </p>
+
+<p>The way that Upstart works is that: </p>
+
+<p><ol>
+<br /><li>First, it loads up the job configurations from /etc/init</li>
+<br /><li>Once a startup event occurs, it will run jobs triggered by that event.</li>
+<br /><li>These jobs will make new events and then those events will trigger more jobs</li>
+<br /><li>Upstart continues to do this until it completes all the necessary jobs</li>
+<br /></ol>
+</p>
+        </div>
+      </div>
+      
+      <div class="col-md-6 practice">
+        <div class="exercise-content">
+          <h3>Alıştırmalar</h3>
+          <p><p>If you are running Upstart, see if you can make sense of the job configurations in /etc/init.</p></p>
+        </div>
+        
+        <div class="quiz-content">
+          <h3>Quiz</h3>
+          <p>Which init system was made for Ubuntu?<p>
+            
+          <div class="course-actions">
+            <div id="check-answer"></div>
+            <form action="https://linuxjourney.com/answer?lesson_id=159&amp;subject_id=13" accept-charset="UTF-8" data-remote="true" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+              <input type="text" name="user_answer" id="user_answer" size="30" class="input-sm" />
+              <input type="submit" name="commit" value="Cevabı Kontrol Et" class="btn btn-info btn-sm" />
+</form>            
+              <a class="btn btn-warning" href="upstart-jobs.html">Devam et</a>
+          </div>
+          
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div><!-- end of page content -->
+      
+      
+    </div><!-- end of wrapper -->
+    
+    <script>
+      $(document).ready(optimizeMobile);
+      $(window).on('resize', optimizeMobile);
+      
+      function optimizeMobile() {
+        if (($(window).width() <= 767) || ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )){
+          $("#wrapper").removeClass("active");
+        } else {
+          $("#wrapper").addClass("active");
+        }
+      }
+      
+      $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("active");
+      });
+      
+      $("#hint-toggle").click(function(e) {
+        $("#hint").toggle();
+      });
+    </script>
+  </body>
+</html>

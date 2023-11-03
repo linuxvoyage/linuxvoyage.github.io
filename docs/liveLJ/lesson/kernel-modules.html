@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Learning | Linux Journey</title>
+  <script src="../assets/application-8013fdc35e4c79f95bcb3d655ff61f137ac05bcee52e6d96588427a84eddef12.js" data-turbolinks-track="true"></script>
+  <link rel="stylesheet" media="all" href="../assets/application-b0b91461d093aa2ed95d8a7467856e4dc16f55744d3c17a927c3598e5b26cd3f.css" data-turbolinks-track="true" />
+  <link rel="shortcut icon" type="image/x-icon" href="../assets/favicon-e8bea7a0071e296638a3a1a08be81f0a30b9c945625e5a200fefecd8d9b2ed6c.ico" />
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="ZZbvBYDY+AFLvU6gtG1amzyf7H3w48bb9kTaik/CXY7eKsm8V2pRGFPgGSvXn6altyQVO6vtCcJ8ZabRX82MoA==" />
+</head>
+  <body>
+
+    <div id="wrapper" class="active">
+      
+      
+<!-- Sidebar -->
+<div id="sidebar-wrapper">
+  <ul id="sidebar_menu" class="sidebar-nav">
+    <li class="sidebar-brand"><a href="kernel-modules#">Çekirdek
+      <span id="menu-toggle" class="main_icon glyphicon glyphicon-align-justify"></span>
+    </a></li>
+  </ul>
+  <ul class="sidebar-nav" id="sidebar">
+    <li><a class="" href="kernel-overview.html">1. Overview of the Kernel</a></li>
+    <li><a class="" href="kernel-privilege-levels.html">2. Privilege Levels</a></li>
+    <li><a class="" href="system-calls.html">3. System Calls</a></li>
+    <li><a class="" href="kernel-installation.html">4. Kernel Installation</a></li>
+    <li><a class="" href="kernel-location.html">5. Kernel Location</a></li>
+    <li><a class="current" href="kernel-modules.html">6. Kernel Modules</a></li>
+  </ul>
+</div>
+    
+<!-- Page content -->
+<div id="page-content-wrapper">
+  <!-- Keep all page content within the page-content inset div! -->
+  <div class="page-content inset">
+    <div class="row">
+      <div class="col-md-6 lesson">
+        
+        <div class="user-app">
+          <a class="btn btn-default btn-sm" href="../change_locale/tr">
+            <i class="glyphicon glyphicon glyphicon-home"></i> Anasayfa
+</a>        </div>
+        
+        <div class="lesson-content">
+          <h3>6. Kernel Modules</h3>
+          <p class="lesson-text"><p>Let's say I have a sweet ride, I invest a lot of time and money into it. I add a spoiler, hitch, bike rack and other random things. These components don't actually change the core functionality of the car and I can remove and add them very easily. The kernel uses the same concept with kernel modules.</p>
+
+<p>The kernel in itself is a monolithic piece of software, when we want to add support for a new type of keyboard, we don't write this code directly into the kernel code. Just as we wouldn't meld a bike rack to our car (well maybe some people would do that). Kernel modules are pieces of code that can be loaded and unloaded into the kernel on demand. They allow us to extend the functionality of the kernel without actually adding to the core kernel code. We can also add modules and not have to reboot the system (in most cases).</p>
+
+<p><b>View a list of currently loaded modules</b></p>
+
+<p><pre>$ lsmod</pre></p>
+
+<p><b>Load a module</b></p>
+
+<p><pre>$ sudo modprobe bluetooth</pre></p>
+
+<p>Modprobe loads tries the module from <b>/lib/modules/(kernel version)/kernel/drivers</b>. Kernel modules may also have dependencies, modprobe loads our module dependencies if they are not already loaded. </p>
+
+<p><b>Remove a module</b></p>
+
+<p><pre>$ sudo modprobe -r bluetooth</pre></p>
+
+<p><b>Load on bootup</b></p>
+
+<p>You can also load modules during system boot, instead of temporarily loading them with modprobe (which will be unloaded when you reboot). Just modify the <b>/etc/modprobe.d</b> directory and add a configuration file in it like so:</p>
+
+<p><pre>pete@icebox:~$ /etc/modprobe.d/peanutbutter.conf</p>
+
+<p>options peanut_butter type=almond
+<br /></pre></p>
+
+<p>A bit of a outlandish example, but if you had a module named peanut_butter and you wanted to add a kernel parameter for type=almond, you can have it load on startup using this configuration file. Also note that kernel modules have their own kernel parameters so you'll want to read about the module specifically to find out more.</p>
+
+<p><b>Do not load on bootup</b></p>
+
+<p>You can also make sure a module does not load on bootup by adding a configuration file like so:</p>
+
+<p><pre>pete@icebox:~$ /etc/modprobe.d/peanutbutter.conf</p>
+
+<p>blacklist peanut_butter
+<br /></pre>
+</p>
+        </div>
+      </div>
+      
+      <div class="col-md-6 practice">
+        <div class="exercise-content">
+          <h3>Alıştırmalar</h3>
+          <p><p>Unload your bluetooth module with modprobe and see what happens. How will you fix this?</p></p>
+        </div>
+        
+        <div class="quiz-content">
+          <h3>Quiz</h3>
+          <p>What command is used to unload a module?<p>
+            
+          <div class="course-actions">
+            <div id="check-answer"></div>
+            <form action="https://linuxjourney.com/answer?lesson_id=157&amp;subject_id=12" accept-charset="UTF-8" data-remote="true" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+              <input type="text" name="user_answer" id="user_answer" size="30" class="input-sm" />
+              <input type="submit" name="commit" value="Cevabı Kontrol Et" class="btn btn-info btn-sm" />
+</form>            
+              <a class="btn btn-warning" href="../change_locale/tr"><span class="translation_missing" title="translation missing: tr.courses.messages.return">Return</span></a>
+          </div>
+          
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div><!-- end of page content -->
+      
+      
+    </div><!-- end of wrapper -->
+    
+    <script>
+      $(document).ready(optimizeMobile);
+      $(window).on('resize', optimizeMobile);
+      
+      function optimizeMobile() {
+        if (($(window).width() <= 767) || ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )){
+          $("#wrapper").removeClass("active");
+        } else {
+          $("#wrapper").addClass("active");
+        }
+      }
+      
+      $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("active");
+      });
+      
+      $("#hint-toggle").click(function(e) {
+        $("#hint").toggle();
+      });
+    </script>
+  </body>
+</html>

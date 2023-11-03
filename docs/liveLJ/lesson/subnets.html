@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Learning | Linux Journey</title>
+  <script src="../assets/application-8013fdc35e4c79f95bcb3d655ff61f137ac05bcee52e6d96588427a84eddef12.js" data-turbolinks-track="true"></script>
+  <link rel="stylesheet" media="all" href="../assets/application-b0b91461d093aa2ed95d8a7467856e4dc16f55744d3c17a927c3598e5b26cd3f.css" data-turbolinks-track="true" />
+  <link rel="shortcut icon" type="image/x-icon" href="../assets/favicon-e8bea7a0071e296638a3a1a08be81f0a30b9c945625e5a200fefecd8d9b2ed6c.ico" />
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="GtYE/+ZsJQ5j7zzVY/5knoXbvbpiCdrQYB3Ok9Sh0s6haiJGMd6MF3uya14ADJigDmBE/DkHFcnqPLLIxK4D4A==" />
+</head>
+  <body>
+
+    <div id="wrapper" class="active">
+      
+      
+<!-- Sidebar -->
+<div id="sidebar-wrapper">
+  <ul id="sidebar_menu" class="sidebar-nav">
+    <li class="sidebar-brand"><a href="subnets#">Alt Ağlara Bölme
+      <span id="menu-toggle" class="main_icon glyphicon glyphicon-align-justify"></span>
+    </a></li>
+  </ul>
+  <ul class="sidebar-nav" id="sidebar">
+    <li><a class="" href="ipv4">1. IPv4</a></li>
+    <li><a class="current" href="subnets.html">2. Subnets</a></li>
+    <li><a class="" href="subnet-math.html">3. Subnet Math</a></li>
+    <li><a class="" href="subnetting-cheats.html">4. Subnetting Cheats</a></li>
+    <li><a class="" href="classless-interdomain-routing-cidr.html">5. CIDR</a></li>
+    <li><a class="" href="nat-network-address-translation.html">6. NAT</a></li>
+    <li><a class="" href="ipv6">7. IPv6</a></li>
+  </ul>
+</div>
+    
+<!-- Page content -->
+<div id="page-content-wrapper">
+  <!-- Keep all page content within the page-content inset div! -->
+  <div class="page-content inset">
+    <div class="row">
+      <div class="col-md-6 lesson">
+        
+        <div class="user-app">
+          <a class="btn btn-default btn-sm" href="../change_locale/tr">
+            <i class="glyphicon glyphicon glyphicon-home"></i> Anasayfa
+</a>        </div>
+        
+        <div class="lesson-content">
+          <h3>2. Subnets</h3>
+          <p class="lesson-text"><p>How can I tell if I'm on the same network as Patty? Well we can just look at the subnet short for subnetwork. A subnet is a group of hosts with IP addresses that are similar in a certain way. These hosts usually are in a proximate location from each other and you can easily send data to and from hosts on the same subnet. Think about it as sending mail in the same zip code, it's a lot easier than sending mail to a different state. </p>
+
+<p>For example, all hosts with an IP address that starts with 123.45.67 would be on the same subnet. My host has an IP of 123.45.67.8 and Patty's has an IP of 123.45.67.9. The common numbers are my network prefix and the 8 and 9 are our hosts, therefore my network is the same as Patty's. A subnet is divided into a network prefix, such as 123.45.67.0 and a subnet mask.</p>
+
+<p><b>Subnet Masks</b></p>
+
+<p>Subnet masks determine what part of your IP address is the network portion and what part is the host portion. </p>
+
+<p>A typical subnet mask can look something like this:</p>
+
+<p><pre>255.255.255.0</pre></p>
+
+<p>The 255 portion is actually our mask. To make this a little easier to understand, remember how we refer to each octet as 8 bits? In computer science a bit is denoted by a 0 or a 1 in binary form. When binary numbers are used, 1 means on and 0 means off. So what does 8 0's or 1's equal?</p>
+
+<p>Punch into Google "binary to decimal calculator" and convert 11111111 into a decimal form. What do you get? 255! So an octet ranges from 0 to 255. So if we had a subnet mask of 255.255.255.0, and an IP address of 192.168.1.0, how many hosts are on that subnet? We'll find out the answer to that in our subnet math lesson.</p>
+
+<p>Also when we talk about our subnet, we commonly denote it by the network prefix followed by the subnet mask:</p>
+
+<p><pre>123.234.0.0/255.255.0.0</pre></p>
+
+<p><b>Why?</b></p>
+
+<p>Why on earth do we make subnets? Subnetting is used to segment networks and control the flow of traffic within that network. So a host on one subnet can’t interact with another host on a different subnet. </p>
+
+<p>But wait a minute, what if I want to connect to other hosts like yahoo.com? Then you need to connect subnets together. To connect subnets you just need to find the hosts that are connected to more than one subnet. For example, if my host at 192.168.1.129 is connected to a local network of 192.168.1.129/24 it can reach any hosts on that network. To reach hosts on the rest of the Internet, it needs to communicate through the router. Traditionally, on most networks with a subnet mask of 255.255.255.0, the router is usually at address 1 of the subnet, so 192.168.1.1. Now that router will have a port that connects it to another subnet (more in the Routing course). Certain IP addresses (private networks) are not visible to the internet, and we have things like NAT in place (more on this later).</p>
+        </div>
+      </div>
+      
+      <div class="col-md-6 practice">
+        <div class="exercise-content">
+          <h3>Alıştırmalar</h3>
+          <p><p>Use ifconfig to view your subnet mask.</p></p>
+        </div>
+        
+        <div class="quiz-content">
+          <h3>Quiz</h3>
+          <p>True or false, a subnet consists of a subnet mask and network prefix.<p>
+            
+          <div class="course-actions">
+            <div id="check-answer"></div>
+            <form action="https://linuxjourney.com/answer?lesson_id=213&amp;subject_id=21" accept-charset="UTF-8" data-remote="true" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+              <input type="text" name="user_answer" id="user_answer" size="30" class="input-sm" />
+              <input type="submit" name="commit" value="Cevabı Kontrol Et" class="btn btn-info btn-sm" />
+</form>            
+              <a class="btn btn-warning" href="subnet-math.html">Devam et</a>
+          </div>
+          
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div><!-- end of page content -->
+      
+      
+    </div><!-- end of wrapper -->
+    
+    <script>
+      $(document).ready(optimizeMobile);
+      $(window).on('resize', optimizeMobile);
+      
+      function optimizeMobile() {
+        if (($(window).width() <= 767) || ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )){
+          $("#wrapper").removeClass("active");
+        } else {
+          $("#wrapper").addClass("active");
+        }
+      }
+      
+      $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("active");
+      });
+      
+      $("#hint-toggle").click(function(e) {
+        $("#hint").toggle();
+      });
+    </script>
+  </body>
+</html>

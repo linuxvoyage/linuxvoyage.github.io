@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Learning | Linux Journey</title>
+  <script src="../assets/application-8013fdc35e4c79f95bcb3d655ff61f137ac05bcee52e6d96588427a84eddef12.js" data-turbolinks-track="true"></script>
+  <link rel="stylesheet" media="all" href="../assets/application-b0b91461d093aa2ed95d8a7467856e4dc16f55744d3c17a927c3598e5b26cd3f.css" data-turbolinks-track="true" />
+  <link rel="shortcut icon" type="image/x-icon" href="../assets/favicon-e8bea7a0071e296638a3a1a08be81f0a30b9c945625e5a200fefecd8d9b2ed6c.ico" />
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="Gov9Qcj9P1yRQUmxuye5fwopIhTQgubhPl0dPJqMBRqhN9v4H0+WRYkcHjrY1UVBgZLbUouMKfi0fGFnioPUNA==" />
+</head>
+  <body>
+
+    <div id="wrapper" class="active">
+      
+      
+<!-- Sidebar -->
+<div id="sidebar-wrapper">
+  <ul id="sidebar_menu" class="sidebar-nav">
+    <li class="sidebar-brand"><a href="etc-passwd-file#">Kullanıcı Yönetimi
+      <span id="menu-toggle" class="main_icon glyphicon glyphicon-align-justify"></span>
+    </a></li>
+  </ul>
+  <ul class="sidebar-nav" id="sidebar">
+    <li><a class="" href="users-and-groups.html">1. Users and Groups</a></li>
+    <li><a class="" href="root-user.html">2. root</a></li>
+    <li><a class="current" href="etc-passwd-file.html">3. /etc/passwd</a></li>
+    <li><a class="" href="etc-shadow-file.html">4. /etc/shadow</a></li>
+    <li><a class="" href="etc-group-file.html">5. /etc/group</a></li>
+    <li><a class="" href="user-management-tools.html">6. User Management Tools</a></li>
+  </ul>
+</div>
+    
+<!-- Page content -->
+<div id="page-content-wrapper">
+  <!-- Keep all page content within the page-content inset div! -->
+  <div class="page-content inset">
+    <div class="row">
+      <div class="col-md-6 lesson">
+        
+        <div class="user-app">
+          <a class="btn btn-default btn-sm" href="../change_locale/tr">
+            <i class="glyphicon glyphicon glyphicon-home"></i> Anasayfa
+</a>        </div>
+        
+        <div class="lesson-content">
+          <h3>3. /etc/passwd</h3>
+          <p class="lesson-text"><p>Remember that usernames aren't really identifications for users. The system uses a user ID (UID) to identify a user. To find out what users are mapped to what ID, look at the /etc/passwd file. </p>
+
+<p><pre>$ cat /etc/passwd</pre></p>
+
+<p>This file shows you a list of users and detailed information about them. For example, the first line in this file most likely looks like this:</p>
+
+<p><pre>root:x:0:0:root:/root:/bin/bash</pre></p>
+
+<p>Each line displays user information for one user, most commonly you'll see the root user as the first line. There are many fields separated by colons that tell you additional information about the user, let's look at them all:</p>
+
+<p><ol>
+<br /><li>Username</li>
+<br /><li>User's password - the password is not really stored in this file, it's usually stored in the /etc/shadow file. We'll discuss more in the next lesson about /etc/shadow, but for now, know that it contains encrypted user passwords. You can see many different symbols that are in this field, if you see an "x" that means the password is stored in the /etc/shadow file, a "*" means the user doesn't have login access and if there is a blank field that means the user doesn't have a password.</li>
+<br /><li>The user ID - as you can see root has the UID of 0</li>
+<br /><li>The group ID</li>
+<br /><li>GECOS field - This is used to generally leave comments about the user or account such as their real name or phone number, it is comma delimited.</li>
+<br /><li>User's home directory</li>
+<br /><li>User's shell - you'll probably see a lot of user's defaulting to bash for their shell</li>
+<br /></ol></p>
+
+<p>Normally in a user's setting page, you would expect you see just human users. However, you'll notice /etc/passwd contains other users. Remember that users are really only on the system to run processes with different permissions. Sometimes we want to run processes with pre-determined permissions. For example, the daemon user is used for daemon processes.</p>
+
+<p>Also should note that you can edit the /etc/passwd file by hand if you want to add users and modify information with the <b>vipw</b> tool, however things like these are best left to the tools we will discuss in a later lesson such as useradd and userdel.</p>
+        </div>
+      </div>
+      
+      <div class="col-md-6 practice">
+        <div class="exercise-content">
+          <h3>Alıştırmalar</h3>
+          <p><p>Look at your /etc/passwd file, take a look at some of the users and note the access they have. </p></p>
+        </div>
+        
+        <div class="quiz-content">
+          <h3>Quiz</h3>
+          <p>If a user doesn&#39;t have login access how is that denoted in /etc/passwd?<p>
+            
+          <div class="course-actions">
+            <div id="check-answer"></div>
+            <form action="https://linuxjourney.com/answer?lesson_id=79&amp;subject_id=5" accept-charset="UTF-8" data-remote="true" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+              <input type="text" name="user_answer" id="user_answer" size="30" class="input-sm" />
+              <input type="submit" name="commit" value="Cevabı Kontrol Et" class="btn btn-info btn-sm" />
+</form>            
+              <a class="btn btn-warning" href="etc-shadow-file.html">Devam et</a>
+          </div>
+          
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div><!-- end of page content -->
+      
+      
+    </div><!-- end of wrapper -->
+    
+    <script>
+      $(document).ready(optimizeMobile);
+      $(window).on('resize', optimizeMobile);
+      
+      function optimizeMobile() {
+        if (($(window).width() <= 767) || ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )){
+          $("#wrapper").removeClass("active");
+        } else {
+          $("#wrapper").addClass("active");
+        }
+      }
+      
+      $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("active");
+      });
+      
+      $("#hint-toggle").click(function(e) {
+        $("#hint").toggle();
+      });
+    </script>
+  </body>
+</html>

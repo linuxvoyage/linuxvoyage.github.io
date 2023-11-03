@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Learning | Linux Journey</title>
+  <script src="../assets/application-8013fdc35e4c79f95bcb3d655ff61f137ac05bcee52e6d96588427a84eddef12.js" data-turbolinks-track="true"></script>
+  <link rel="stylesheet" media="all" href="../assets/application-b0b91461d093aa2ed95d8a7467856e4dc16f55744d3c17a927c3598e5b26cd3f.css" data-turbolinks-track="true" />
+  <link rel="shortcut icon" type="image/x-icon" href="../assets/favicon-e8bea7a0071e296638a3a1a08be81f0a30b9c945625e5a200fefecd8d9b2ed6c.ico" />
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="c1EKb7V8BRn5dZFmJED+QfSbkbp+uCZ35cF6U6HCAcvI7SzWYs6sAOEoxu1HsgJ/fyBo/CW26W5v4AYIsc3Q5Q==" />
+</head>
+  <body>
+
+    <div id="wrapper" class="active">
+      
+      
+<!-- Sidebar -->
+<div id="sidebar-wrapper">
+  <ul id="sidebar_menu" class="sidebar-nav">
+    <li class="sidebar-brand"><a href="filesystem-types#">Dosya Sistemi
+      <span id="menu-toggle" class="main_icon glyphicon glyphicon-align-justify"></span>
+    </a></li>
+  </ul>
+  <ul class="sidebar-nav" id="sidebar">
+    <li><a class="" href="filesystem-hierarchy.html">1. Filesystem Hierarchy</a></li>
+    <li><a class="current" href="filesystem-types.html">2. Filesystem Types</a></li>
+    <li><a class="" href="anatomy-of-a-disk.html">3. Anatomy of a Disk</a></li>
+    <li><a class="" href="disk-partitioning.html">4. Disk Partitioning</a></li>
+    <li><a class="" href="creating-filesystems.html">5. Creating Filesystems</a></li>
+    <li><a class="" href="mounting-and-unmounting-filesystems.html">6. mount and umount</a></li>
+    <li><a class="" href="etc-fstab-file-system-table.html">7. /etc/fstab</a></li>
+    <li><a class="" href="swap-space.html">8. swap</a></li>
+    <li><a class="" href="disk-usage.html">9. Disk Usage</a></li>
+    <li><a class="" href="filesystem-repair.html">10. Filesystem Repair</a></li>
+    <li><a class="" href="inodes.html">11. Inodes</a></li>
+    <li><a class="" href="symlinks.html">12. symlinks</a></li>
+  </ul>
+</div>
+    
+<!-- Page content -->
+<div id="page-content-wrapper">
+  <!-- Keep all page content within the page-content inset div! -->
+  <div class="page-content inset">
+    <div class="row">
+      <div class="col-md-6 lesson">
+        
+        <div class="user-app">
+          <a class="btn btn-default btn-sm" href="../change_locale/tr">
+            <i class="glyphicon glyphicon glyphicon-home"></i> Anasayfa
+</a>        </div>
+        
+        <div class="lesson-content">
+          <h3>2. Filesystem Types</h3>
+          <p class="lesson-text"><p>There are many different filesystem implementations available. Some are faster than others, some support larger capacity storage and others only work on smaller capacity storage. Different filesystems have different ways of organizing their data and we'll go into detail about what types of filesystems there are. Since there are so many different implementations available, applications need a way to deal with the different operations. So there is something called the Virtual File System (VFS) abstraction layer. It is a layer between applications and the different filesystem types, so no matter what filesystem you have, your applications will be able to work with it. </p>
+
+<p>You can have many filesystem on your disks, depending on how they are partitioned and we will go through that in a coming lesson.</p>
+
+<p><b>Journaling</b></p>
+
+<p>Journaling comes by default on most filesystem types, but just in case it doesn't, you should know what it does. Let's say you're copying a large file and all of a sudden you lose power. Well if you are on a non-journaled filesystem, the file would end up corrupted and your filesystem would be inconsistent and then  when you boot back up, your system would perform a filesystem check to make sure everything is ok. However, the repairs could take awhile depending on how large your filesystem was. </p>
+
+<p>Now if you were on a journaled system, before your machine even begins to copy the file, it will write what you're going to be doing in a log file (journal). Now when you actually copy the file, once it completes, the journal marks that task as complete. The filesystem is always in a consistent state because of this, so it will know exactly where you left off if your machine shutdown suddenly. This also decreases the boot time because instead of checking the entire filesystem it just looks at your journal.</p>
+
+<p><b>Common Desktop Filesystem Types</b></p>
+
+<p><ul>
+<br /><li>ext4 - This is the most current version of the native Linux filesystems. It is compatible with the older ext2 and ext3 versions. It supports disk volumes up to 1 exabyte and file sizes up to 16 terabytes and much more. It is the standard choice for Linux filesystems.</li>
+<br /><li>Btrfs - "Better or Butter FS" it is a new filesystem for Linux that comes with snapshots, incremental backups, performance increase and much more. It is widely available, but not quite stable and compatible yet.</li>
+<br /><li>XFS - High performance journaling file system, great for a system with large files such as a media server.</li>
+<br /><li>NTFS and FAT - Windows filesystems</li>
+<br /><li>HFS+ - Macintosh filesystem</li>
+<br /></ul></p>
+
+<p>Check out what filesystems are on your machine: </p>
+
+<p><pre>
+<br />pete@icebox:~$ df -T
+<br />Filesystem     Type     1K-blocks    Used Available Use% Mounted on
+<br />/dev/sda1      ext4       6461592 2402708   3707604  40% /
+<br />udev           devtmpfs    501356       4    501352   1% /dev
+<br />tmpfs          tmpfs       102544    1068    101476   2% /run
+<br />/dev/sda6      xfs       13752320  460112  13292208   4% /home
+<br /></pre></p>
+
+<p>The <b>df</b> command reports file system disk space usage and other details about your disk, we will talk more about this tool later.</p>
+        </div>
+      </div>
+      
+      <div class="col-md-6 practice">
+        <div class="exercise-content">
+          <h3>Alıştırmalar</h3>
+          <p><p>Do a little bit of research online on the other filesystem types: ReiserFS, ZFS, JFS and others you can find.</p></p>
+        </div>
+        
+        <div class="quiz-content">
+          <h3>Quiz</h3>
+          <p>What is the common Linux filesystem type?<p>
+            
+          <div class="course-actions">
+            <div id="check-answer"></div>
+            <form action="https://linuxjourney.com/answer?lesson_id=127&amp;subject_id=11" accept-charset="UTF-8" data-remote="true" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+              <input type="text" name="user_answer" id="user_answer" size="30" class="input-sm" />
+              <input type="submit" name="commit" value="Cevabı Kontrol Et" class="btn btn-info btn-sm" />
+</form>            
+              <a class="btn btn-warning" href="anatomy-of-a-disk.html">Devam et</a>
+          </div>
+          
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div><!-- end of page content -->
+      
+      
+    </div><!-- end of wrapper -->
+    
+    <script>
+      $(document).ready(optimizeMobile);
+      $(window).on('resize', optimizeMobile);
+      
+      function optimizeMobile() {
+        if (($(window).width() <= 767) || ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )){
+          $("#wrapper").removeClass("active");
+        } else {
+          $("#wrapper").addClass("active");
+        }
+      }
+      
+      $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("active");
+      });
+      
+      $("#hint-toggle").click(function(e) {
+        $("#hint").toggle();
+      });
+    </script>
+  </body>
+</html>
